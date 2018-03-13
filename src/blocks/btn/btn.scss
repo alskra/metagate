@@ -1,0 +1,10 @@
+.btn {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+
+  &-primary {
+    //background-color: $color-dark-blue;
+  }
+}

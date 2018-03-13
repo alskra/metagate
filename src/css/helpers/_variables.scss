@@ -1,0 +1,78 @@
+// Colors
+$color-blue: #99CEFF;
+$color-dark-blue: #2F7BC2;
+
+// Customization Bootstrap
+$primary: $color-dark-blue;
+
+$spacer: 1rem;
+
+$body-color: #FFFFFF;
+$link-color: white;
+$link-hover-color: $link-color;
+$link-decoration: underline;
+$link-hover-decoration: none;
+$body-bg: #03081C;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+$transition-base: .2s ease-in-out;
+
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 1rem;
+$font-weight-base: 400;
+$line-height-base: (19/16);
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: $spacer/2;
+$headings-font-family: inherit;
+$headings-font-weight: 300;
+$headings-line-height: 1.25;
+$headings-color: white;
+
+$input-padding-y: 20.5px;
+$input-padding-x: 20px;
+$input-line-height: 1.25;
+$input-color: white;
+$input-bg: rgba(#050B1F, 0.2);
+$input-border-width: 1px;
+$input-border-color: transparent;
+$input-placeholder-color: $color-blue;
+$input-border-radius: 0;
+$input-transition: $transition-base;
+
+$input-focus-color: white;
+$input-focus-bg: rgba(5, 11, 31, 0.6);
+$input-focus-border-color: rgba(153, 206, 255, 0.3);
+
+$form-check-input-gutter: 32px;
+
+$btn-font-weight: 500;
+$btn-border-width: 0;
+$btn-transition: $transition-base;
+$btn-padding-y: 18px;
+$btn-padding-x: 20px;
+$btn-line-height: (19/16);
+$btn-border-radius: 4px;

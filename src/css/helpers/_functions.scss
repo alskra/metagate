@@ -1,0 +1,27 @@
+// Sources
+@function embed-svg($path) {
+  @return inline-svg('build/img/#{$path}');
+}
+
+@function url-img($path) {
+  @return url('../img/#{$path}');
+}
+
+// Units
+@function rem($number) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return $number/16*1rem;
+  }
+}
+
+@function em($number) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return $number*1em;
+  }
+}

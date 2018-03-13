@@ -1,0 +1,63 @@
+.header {
+  padding: 19px 10px;
+  background: linear-gradient(180deg, #F2F2F2 57.46%, #EBEBEB 100%);
+
+  &__inner {
+    display: flex;
+  }
+
+  &__btn {
+    color: #636363;
+    font-size: 15px;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    background: none;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: $transition-base;
+    &:disabled {
+      color: #D9D9D9;
+      cursor: default;
+    }
+
+    &--back {
+
+    }
+
+    &--forward {
+      transform: rotateY(180deg);
+    }
+
+    &--reload {
+      font-size: 17px;
+    }
+  }
+
+  &__loc-field {
+    color: #636363;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 0;
+    padding: 0 40px 0 15px;
+    width: 650px;
+    height: 32px;
+    background: embed-svg('svg-icons/angle-1-down.svg') no-repeat right 15px center #FFFFFF;
+    margin-left: 8px;
+    margin-right: 20px;
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+    margin-right: 24px;
+  }
+}

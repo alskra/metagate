@@ -1,0 +1,15 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+
+- $.title = `Список страниц - ${$.package.description}`;
+
++page
+  +b.MAIN.py-5
+    .container-fluid
+      +b.H1= $.package.description
+      +b.OL
+        each page in pageList
+          +e.LI: +e.A(href=page.url target='_self')= page.title
+            +e.SMALL (#{page.url})

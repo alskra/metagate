@@ -1,0 +1,32 @@
+.form-check {
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  margin: 0;
+
+  &-input {
+    clip: rect(0, 0, 0, 0);
+    & ~ .form-check-label {
+      &::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-clip: content-box;
+        padding: 4px;
+        border: 1px solid $color-blue;
+        position: absolute;
+        top: 7px;
+        left: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+    &:checked {
+      & ~ .form-check-label {
+        &::before {
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+}

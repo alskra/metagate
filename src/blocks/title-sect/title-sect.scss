@@ -1,0 +1,11 @@
+.title-sect {
+  color: white;
+  font-size: 60px;
+  line-height: (70/60);
+  font-weight: 100;
+  margin: 0 0 30px;
+  strong {
+    font-weight: inherit;
+    color: $color-blue;
+  }
+}

@@ -1,0 +1,27 @@
+// State
+@mixin state-hover-focus {
+  &:hover, &:focus {
+    @content;
+  }
+}
+
+@mixin state-active {
+  &:not(.disabled):active {
+    @content;
+  }
+}
+
+@mixin state-disabled {
+  &:disabled,
+  &.disabled,
+  fieldset[disabled] & {
+    @content;
+  }
+}
+
+// Pixel ratio
+@mixin media-pixel-ratio($dpr) {
+  @media (-webkit-min-device-pixel-ratio: $dpr), (min-resolution: $dpr*96dpi) {
+    @content;
+  }
+}

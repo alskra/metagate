@@ -1,0 +1,29 @@
+.svg-symbols {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+[class^='icon-svg-'], [class*=' icon-svg-'] {
+  fill: currentColor;
+  stroke: inherit;
+
+  use {
+    pointer-events: none;
+  }
+}
+
+<% _.forEach( icons, function( icon ){ %><%= icon.class %> {
+  width: (<%= icon.width %>/<%= icon.height %>*1em);
+  height: 1em;
+}
+#<%= icon.id %> {
+  <%= icon.style %>
+}
+
+<% }); %>

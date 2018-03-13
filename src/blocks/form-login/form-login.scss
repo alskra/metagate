@@ -1,0 +1,55 @@
+.form-login {
+  font-size: 14px;
+  line-height: (16/14);
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: (28/24);
+  }
+
+  &__lnk {
+    color: $color-blue;
+    text-decoration: none;
+    display: inline-block;
+    transition: $transition-base;
+    @include hover-focus {
+      color: white;
+      text-decoration: none;
+    }
+
+    &-icon {
+      font-size: 16px;
+      margin-right: 8px;
+      vertical-align: middle;
+      transform: translateY(-1px);
+      &.icon-svg-user {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__check {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  &__lnk-continue {
+    color: $color-blue;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: (28/24);
+    transition: $transition-base;
+    @include hover-focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  &__btn-sign-in {
+    margin-bottom: 44px;
+  }
+}

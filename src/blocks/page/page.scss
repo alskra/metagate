@@ -1,0 +1,32 @@
+.page {
+  $r: &;
+  ::selection {
+    color: white;
+    background-color: $color-blue;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: url-img('promo-spiral.png') no-repeat 0 0, url-img('team-cloud.png') no-repeat 100% 100% $body-bg;
+    padding-top: 100px;
+  }
+
+  &__header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-fixed;
+  }
+
+  &__content {
+    flex: 1 0 auto;
+  }
+
+  &__footer {
+    flex: none;
+  }
+}

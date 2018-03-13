@@ -1,0 +1,49 @@
+.form-label {
+  display: block;
+  position: relative;
+  margin: 0;
+  .form-control {
+    padding-right: 50px;
+  }
+
+  &__placeholder {
+    content: attr(data-label);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: $input-placeholder-color;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: $input-line-height;
+    text-transform: uppercase;
+    padding: $input-padding-y $input-padding-x;
+    border: $input-border-width solid transparent;
+    transition: $input-transition;
+    pointer-events: none;
+    .form-control:focus ~ &, .form-control--has-value ~ & {
+      font-size: 12px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__icon {
+    color: $input-placeholder-color;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: $input-transition;
+    pointer-events: none;
+    .form-control:focus ~ &, .form-control--has-value ~ & {
+      color: white;
+    }
+    &.icon-svg-envelope {
+      font-size: 11px;
+    }
+    &.icon-svg-safe {
+      font-size: 18px;
+    }
+  }
+}

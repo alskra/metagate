@@ -1,0 +1,54 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+- $.title = `${pageList.register.title} - ${$.package.description}`;
+
++page
+  +header.__header
+  +e.__content.d-flex.flex-column.justify-content-center
+    .container-fluid
+      .row
+        .col-4.offset-4
+          +b.H1.title-sect #[strong #Meta]Gate
+          +b.FORM.form-login(action='')
+            +e.__header.row.align-items-baseline
+              .col-6
+                +e.__title Create Account
+              .col-6.text-right
+                +e.A.__lnk(href=js)
+                  +icon-svg#user.__lnk-icon
+                  | User Login
+            +b.form-group
+              +b.LABEL.form-label
+                +b.INPUT.form-control(type='email')
+                +e.__placeholder e-mail address
+                +icon-svg#envelope.__icon
+            +b.form-group
+              +b.LABEL.form-label
+                +b.INPUT.form-control(type='password')
+                +e.__placeholder password
+                +icon-svg#safe.__icon
+            +b.form-group
+              +b.LABEL.form-label
+                +b.INPUT.form-control(type='password')
+                +e.__placeholder confirm password
+                +icon-svg#safe.__icon
+            +e.__check.row.align-items-baseline
+              .col-12.mb-3
+                +b.LABEL.form-check
+                  +b.INPUT.form-check-input(type='checkbox')
+                  +b.form-check-label I wagree with #[a(href='js' target='_blank') Terms of Use]
+              .col-12
+                +b.LABEL.form-check
+                  +b.INPUT.form-check-input(type='checkbox')
+                  +b.form-check-label I wagree with #[a(href='js' target='_blank') Privacy Policy]
+            +e.__actions.text-center
+              +b.BUTTON.btn.btn-primary.w-100.__btn-sign-in Continue
+
+
+  +footer.__footer
+

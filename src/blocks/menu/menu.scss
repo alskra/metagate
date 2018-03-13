@@ -1,0 +1,43 @@
+.menu {
+  display: flex;
+  overflow: hidden;
+
+  &__item {
+    color: #636363;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: $transition-base;
+    @include hover-focus {
+      color: #141414;
+      text-decoration: none;
+    }
+    & + & {
+      margin-left: 34px;
+    }
+
+    &-icon {
+      flex: none;
+      margin-right: 6px;
+      &.icon-svg-metaapps {
+        font-size: 14px;
+      }
+      &.icon-svg-metawallet {
+        font-size: 17px;
+      }
+      &.settings {
+        font-size: 17px;
+      }
+    }
+
+    &-lbl {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1px;
+    }
+  }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="en">
+  <head>
+    <title>Register — MetaGate</title>
+    <!-- Meta-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons-->
+    <!-- CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- JS Inline-->
+    <!-- |-Insert svg-symbols-->
+    <script>
+      (function()
+      {
+        "use strict";
+        var request = new XMLHttpRequest();
+        request.open("GET", 'img/svg-symbols.svg', true);
+        request.onload = function()
+        {
+          if (request.status >= 200 && request.status < 400)
+          {
+            document.body.insertAdjacentHTML("afterbegin", request.responseText);
+          }
+        };
+        request.send();
+      })();
+    </script>
+  </head>
+  <body class="page__body">
+    <header class="header page__header">
+      <div class="header__inner">
+        <button class="header__btn header__btn--back">
+          <svg class="icon-svg-angle-left" role="img">
+            <use xlink:href="#icon-svg-angle-left"></use>
+          </svg>
+        </button>
+        <button class="header__btn header__btn--forward" disabled="">
+          <svg class="icon-svg-angle-left" role="img">
+            <use xlink:href="#icon-svg-angle-left"></use>
+          </svg>
+        </button>
+        <button class="header__btn header__btn--reload">
+          <svg class="icon-svg-refresh" role="img">
+            <use xlink:href="#icon-svg-refresh"></use>
+          </svg>
+        </button>
+        <input class="header__loc-field" type="text" value="/MetaGate/Create" />
+        <nav class="menu header__menu">
+          <a class="menu__item" href="javascript:">
+            <svg class="icon-svg-metaapps menu__item-icon" role="img">
+              <use xlink:href="#icon-svg-metaapps"></use>
+            </svg>
+            <span class="menu__item-lbl">MetaApps</span>
+          </a>
+          <a class="menu__item" href="javascript:">
+            <svg class="icon-svg-metawallet menu__item-icon" role="img">
+              <use xlink:href="#icon-svg-metawallet"></use>
+            </svg>
+            <span class="menu__item-lbl">MetaWallet</span>
+          </a>
+          <a class="menu__item" href="javascript:">
+            <svg class="icon-svg-settings menu__item-icon" role="img">
+              <use xlink:href="#icon-svg-settings"></use>
+            </svg>
+            <span class="menu__item-lbl">Settings</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div class="page__content d-flex flex-column justify-content-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4 offset-4">
+            <h1 class="title-sect">
+              <strong>#Meta</strong>Gate</h1>
+            <form class="form-login" action="">
+              <div class="form-login__header row align-items-baseline">
+                <div class="col-6">
+                  <div class="form-login__title">Create Account</div>
+                </div>
+                <div class="col-6 text-right">
+                  <a class="form-login__lnk" href="javascript:">
+                    <svg class="icon-svg-user form-login__lnk-icon" role="img">
+                      <use xlink:href="#icon-svg-user"></use>
+                    </svg>User Login</a>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <input class="form-control" type="email" />
+                  <span class="form-label__placeholder">e-mail address</span>
+                  <svg class="icon-svg-envelope form-label__icon" role="img">
+                    <use xlink:href="#icon-svg-envelope"></use>
+                  </svg>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <input class="form-control" type="password" />
+                  <span class="form-label__placeholder">password</span>
+                  <svg class="icon-svg-safe form-label__icon" role="img">
+                    <use xlink:href="#icon-svg-safe"></use>
+                  </svg>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-label">
+                  <input class="form-control" type="password" />
+                  <span class="form-label__placeholder">confirm password</span>
+                  <svg class="icon-svg-safe form-label__icon" role="img">
+                    <use xlink:href="#icon-svg-safe"></use>
+                  </svg>
+                </label>
+              </div>
+              <div class="form-login__check row align-items-baseline">
+                <div class="col-12 mb-3">
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <span class="form-check-label">I wagree with
+                      <a href="js" target="_blank">Terms of Use</a>
+                    </span>
+                  </label>
+                </div>
+                <div class="col-12">
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <span class="form-check-label">I wagree with
+                      <a href="js" target="_blank">Privacy Policy</a>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-login__actions text-center">
+                <button class="btn btn-primary w-100 form-login__btn-sign-in">Continue</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer page__footer">
+      <div class="footer__inner">
+        <a class="footer__logo" href="index.html">
+          <svg class="icon-svg-logo_mail footer__logo-img" role="img">
+            <use xlink:href="#icon-svg-logo_mail"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <!-- JS-->
+    <script src="js/libs.js"></script>
+    <script src="js/app.js" async=""></script>
+  </body>
+</html>

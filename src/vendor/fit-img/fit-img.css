@@ -1,0 +1,13 @@
+[data-fit-img] {
+  display: block;
+  visibility: hidden;
+  background: no-repeat 50% 50%/cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+[data-fit-img='contain'] {
+  background-size: contain;
+  object-fit: contain;
+}
