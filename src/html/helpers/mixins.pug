@@ -7,6 +7,6 @@ include ../../../node_modules/bemto.pug/bemto.pug
   })
 
 mixin icon-svg(id)
-  - attributes.id ? id = attributes.id : null; attributes.id = null;
+  - attributes.id ? id = attributes.id : null; attributes.id = undefined;
   +b.SVG(class=`icon-svg-${id}` role="img")&attributes(attributes)
     use(xlink:href=`#icon-svg-${id}`)

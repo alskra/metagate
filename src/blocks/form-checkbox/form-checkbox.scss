@@ -1,0 +1,43 @@
+.form-checkbox {
+  font-size: 14px;
+  line-height: (16/14);
+  display: inline-flex;
+  vertical-align: top;
+  align-items: flex-start;
+  margin: 0;
+
+  &__input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  &__fake {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    padding: 4px;
+    border: 1px solid $color-blue;
+    cursor: pointer;
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      background: $color-blue;
+      transition: $input-transition-base;
+      transform: scale(0);
+    }
+    :focus ~ & {
+      @include focus-default;
+    }
+    :checked ~ & {
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__lbl {
+    margin-top: 1px;
+    margin-left: 14px;
+  }
+}

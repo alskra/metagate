@@ -1,6 +1,4 @@
 .footer {
-  padding: 30px 0 70px;
-
   &__inner {
     display: flex;
     align-items: flex-start;
@@ -8,8 +6,9 @@
 
   &__logo {
     font-size: 52px;
-    margin-left: auto;
-    margin-right: 78px;
+    position: fixed;
+    right: 70px;
+    bottom: 70px;
     @include plain-hover-focus {
       color: white;
       text-decoration: none;

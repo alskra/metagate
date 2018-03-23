@@ -1,0 +1,69 @@
+mixin form-start(data)
+  +b.FORM.form-start&attributes(attributes)(action='')
+    if data === 'login'
+      +e.__header.row
+        .col-6
+          +e.__title User login
+        .col-6.text-right
+          +e.A.__link(href=js)
+            +icon-svg#key.__link-icon
+            | Create Account
+      +e.__row
+        +b.LABEL.form-field-lbl
+          +e.INPUT.__input(type='email')
+          +e.__placeholder e-mail account
+          +icon-svg#envelope.__icon
+      +e.__row
+        +b.LABEL.form-field-lbl
+          +b.INPUT.__input(type='password')
+          +e.__placeholder password
+          +icon-svg#safe.__icon
+      .row.mt-30.mb-50
+        .col-6
+          +b.LABEL.form-checkbox
+            +e.INPUT.__input(type='checkbox')
+            +e.__fake
+            +e.__lbl Remember account
+        .col-6.text-right
+          a(href=js) Forgot password?
+      .text-center
+        +b.BUTTON.btn--primary.w-100.mb-45 Login
+        +e.A.__link-continue(href=js) Continue without login
+    else if data === 'register'
+      +e.__header.row
+        .col-6
+          +e.__title Create Account
+        .col-6.text-right
+          +e.A.__link(href=js)
+            +icon-svg#user.__link-icon
+            | User Login
+      +e.__row
+        +b.LABEL.form-field-lbl
+          +e.INPUT.__input(type='email')
+          +e.__placeholder e-mail address
+          +icon-svg#envelope.__icon
+      +e.__row
+        +b.LABEL.form-field-lbl
+          +e.INPUT.__input(type='password')
+          +e.__placeholder password
+          +icon-svg#safe.__icon
+      +e.__row
+        +b.LABEL.form-field-lbl
+          +e.INPUT.__input(type='password')
+          +e.__placeholder confirm password
+          +icon-svg#safe.__icon
+      .row.mt-40.mb-30
+        .col-12.mb-10
+          +b.LABEL.form-checkbox
+            +e.INPUT.__input(type='checkbox')
+            +e.__fake
+            +e.__lbl I wagree with #[a(href=js target='_blank') Terms of Use]
+        .col-12
+          +b.LABEL.form-checkbox
+            +e.INPUT.__input(type='checkbox')
+            +e.__fake
+            +e.__lbl I wagree with #[a(href=js target='_blank') Privacy Policy]
+      .text-center
+        +b.BUTTON.btn--primary.w-100 Continue
+    else
+      block

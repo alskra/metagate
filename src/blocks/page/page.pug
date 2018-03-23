@@ -13,18 +13,18 @@ mixin page
       // Favicons
       //-link(rel='icon' type='image/x-icon' href='/favicon.ico')
       // CSS
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
       link(rel='stylesheet' href=`css/libs${$.isDevelopment ? '' : '.min'}.css`)
       link(rel='stylesheet' href=`css/app${$.isDevelopment ? '' : '.min'}.css`)
       // JS Inline
       // |-Insert svg-symbols
       script
         include ../../vendor/svg-symbols/svg-symbols.js
-      //- |-Fix object-fit <img>
-        script
-          include ../../vendor/fit-img/fit-img.js
+      // |-Fix object-fit <img>
+      script
+        include ../../vendor/fit-img/fit-img.js
     +e.BODY.__body
-      block
+      +e.__body-inner
+        block
       // JS
       script(src=`js/libs${$.isDevelopment ? '' : '.min'}.js`)
       script(src=`js/app${$.isDevelopment ? '' : '.min'}.js` async='')

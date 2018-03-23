@@ -10,18 +10,21 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    transition: $transition-base;
+    transition: color $btn-transition-base;
     @include hover-focus {
       color: #141414;
       text-decoration: none;
     }
     & + & {
-      margin-left: 34px;
+      margin-left: 32px;
     }
 
     &-icon {
       flex: none;
-      margin-right: 6px;
+      margin-right: 5px;
+      &.icon-svg-buy {
+        font-size: 17px;
+      }
       &.icon-svg-metaapps {
         font-size: 14px;
       }

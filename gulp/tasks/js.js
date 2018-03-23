@@ -6,6 +6,11 @@ module.exports = function () {
       $.gulp.src('src/js/*.js'),
       $.gp.sourcemaps.init(),
       $.gp.include(),
+      $.gp.if(function (file) {
+        return file.basename !== 'libs.js'
+      }, $.gp.babel({
+        presets: ['@babel/env']
+      })),
       $.gp.jsbeautifier({js: {
           indent_size: 2
         }}),

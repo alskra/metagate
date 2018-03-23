@@ -13,7 +13,6 @@ global.$ = {
   emittyPug: require('emitty').setup('src', 'pug'),
   emittySCSS: require('emitty').setup('src', 'scss'),
   sassInlineSVG: require('sass-inline-svg-utf8'),
-  webpackStream: require('webpack-stream'),
   rsp: require('remove-svg-properties').stream,
 
   isDevelopment: process.env.NODE_ENV !== 'production',

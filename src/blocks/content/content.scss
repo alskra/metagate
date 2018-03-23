@@ -1,0 +1,28 @@
+.content {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+    line-height: (70/60);
+    margin-bottom: $headings-margin-bottom;
+  }
+
+  h1, .h1 {
+    font-weight: 100;
+    font-size: 60px;
+  }
+  h2, .h2 {
+    font-size: 50px;
+  }
+  h3, .h3 {
+    font-size: 40px;
+  }
+  h4, .h4 {
+    font-size: 30px;
+  }
+  h5, .h5 {
+    font-size: 25px;
+  }
+  h6, .h6 {
+    font-size: 20px;
+  }
+}

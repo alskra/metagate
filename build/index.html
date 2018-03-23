@@ -10,7 +10,6 @@
     <meta name="author" content="" />
     <!-- Favicons-->
     <!-- CSS-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,700i&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.css" />
     <link rel="stylesheet" href="css/app.css" />
     <!-- JS Inline-->
@@ -31,25 +30,36 @@
         request.send();
       })();
     </script>
+    <!-- |-Fix object-fit <img>-->
+    <script>
+      function fitImg(e)
+      {
+        var s = e.style;
+        document.documentElement.style.objectFit === undefined && (s.backgroundImage = 'url(' + e.src + ')', s.paddingLeft = '100%');
+        s.visibility = 'visible';
+      }
+    </script>
   </head>
   <body class="page__body">
-    <main class="py-5" role="main">
-      <div class="container-fluid">
-        <h1>MetaGate</h1>
-        <ol>
-          <li>
-            <a href="page-login.html" target="_self">Login
-              <small>(page-login.html)</small>
-            </a>
-          </li>
-          <li>
-            <a href="page-register.html" target="_self">Register
-              <small>(page-register.html)</small>
-            </a>
-          </li>
-        </ol>
-      </div>
-    </main>
+    <div class="page__body-inner">
+      <main class="content py-5" role="main">
+        <div class="container-fluid">
+          <h1>MetaGate</h1>
+          <ol>
+            <li>
+              <a href="page-login.html" target="_self">Login
+                <small>(page-login.html)</small>
+              </a>
+            </li>
+            <li>
+              <a href="page-register.html" target="_self">Register
+                <small>(page-register.html)</small>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </main>
+    </div>
     <!-- JS-->
     <script src="js/libs.js"></script>
     <script src="js/app.js" async=""></script>

@@ -1,10 +1,35 @@
 .btn {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-transform: uppercase;
-  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  user-select: none;
+  cursor: pointer;
+  @include plain-hover-focus {
+    text-decoration: none;
+  }
+  @include state-disabled {
+    cursor: default;
+    opacity: .65;
+  }
 
-  &-primary {
-    //background-color: $color-dark-blue;
+  &--primary {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: white;
+    text-transform: uppercase;
+    padding: 17.5px 20px;
+    border: 0;
+    border-radius: 4px;
+    background: $color-dark-blue;
+    transition: $btn-transition;
+    @include hover {
+      &:not(:disabled) {
+        background: darken($color-dark-blue, 5%);
+      }
+    }
   }
 }

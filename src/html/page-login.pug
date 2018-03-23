@@ -4,45 +4,16 @@ include helpers/mixins
 include ../blocks/page/page
 include ../blocks/header/header
 include ../blocks/footer/footer
+include ../blocks/form-start/form-start
 
 - $.title = `${pageList.login.title} - ${$.package.description}`;
 
 +page
   +header.__header
-  +e.__content.d-flex.flex-column.justify-content-center
+  +e.__main.d-flex.flex-column.justify-content-center
     .container-fluid
       .row
         .col-4.offset-4
           +b.H1.title-sect #[strong #Meta]Gate
-          +b.FORM.form-login(action='')
-            +e.__header.row.align-items-baseline
-              .col-6
-                +e.__title User login
-              .col-6.text-right
-                +e.A.__lnk(href=js)
-                  +icon-svg#key.__lnk-icon
-                  | Create Account
-            +b.form-group
-              +b.LABEL.form-label
-                +b.INPUT.form-control(type='email')
-                +e.__placeholder e-mail account
-                +icon-svg#envelope.__icon
-            +b.form-group
-              +b.LABEL.form-label
-                +b.INPUT.form-control(type='password')
-                +e.__placeholder password
-                +icon-svg#safe.__icon
-            +e.__check.row.align-items-baseline
-              .col-6
-                +b.LABEL.form-check
-                  +b.INPUT.form-check-input(type='checkbox')
-                  +b.form-check-label Remember account
-              .col-6.text-right
-                a(href=js) Forgot password?
-            +e.__actions.text-center
-              +b.BUTTON.btn.btn-primary.w-100.__btn-sign-in Login
-              +e.A.__lnk-continue(href=js) Continue without login
-
-
+          +form-start('login')
   +footer.__footer
-

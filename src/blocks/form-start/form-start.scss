@@ -1,0 +1,58 @@
+.form-start {
+  font-size: 14px;
+  line-height: (16/14);
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: (28/24);
+  }
+
+  &__link {
+    color: $color-blue;
+    text-align: left;
+    display: inline-flex;
+    vertical-align: top;
+    align-items: flex-start;
+    transition: color $btn-transition-base;
+    margin-top: 10px;
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+    @include hover {
+      color: white;
+    }
+
+    &-icon {
+      flex: none;
+      font-size: 16px;
+      margin-right: 8px;
+      &.icon-svg-key {
+        transform: translateY(-1px);
+      }
+      &.icon-svg-user {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__link-continue {
+    color: $color-blue;
+    font-size: 24px;
+    line-height: (28/24);
+    transition: color $btn-transition-base;
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+    @include hover {
+      color: white;
+    }
+  }
+}

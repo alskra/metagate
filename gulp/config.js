@@ -12,7 +12,7 @@ module.exports = {
     './gulp/tasks/serve.js'
   ],
   autoprefixer: {
-    browsers: ['last 2 versions', 'ie >= 10'],
+    browsers: ['defaults', 'ie >= 10'],
     add: true,
     remove: true,
     cascade: false

@@ -1,17 +1,22 @@
 .page {
   $r: &;
+  height: 100%;
   ::selection {
     color: white;
     background-color: $color-blue;
   }
 
   &__body {
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    min-height: 100vh;
-    background: url-img('promo-spiral.png') no-repeat 0 0, url-img('team-cloud.png') no-repeat 100% 100% $body-bg;
-    padding-top: 100px;
+    height: 100%;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      min-width: 1280px;
+      min-height: 100%;
+      background: url-img('promo-spiral.png') no-repeat 0 0 fixed, url-img('team-cloud.png') no-repeat 100% 100% fixed $body-bg;
+      padding: 70px 0;
+    }
   }
 
   &__header {
@@ -22,8 +27,9 @@
     z-index: $zindex-fixed;
   }
 
-  &__content {
+  &__main {
     flex: 1 0 auto;
+    padding: 30px 0;
   }
 
   &__footer {
