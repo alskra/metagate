@@ -9,7 +9,7 @@ include ../blocks/page/page
   +b.MAIN.content.py-5
     .container-fluid
       +b.H1= $.package.description
-      +b.OL
+      ol
         each page in pageList
-          +e.LI: +e.A(href=page.url target='_self')= page.title
-            +e.SMALL (#{page.url})
+          li.mb-5: a(href=page.url target='_self')= page.title
+            small (#{page.url})

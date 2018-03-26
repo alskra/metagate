@@ -1,0 +1,28 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/breadcrumb/breadcrumb
+
+- $.title = `${pageList.firstTime.title} - ${$.package.description}`;
+
++page.--theme-dark
+  +header.__header
+  +e.__main
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid
+          .row
+            .col-10.mt-40.d-flex.align-items-start
+              +b.H1.title.__title #[strong #Meta]Wallet
+              +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
+            .col-2.mt-10.d-flex.flex-column.align-items-end
+              +logo.__logo.mb-35
+              +e.NAV.__actions
+                +e.A.__actions-item(href=js)
+                  +icon-svg#user.__actions-icon
+                  | User Login
+
+  +footer('inner').__footer

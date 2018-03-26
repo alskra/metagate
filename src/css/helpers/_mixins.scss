@@ -1,7 +1,9 @@
 // State
-@mixin focus-default {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+@mixin focus-default($shadows...) {
+  //outline: 1px dotted;
+  //outline: 5px auto -webkit-focus-ring-color;
+  outline: 0;
+  box-shadow: $shadows, $focus-box-shadow;
 }
 
 @mixin state-hover-focus {

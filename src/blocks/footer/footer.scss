@@ -6,16 +6,10 @@
 
   &__logo {
     font-size: 52px;
-    position: fixed;
-    right: 70px;
-    bottom: 70px;
-    @include plain-hover-focus {
-      color: white;
-      text-decoration: none;
-    }
+    margin: 0 30px 30px auto;
+  }
 
-    &-img {
-      display: block;
-    }
+  &__support {
+    margin: 0 30px 30px auto;
   }
 }

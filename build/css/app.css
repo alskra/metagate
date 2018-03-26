@@ -75,6 +75,10 @@
   width: 1em;
   height: 1em
 }
+.icon-svg-dialog {
+  width: 1.03005em;
+  height: 1em
+}
 .icon-svg-envelope {
   width: 1.63517em;
   height: 1em
@@ -111,6 +115,70 @@
   width: 1.0661em;
   height: 1em
 }
+.action-support {
+  font-size: 1.125rem;
+  line-height: 1.16667;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+.action-support,
+.action-support:focus,
+.action-support:hover {
+  color: #fff;
+  text-decoration: none
+}
+.action-support__icon {
+  -ms-flex: none;
+  flex: none;
+  font-size: 2.0625rem;
+  margin-right: 0.75rem
+}
+.action-support__text small {
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #99ceff;
+  display: block
+}
+.breadcrumb {
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 1.16667;
+  overflow: hidden
+}
+.breadcrumb__inner {
+  padding-left: 0;
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 0 0 -1.0625rem
+}
+.breadcrumb__item {
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin-left: 1.0625rem
+}
+.breadcrumb__item:not(:first-child)::before {
+  content: '/';
+  color: #99ceff;
+  margin-right: 1.0625rem
+}
+.breadcrumb__item-link {
+  color: #99ceff;
+  transition: color 0.15s ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.breadcrumb__item-link,
+.breadcrumb__item-link:focus,
+.breadcrumb__item-link:hover {
+  text-decoration: none
+}
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -126,6 +194,10 @@
 .btn:focus,
 .btn:hover {
   text-decoration: none
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.125rem #66b6ff
 }
 .btn.disabled,
 .btn:disabled,
@@ -165,7 +237,7 @@ fieldset[disabled] .btn {
 .content h6 {
   font-weight: 300;
   line-height: 1.16667;
-  margin-bottom: 0.15625rem
+  margin-bottom: 0.5rem
 }
 .content .h1,
 .content h1 {
@@ -200,18 +272,10 @@ fieldset[disabled] .btn {
 }
 .footer__logo {
   font-size: 3.25rem;
-  position: fixed;
-  right: 4.375rem;
-  bottom: 4.375rem
+  margin: 0 1.875rem 1.875rem auto
 }
-.footer__logo,
-.footer__logo:focus,
-.footer__logo:hover {
-  color: #fff;
-  text-decoration: none
-}
-.footer__logo-img {
-  display: block
+.footer__support {
+  margin: 0 1.875rem 1.875rem auto
 }
 .form-checkbox {
   font-size: 0.875rem;
@@ -234,31 +298,49 @@ fieldset[disabled] .btn {
   height: 1.125rem;
   padding: 0.25rem;
   border: 0.0625rem solid #99ceff;
-  cursor: pointer
+  cursor: pointer;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
 }
 .form-checkbox__fake::before {
   content: '';
   display: block;
   height: 100%;
-  background: #99ceff;
+  background: #fff;
   transition: 0.15s ease-in-out;
   transform: scale(0)
 }
 :focus ~ .form-checkbox__fake {
-  outline: 0.0625rem dotted;
-  outline: 0.3125rem auto -webkit-focus-ring-color
+  outline: 0;
+  box-shadow: 0 0 0 0.125rem #66b6ff
 }
 :checked ~ .form-checkbox__fake::before {
   transform: scale(1)
 }
 .form-checkbox__lbl {
-  margin-top: 0.0625rem;
+  margin-top: 0.125rem;
   margin-left: 0.875rem
 }
 .form-field-lbl {
   display: block;
   margin: 0;
   position: relative
+}
+.form-field-lbl::before {
+  content: attr(data-placeholder);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  color: #99ceff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: text;
+  pointer-events: none;
+  transition: 0.15s ease-in-out;
+  position: absolute;
+  top: 1.28125rem;
+  right: 3.1875rem;
+  left: 1.3125rem
 }
 .form-field-lbl__input {
   font-weight: 300;
@@ -268,28 +350,11 @@ fieldset[disabled] .btn {
   text-transform: uppercase;
   display: block;
   width: 100%;
-  padding: 2.09375rem 1.25rem 0.46875rem;
+  padding: 2.15625rem 3.125rem 0.40625rem 1.25rem;
   border: 0.0625rem solid transparent;
   background: rgba(5, 11, 31, 0.2);
   box-shadow: 0 0 0.625rem rgba(153, 206, 255, 0.2);
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
-}
-.form-field-lbl__placeholder {
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.25;
-  color: #99ceff;
-  text-transform: uppercase;
-  padding: 1.28125rem 1.25rem;
-  border: 0.0625rem solid transparent;
-  cursor: text;
-  pointer-events: none;
-  transition: 0.15s ease-in-out;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0
 }
 .form-field-lbl__icon {
   color: #99ceff;
@@ -308,6 +373,11 @@ fieldset[disabled] .btn {
 .form-field-lbl__icon.icon-svg-safe {
   font-size: 1.125rem
 }
+.form-field-lbl--focus::before,
+.form-field-lbl--has-value::before {
+  font-size: 0.75rem;
+  top: 0.5rem
+}
 .form-field-lbl--focus .form-field-lbl__input,
 .form-field-lbl--has-value .form-field-lbl__input {
   color: #fff;
@@ -315,12 +385,6 @@ fieldset[disabled] .btn {
   background: rgba(5, 11, 31, 0.6);
   box-shadow: none;
   outline: 0
-}
-.form-field-lbl--focus .form-field-lbl__placeholder,
-.form-field-lbl--has-value .form-field-lbl__placeholder {
-  font-size: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem
 }
 .form-field-lbl--focus .form-field-lbl__icon,
 .form-field-lbl--has-value .form-field-lbl__icon {
@@ -359,11 +423,12 @@ fieldset[disabled] .btn {
 .form-start__link-icon {
   -ms-flex: none;
   flex: none;
-  font-size: 1rem;
-  margin-right: 0.5rem
+  height: 1rem;
+  margin-right: 0.5rem;
+  transform: translateY(-0.0625rem)
 }
 .form-start__link-icon.icon-svg-key {
-  transform: translateY(-0.0625rem)
+  font-size: 1rem
 }
 .form-start__link-icon.icon-svg-user {
   font-size: 0.9375rem
@@ -449,7 +514,16 @@ fieldset[disabled] .btn {
 }
 .header__menu {
   margin-left: auto;
-  margin-right: 1.375rem
+  margin-right: 1.25rem
+}
+.logo,
+.logo:focus,
+.logo:hover {
+  color: #fff;
+  text-decoration: none
+}
+.logo__img {
+  display: block
 }
 .menu {
   display: -ms-flexbox;
@@ -474,7 +548,7 @@ fieldset[disabled] .btn {
   text-decoration: none
 }
 .menu__item + .menu__item {
-  margin-left: 2rem
+  margin-left: 1.875rem
 }
 .menu__item-icon {
   -ms-flex: none;
@@ -517,7 +591,7 @@ fieldset[disabled] .btn {
   min-width: 80rem;
   min-height: 100%;
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c;
-  padding: 4.375rem 0
+  padding-top: 4.375rem
 }
 .page__header {
   position: fixed;
@@ -535,14 +609,54 @@ fieldset[disabled] .btn {
   -ms-flex: none;
   flex: none
 }
-.title-sect {
+.page--theme-dark .page__body-inner {
+  background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/whatis-satelit.png) no-repeat right 11.5625rem top 18.125rem fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c
+}
+.section__title {
+  overflow: hidden;
+  word-wrap: break-word
+}
+.section__logo {
+  font-size: 2.125rem
+}
+.section__actions {
+  font-size: 0.875rem;
+  line-height: 1.14286
+}
+.section__actions-item {
+  color: #99ceff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  transition: color 0.15s ease-in-out
+}
+.section__actions-item,
+.section__actions-item:focus,
+.section__actions-item:hover {
+  text-decoration: none
+}
+.section__actions-item:hover {
+  color: #fff
+}
+.section__actions-icon {
+  -ms-flex: none;
+  flex: none;
+  height: 1rem;
+  margin-right: 0.5rem;
+  transform: translateY(-0.0625rem)
+}
+.section__actions-icon.icon-svg-user {
+  font-size: 0.9375rem
+}
+.title {
   font-weight: 100;
   font-size: 3.75rem;
   line-height: 1.16667;
   color: #fff;
-  margin: 0 0 1.875rem
+  margin: 0
 }
-.title-sect strong {
+.title strong {
   font-weight: inherit;
   color: #99ceff
 }

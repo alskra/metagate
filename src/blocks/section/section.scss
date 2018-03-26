@@ -1,0 +1,42 @@
+.section {
+  &__header {
+
+  }
+
+  &__title {
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+
+  &__logo {
+    font-size: 34px;
+  }
+
+  &__actions {
+    font-size: 14px;
+    line-height: (16/14);
+
+    &-item {
+      color: $color-blue;
+      display: flex;
+      align-items: flex-start;
+      transition: color $btn-transition-base;
+      @include plain-hover-focus {
+        text-decoration: none;
+      }
+      @include hover {
+        color: white;
+      }
+    }
+
+    &-icon {
+      flex: none;
+      height: 16px;
+      margin-right: 8px;
+      transform: translateY(-1px);
+      &.icon-svg-user {
+        font-size: 15px;
+      }
+    }
+  }
+}

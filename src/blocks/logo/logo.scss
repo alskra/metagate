@@ -1,0 +1,10 @@
+.logo {
+  @include plain-hover-focus {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__img {
+    display: block;
+  }
+}

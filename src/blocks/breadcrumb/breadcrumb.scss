@@ -1,0 +1,36 @@
+.breadcrumb {
+  font-weight: 100;
+  font-size: 24px;
+  line-height: (28/24);
+  overflow: hidden;
+
+  &__inner {
+    @include list-unstyled;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 -17px;
+  }
+
+  &__item {
+    display: flex;
+    overflow: hidden;
+    margin-left: 17px;
+    &:not(:first-child) {
+      &::before {
+        content: '/';
+        color: $color-blue;
+        margin-right: 17px;
+      }
+    }
+
+    &-link {
+      color: $color-blue;
+      transition: color $btn-transition-base;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include plain-hover-focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

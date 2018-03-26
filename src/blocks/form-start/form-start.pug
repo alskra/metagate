@@ -9,14 +9,12 @@ mixin form-start(data)
             +icon-svg#key.__link-icon
             | Create Account
       +e.__row
-        +b.LABEL.form-field-lbl
+        +b.LABEL.form-field-lbl(data-placeholder='E-mail account')
           +e.INPUT.__input(type='email')
-          +e.__placeholder e-mail account
           +icon-svg#envelope.__icon
       +e.__row
-        +b.LABEL.form-field-lbl
+        +b.LABEL.form-field-lbl(data-placeholder='Password')
           +b.INPUT.__input(type='password')
-          +e.__placeholder password
           +icon-svg#safe.__icon
       .row.mt-30.mb-50
         .col-6
@@ -38,19 +36,16 @@ mixin form-start(data)
             +icon-svg#user.__link-icon
             | User Login
       +e.__row
-        +b.LABEL.form-field-lbl
+        +b.LABEL.form-field-lbl(data-placeholder='E-mail address')
           +e.INPUT.__input(type='email')
-          +e.__placeholder e-mail address
           +icon-svg#envelope.__icon
       +e.__row
-        +b.LABEL.form-field-lbl
+        +b.LABEL.form-field-lbl(data-placeholder='Password')
           +e.INPUT.__input(type='password')
-          +e.__placeholder password
           +icon-svg#safe.__icon
       +e.__row
-        +b.LABEL.form-field-lbl
+        +b.LABEL.form-field-lbl(data-placeholder='Confirm password')
           +e.INPUT.__input(type='password')
-          +e.__placeholder confirm password
           +icon-svg#safe.__icon
       .row.mt-40.mb-30
         .col-12.mb-10

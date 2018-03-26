@@ -3,6 +3,23 @@
   display: block;
   margin: 0;
   position: relative;
+  &::before {
+    content: attr(data-placeholder);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.25;
+    color: $color-blue;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: text;
+    pointer-events: none;
+    transition: $input-transition-base;
+    position: absolute;
+    top: 20.5px;
+    right: 51px;
+    left: 21px;
+  }
 
   &__input {
     font-weight: 300;
@@ -12,7 +29,7 @@
     text-transform: uppercase;
     display: block;
     width: 100%;
-    padding: 33.5px 20px 7.5px;
+    padding: 34.5px 50px 6.5px 20px;
     border: 1px solid transparent;
     background: rgba(#050B1F, 0.2);
     box-shadow: 0 0 10px rgba($color-blue, 0.2);
@@ -20,21 +37,7 @@
   }
 
   &__placeholder {
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.25;
-    color: $color-blue;
-    text-transform: uppercase;
-    padding: 20.5px 20px;
-    border: 1px solid transparent;
-    cursor: text;
-    pointer-events: none;
-    transition: $input-transition-base;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+
   }
 
   &__icon {
@@ -56,6 +59,10 @@
   }
 
   &--focus, &--has-value {
+    &::before {
+      font-size: 12px;
+      top: 8px;
+    }
     #{$b} {
       &__input {
         color: white;
@@ -63,11 +70,6 @@
         background: rgba(5, 11, 31, 0.6);
         box-shadow: none;
         outline: 0;
-      }
-      &__placeholder {
-        font-size: 12px;
-        padding-top: 8px;
-        padding-bottom: 8px;
       }
       &__icon {
         color: white;

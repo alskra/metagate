@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="page no-js" lang="en">
+<html class="page page--theme-dark no-js" lang="en">
   <head>
-    <title>Register — MetaGate</title>
+    <title>FirstTime — MetaGate</title>
     <!-- Meta-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1280" />
@@ -90,82 +90,55 @@
           </nav>
         </div>
       </header>
-      <div class="page__main d-flex flex-column justify-content-center">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-4 offset-4">
-              <h1 class="title mb-30">
-                <strong>#Meta</strong>Gate</h1>
-              <form class="form-start" action="">
-                <div class="form-start__header row">
-                  <div class="col-6">
-                    <div class="form-start__title">Create Account</div>
-                  </div>
-                  <div class="col-6 text-right">
-                    <a class="form-start__link" href="javascript:">
-                      <svg class="icon-svg-user form-start__link-icon" role="img">
+      <div class="page__main">
+        <section class="section">
+          <header class="section__header">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-10 mt-40 d-flex align-items-start">
+                  <h1 class="title section__title">
+                    <strong>#Meta</strong>Wallet</h1>
+                  <nav class="breadcrumb section__breadcrumb mt-30 ml-50" aria-label="breadcrumb">
+                    <ol class="breadcrumb__inner">
+                      <li class="breadcrumb__item">
+                        <a class="breadcrumb__item-link" href="javascript:">My Wallets</a>
+                      </li>
+                      <li class="breadcrumb__item">
+                        <a class="breadcrumb__item-link" href="javascript:">Transfer</a>
+                      </li>
+                      <li class="breadcrumb__item">
+                        <a class="breadcrumb__item-link" href="javascript:">History</a>
+                      </li>
+                      <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Settings</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div class="col-2 mt-10 d-flex flex-column align-items-end">
+                  <a class="logo section__logo mb-35" href="index.html">
+                    <svg class="icon-svg-logo_mail logo__img" role="img">
+                      <use xlink:href="#icon-svg-logo_mail"></use>
+                    </svg>
+                  </a>
+                  <nav class="section__actions">
+                    <a class="section__actions-item" href="javascript:">
+                      <svg class="icon-svg-user section__actions-icon" role="img">
                         <use xlink:href="#icon-svg-user"></use>
                       </svg>User Login</a>
-                  </div>
+                  </nav>
                 </div>
-                <div class="form-start__row">
-                  <label class="form-field-lbl" data-placeholder="E-mail address">
-                    <input class="form-field-lbl__input" type="email" />
-                    <svg class="icon-svg-envelope form-field-lbl__icon" role="img">
-                      <use xlink:href="#icon-svg-envelope"></use>
-                    </svg>
-                  </label>
-                </div>
-                <div class="form-start__row">
-                  <label class="form-field-lbl" data-placeholder="Password">
-                    <input class="form-field-lbl__input" type="password" />
-                    <svg class="icon-svg-safe form-field-lbl__icon" role="img">
-                      <use xlink:href="#icon-svg-safe"></use>
-                    </svg>
-                  </label>
-                </div>
-                <div class="form-start__row">
-                  <label class="form-field-lbl" data-placeholder="Confirm password">
-                    <input class="form-field-lbl__input" type="password" />
-                    <svg class="icon-svg-safe form-field-lbl__icon" role="img">
-                      <use xlink:href="#icon-svg-safe"></use>
-                    </svg>
-                  </label>
-                </div>
-                <div class="row mt-40 mb-30">
-                  <div class="col-12 mb-10">
-                    <label class="form-checkbox">
-                      <input class="form-checkbox__input" type="checkbox" />
-                      <span class="form-checkbox__fake"></span>
-                      <span class="form-checkbox__lbl">I wagree with
-                        <a href="javascript:" target="_blank">Terms of Use</a>
-                      </span>
-                    </label>
-                  </div>
-                  <div class="col-12">
-                    <label class="form-checkbox">
-                      <input class="form-checkbox__input" type="checkbox" />
-                      <span class="form-checkbox__fake"></span>
-                      <span class="form-checkbox__lbl">I wagree with
-                        <a href="javascript:" target="_blank">Privacy Policy</a>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button class="btn btn--primary w-100">Continue</button>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
-        </div>
+          </header>
+        </section>
       </div>
       <footer class="footer page__footer">
         <div class="footer__inner">
-          <a class="logo footer__logo" href="index.html">
-            <svg class="icon-svg-logo_mail logo__img" role="img">
-              <use xlink:href="#icon-svg-logo_mail"></use>
+          <a class="action-support footer__support" href="javascript:">
+            <svg class="icon-svg-dialog action-support__icon" role="img">
+              <use xlink:href="#icon-svg-dialog"></use>
             </svg>
+            <span class="action-support__text">
+              <small>Have questions?</small>Ask our support</span>
           </a>
         </div>
       </footer>

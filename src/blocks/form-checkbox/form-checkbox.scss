@@ -18,11 +18,12 @@
     padding: 4px;
     border: 1px solid $color-blue;
     cursor: pointer;
+    transition: $input-transition;
     &::before {
       content: '';
       display: block;
       height: 100%;
-      background: $color-blue;
+      background: white;
       transition: $input-transition-base;
       transform: scale(0);
     }
@@ -37,7 +38,7 @@
   }
 
   &__lbl {
-    margin-top: 1px;
+    margin-top: 2px;
     margin-left: 14px;
   }
 }

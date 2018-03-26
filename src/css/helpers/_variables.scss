@@ -30,6 +30,8 @@ $font-size-base: 1rem;
 $font-weight-base: 400;
 $line-height-base: (19/16);
 
+$headings-margin-bottom: 0.5rem;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -55,3 +57,5 @@ $btn-transition: color $btn-transition-base, background-color $btn-transition-ba
 
 $input-transition-base: $btn-transition-base;
 $input-transition: $btn-transition;
+
+$focus-box-shadow: 0 0 0 2px darken($color-blue, 10%);

@@ -1,5 +1,16 @@
-mixin footer
+include ../logo/logo
+
+mixin footer(data)
   +b.FOOTER.footer&attributes(attributes)
-    +e.__inner
-      +e.A.__logo(href='index.html')
-        +icon-svg#logo_mail.__logo-img
+    if data === 'start'
+      +e.__inner
+        +logo.__logo
+    else if data === 'inner'
+      +e.__inner
+        +b.A.action-support(href=js).__support
+          +icon-svg#dialog.__icon
+          +e.__text
+            small Have questions?
+            | Ask our support
+    else
+      block

@@ -1,0 +1,26 @@
+.action-support {
+  font-size: 18px;
+  line-height: (21/18);
+  display: inline-flex;
+  vertical-align: top;
+  align-items: flex-start;
+  @include plain-hover-focus {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__icon {
+    flex: none;
+    font-size: 33px;
+    margin-right: 12px;
+  }
+
+  &__text {
+    small {
+      font-size: 14px;
+      line-height: (16/14);
+      color: $color-blue;
+      display: block;
+    }
+  }
+}

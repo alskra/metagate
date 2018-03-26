@@ -10,6 +10,9 @@
   @include plain-hover-focus {
     text-decoration: none;
   }
+  &:focus {
+    @include focus-default;
+  }
   @include state-disabled {
     cursor: default;
     opacity: .65;

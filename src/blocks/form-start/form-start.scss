@@ -28,10 +28,11 @@
 
     &-icon {
       flex: none;
-      font-size: 16px;
+      height: 16px;
       margin-right: 8px;
+      transform: translateY(-1px);
       &.icon-svg-key {
-        transform: translateY(-1px);
+        font-size: 16px;
       }
       &.icon-svg-user {
         font-size: 15px;
