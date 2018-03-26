@@ -1,0 +1,126 @@
+.nav-meta {
+  $b: &;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -10px -20px;
+  }
+
+  &__item {
+    color: $color-blue;
+    display: flex;
+    height: 60px;
+    margin: 0 10px 20px;
+    transition: color $btn-transition-base;
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+    @include hover {
+      &:not(#{$b}__item--disabled) {
+        color: white;
+      }
+    }
+
+    &-col-1 {
+      flex: none;
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $color-dark-blue;
+    }
+
+    &-icon {
+      &.icon-svg-ethereum {
+        font-size: 37px;
+      }
+      &.icon-svg-metahash {
+        font-size: 26px;
+      }
+      &.icon-svg-bitcoin {
+        font-size: 32px;
+      }
+      &.icon-svg-bitcoin-cash {
+        font-size: 21px;
+      }
+    }
+
+    &-col-2 {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      width: 138px;
+      padding: 5px 12px;
+      background: #0A4982;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: (14/12);
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-num {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: (28/24);
+      margin-top: 1px;
+    }
+
+    &--active {
+      color: white;
+      height: 100px;
+      #{$b} {
+        &__item {
+          &-col-1 {
+            width: 100px;
+            position: relative;
+            &::before {
+              content: '';
+              width: 17.47px;
+              height: 17.47px;
+              background: inherit;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              margin: 0 0 (-17.47px/2) (-17.47px/2);
+              transform: rotate(45deg);
+            }
+          }
+
+          &-icon {
+            transform-origin: 50% 50% 0;
+            transform: scale((40/26));
+          }
+
+          &-col-2 {
+            width: 250px;
+          }
+
+          &-num {
+            font-weight: 400;
+            font-size: 28px;
+            line-height: (33/28);
+            margin-top: 7px;
+          }
+        }
+      }
+    }
+
+    &--disabled {
+      cursor: default;
+      #{$b} {
+        &__item {
+          &-title, &-num {
+            color: rgba(white, 0.3);
+          }
+        }
+      }
+    }
+  }
+}

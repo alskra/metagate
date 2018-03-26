@@ -67,6 +67,14 @@
   width: 0.66631em;
   height: 1em
 }
+.icon-svg-bitcoin-cash {
+  width: 1.57121em;
+  height: 1em
+}
+.icon-svg-bitcoin {
+  width: 0.75em;
+  height: 1em
+}
 .icon-svg-buy-mhc {
   width: 1em;
   height: 1em
@@ -83,6 +91,10 @@
   width: 1.63517em;
   height: 1em
 }
+.icon-svg-ethereum {
+  width: 0.6217em;
+  height: 1em
+}
 .icon-svg-key {
   width: 0.938em;
   height: 1em
@@ -93,6 +105,10 @@
 }
 .icon-svg-metaapps {
   width: 1.35771em;
+  height: 1em
+}
+.icon-svg-metahash {
+  width: 1.3252em;
   height: 1em
 }
 .icon-svg-metawallet {
@@ -573,6 +589,120 @@ fieldset[disabled] .btn {
   text-overflow: ellipsis;
   margin-top: 0.0625rem
 }
+.nav-meta__inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 -0.625rem -1.25rem
+}
+.nav-meta__item {
+  color: #99ceff;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.75rem;
+  margin: 0 0.625rem 1.25rem;
+  transition: color 0.15s ease-in-out
+}
+.nav-meta__item,
+.nav-meta__item:focus,
+.nav-meta__item:hover {
+  text-decoration: none
+}
+.nav-meta__item:hover:not(.nav-meta__item--disabled) {
+  color: #fff
+}
+.nav-meta__item-col-1 {
+  -ms-flex: none;
+  flex: none;
+  width: 3.75rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #2f7bc2
+}
+.nav-meta__item-icon.icon-svg-ethereum {
+  font-size: 2.3125rem
+}
+.nav-meta__item-icon.icon-svg-metahash {
+  font-size: 1.625rem
+}
+.nav-meta__item-icon.icon-svg-bitcoin {
+  font-size: 2rem
+}
+.nav-meta__item-icon.icon-svg-bitcoin-cash {
+  font-size: 1.3125rem
+}
+.nav-meta__item-col-2 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 8.625rem;
+  padding: 0.3125rem 0.75rem;
+  background: #0a4982
+}
+.nav-meta__item-title {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.16667;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.nav-meta__item-num {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.16667;
+  margin-top: 0.0625rem
+}
+.nav-meta__item--active {
+  color: #fff;
+  height: 6.25rem
+}
+.nav-meta__item--active .nav-meta__item-col-1 {
+  width: 6.25rem;
+  position: relative
+}
+.nav-meta__item--active .nav-meta__item-col-1::before {
+  content: '';
+  width: 1.09188rem;
+  height: 1.09188rem;
+  background: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 -0.54594rem -0.54594rem;
+  transform: rotate(45deg)
+}
+.nav-meta__item--active .nav-meta__item-icon {
+  transform-origin: 50% 50% 0;
+  transform: scale(1.53846)
+}
+.nav-meta__item--active .nav-meta__item-col-2 {
+  width: 15.625rem
+}
+.nav-meta__item--active .nav-meta__item-num {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.17857;
+  margin-top: 0.4375rem
+}
+.nav-meta__item--disabled {
+  cursor: default
+}
+.nav-meta__item--disabled .nav-meta__item-num,
+.nav-meta__item--disabled .nav-meta__item-title {
+  color: rgba(255, 255, 255, 0.3)
+}
 .page {
   height: 100%
 }
@@ -611,6 +741,9 @@ fieldset[disabled] .btn {
 }
 .page--theme-dark .page__body-inner {
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/whatis-satelit.png) no-repeat right 11.5625rem top 18.125rem fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c
+}
+.section__header {
+  margin-bottom: 3.125rem
 }
 .section__title {
   overflow: hidden;

@@ -24,5 +24,31 @@ include ../blocks/breadcrumb/breadcrumb
                 +e.A.__actions-item(href=js)
                   +icon-svg#user.__actions-icon
                   | User Login
-
+      .container-fluid
+        +b.NAV.nav-meta.mb-70
+          +e.__inner
+            +e.A.__item(href=js title='Ethereum')
+              +e.DIV.__item-col-1
+                +icon-svg#ethereum.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title Ethereum
+                +e.DIV.__item-num 0.00000
+            +e.A.__item--active(href=js title='#Metahash')
+              +e.DIV.__item-col-1
+                +icon-svg#metahash.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title #Metahash
+                +e.DIV.__item-num 0.00
+            +e.DIV.__item--disabled
+              +e.DIV.__item-col-1
+                +icon-svg#bitcoin.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title Bitcoin
+                +e.DIV.__item-num 0.00000
+            +e.A.__item(href=js title='Bitcoin cash')
+              +e.DIV.__item-col-1
+                +icon-svg#bitcoin-cash.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title Bitcoin cash
+                +e.DIV.__item-num 0.00000
   +footer('inner').__footer
