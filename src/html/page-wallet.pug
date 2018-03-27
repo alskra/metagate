@@ -55,6 +55,28 @@ include ../blocks/line-chart/line-chart
       +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2}).--theme-blue
       +b.SECTION.subsection
         .container-fluid
+          +e.HEADER.__header
+            .row
+              .col-8
+                +e.H2.__title
+                  +e.__title-icon
+                    +icon-svg#wallet
+                  | My Wallets
+              .col-4
+      +b.SECTION.subsection--dark
+        .container-fluid
+          +e.HEADER.__header
+            +e.H2.__title
+              +e.__title-icon
+                +icon-svg#transfer
+              | Transfer
+      +b.SECTION.subsection--transparent
+        .container-fluid
+          +e.HEADER.__header
+            +e.H2.__title
+              +e.__title-icon
+                +icon-svg#history
+              | History
 
 
 

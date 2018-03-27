@@ -95,6 +95,10 @@
   width: 0.6217em;
   height: 1em
 }
+.icon-svg-history {
+  width: 1em;
+  height: 1em
+}
 .icon-svg-key {
   width: 0.938em;
   height: 1em
@@ -127,8 +131,16 @@
   width: 1em;
   height: 1em
 }
+.icon-svg-transfer {
+  width: 1em;
+  height: 1em
+}
 .icon-svg-user {
   width: 1.0661em;
+  height: 1em
+}
+.icon-svg-wallet {
+  width: 1.313em;
   height: 1em
 }
 .action-support {
@@ -541,7 +553,7 @@ fieldset[disabled] .btn {
 }
 .line-chart__inner {
   position: relative;
-  margin-bottom: 2.0625rem
+  margin-bottom: 4.0625rem
 }
 .line-chart__peity {
   display: none
@@ -643,11 +655,11 @@ fieldset[disabled] .btn {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 2.0625rem
+  height: 4.0625rem
 }
 .line-chart__axis-x-point {
   position: absolute;
-  bottom: 0;
+  bottom: 1.875rem;
   transform: translateX(-50%);
   cursor: default
 }
@@ -913,6 +925,32 @@ fieldset[disabled] .btn {
 .subsection {
   padding: 2.1875rem 0;
   background: #003d69
+}
+.subsection__title {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.1875
+}
+.subsection__title-icon {
+  display: inline-block;
+  width: 2.0625rem
+}
+.subsection__title-icon .icon-svg-wallet {
+  font-size: 1rem;
+  vertical-align: 0.125rem
+}
+.subsection__title-icon .icon-svg-transfer {
+  font-size: 1.5rem;
+  vertical-align: -0.125rem
+}
+.subsection__title-icon .icon-svg-history {
+  font-size: 1.0625rem
+}
+.subsection--dark {
+  background: #002c54
+}
+.subsection--transparent {
+  background: transparent
 }
 .title {
   font-weight: 100;

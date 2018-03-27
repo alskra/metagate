@@ -1,4 +1,38 @@
 .subsection {
   padding: 35px 0;
   background: #003D69;
+
+  &__header {
+
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: (38/32);
+
+    &-icon {
+      display: inline-block;
+      width: 33px;
+      .icon-svg-wallet {
+        font-size: 16px;
+        vertical-align: 2px;
+      }
+      .icon-svg-transfer {
+        font-size: 24px;
+        vertical-align: -2px;
+      }
+      .icon-svg-history {
+        font-size: 17px;
+      }
+    }
+  }
+
+  &--dark {
+    background: #002C54;
+  }
+
+  &--transparent {
+    background: transparent;
+  }
 }

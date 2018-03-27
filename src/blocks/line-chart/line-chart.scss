@@ -8,7 +8,7 @@
 
   &__inner {
     position: relative;
-    margin-bottom: 33px;
+    margin-bottom: 65px;
   }
 
   &__peity {
@@ -122,11 +122,11 @@
     right: 0;
     bottom: 0;
     left: 0;
-    height: 33px;
+    height: 65px;
 
     &-point {
       position: absolute;
-      bottom: 0;
+      bottom: 30px;
       transform: translateX(-50%);
       cursor: default;
 
