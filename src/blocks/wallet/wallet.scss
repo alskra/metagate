@@ -1,3 +1,64 @@
 .wallet {
+  background: #012E53;
 
+  &__head {
+    display: flex;
+    height: 60px;
+    padding: 10px;
+    cursor: pointer;
+
+    &-col-1 {
+      flex: none;
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    &-col-2 {
+      overflow: hidden;
+
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-blue;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+  }
+
+  &__sum {
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__currency {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__body {
+    padding: 3px 15px;
+    background: #00294F;
+  }
+
+  &__number {
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-blue;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
