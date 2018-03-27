@@ -1,0 +1,67 @@
+.form-select {
+  vertical-align: top;
+  .form-field {
+    font-size: 20px;
+    text-align: left;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+  }
+  .filter-option {
+    overflow: hidden;
+    flex: 1 1 auto;
+    margin-right: 15px;
+  }
+  .isvg-angle-d {
+    flex: none;
+    font-size: 7px;
+    margin: auto 0;
+  }
+  .dropdown-item {
+    padding: 8px 15px;
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+    @include hover-focus {
+      background: $color-blue;
+    }
+    &.active {
+      background: $color-dark-blue;
+    }
+    .text {
+      display: block !important;
+    }
+  }
+
+  &__menu {
+    border-radius: 0;
+  }
+
+  &__opt {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      flex: none;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    &-txt {
+      flex: 1 1 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &.show {
+    .isvg-angle-d {
+      transform: rotateX(180deg);
+    }
+  }
+}

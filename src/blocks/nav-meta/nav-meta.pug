@@ -1,0 +1,27 @@
+mixin nav-meta(data)
+  +b.NAV.nav-meta&attributes(attributes)
+    +e.__inner
+      +e.A.__item(href=js title='Ethereum')
+        +e.DIV.__item-col-1
+          +isvg#ethereum.__item-icon
+        +e.DIV.__item-col-2
+          +e.DIV.__item-title Ethereum
+          +e.DIV.__item-num 2.03201
+      +e.A.__item--active(href=js title='#Metahash')
+        +e.DIV.__item-col-1
+          +isvg#metahash.__item-icon
+        +e.DIV.__item-col-2
+          +e.DIV.__item-title #Metahash
+          +e.DIV.__item-num 1,780,320.00
+      +e.DIV.__item--disabled(title='Bitcoin')
+        +e.DIV.__item-col-1
+          +isvg#bitcoin.__item-icon
+        +e.DIV.__item-col-2
+          +e.DIV.__item-title Bitcoin
+          +e.DIV.__item-num 0.00000
+      +e.A.__item(href=js title='Bitcoin cash')
+        +e.DIV.__item-col-1
+          +isvg#bitcoin-cash.__item-icon
+        +e.DIV.__item-col-2
+          +e.DIV.__item-title Bitcoin cash
+          +e.DIV.__item-num 0.52047

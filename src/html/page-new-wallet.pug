@@ -5,6 +5,7 @@ include ../blocks/page/page
 include ../blocks/header/header
 include ../blocks/footer/footer
 include ../blocks/breadcrumb/breadcrumb
+include ../blocks/nav-meta/nav-meta
 include ../blocks/line-chart/line-chart
 
 - $.title = `${pageList.newWallet.title} - ${$.package.description}`;
@@ -26,32 +27,7 @@ include ../blocks/line-chart/line-chart
                   +isvg#user.__actions-icon
                   | User Login
       .container-fluid
-        +b.NAV.nav-meta.mb-70
-          +e.__inner
-            +e.A.__item(href=js title='Ethereum')
-              +e.DIV.__item-col-1
-                +isvg#ethereum.__item-icon
-              +e.DIV.__item-col-2
-                +e.DIV.__item-title Ethereum
-                +e.DIV.__item-num 2.03201
-            +e.A.__item--active(href=js title='#Metahash')
-              +e.DIV.__item-col-1
-                +isvg#metahash.__item-icon
-              +e.DIV.__item-col-2
-                +e.DIV.__item-title #Metahash
-                +e.DIV.__item-num 1,780,320.00
-            +e.DIV.__item--disabled(title='Bitcoin')
-              +e.DIV.__item-col-1
-                +isvg#bitcoin.__item-icon
-              +e.DIV.__item-col-2
-                +e.DIV.__item-title Bitcoin
-                +e.DIV.__item-num 0.00000
-            +e.A.__item(href=js title='Bitcoin cash')
-              +e.DIV.__item-col-1
-                +isvg#bitcoin-cash.__item-icon
-              +e.DIV.__item-col-2
-                +e.DIV.__item-title Bitcoin cash
-                +e.DIV.__item-num 0.52047
+        +nav-meta.mb-70
       +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2}).--theme-blue
 
 

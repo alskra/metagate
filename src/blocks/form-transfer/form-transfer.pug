@@ -1,0 +1,20 @@
+mixin form-transfer(data)
+  +b.FORM.form-transfer&attributes(attributes)(action='')
+    .row.flex-nowrap.align-items-end.mb-40
+      .col-6
+        +b.LABEL.form-label.__label(for='from') #[strong From] #MHC address
+        +b.SELECT.form-select.w-100
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-5.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">My wallet #1</span></span>') My wallet #1
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-1.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">Another strange wallet</span></span>') Another strange wallet
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-2.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">My wallet #2</span></span>') My wallet #2
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-3.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">For my bae’s birthday</span></span>') For my bae’s birthday
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-4.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">Default wallet</span></span>') Default wallet
+      +isvg#arr-r.__arrow
+      .col-6
+        +b.LABEL.form-label.__label(for='to') #[strong To] #MHC address
+        +b.SELECT.form-select.w-100
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-6.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</span></span>') 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-1.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">Another strange wallet</span></span>') Another strange wallet
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-2.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">My wallet #2</span></span>') My wallet #2
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-3.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">For my bae’s birthday</span></span>') For my bae’s birthday
+          option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-4.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">Default wallet</span></span>') Default wallet

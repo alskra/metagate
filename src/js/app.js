@@ -5,6 +5,6 @@
 
 $(function () {
   FormFieldLbl.init();
-
   LineChart.init();
+  FormSelect.init();
 });

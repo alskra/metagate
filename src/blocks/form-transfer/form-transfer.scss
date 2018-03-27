@@ -1,0 +1,12 @@
+.form-transfer {
+  &__label {
+    margin-bottom: 7px;
+  }
+
+  &__arrow {
+    flex: none;
+    font-size: 20px;
+    color: $color-blue;
+    margin: 0 4px 17.5px;
+  }
+}
