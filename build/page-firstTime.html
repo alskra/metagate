@@ -154,7 +154,7 @@
                     <div class="nav-meta__item-num">0.00</div>
                   </div>
                 </a>
-                <div class="nav-meta__item nav-meta__item--disabled">
+                <div class="nav-meta__item nav-meta__item--disabled" title="Bitcoin">
                   <div class="nav-meta__item-col-1">
                     <svg class="icon-svg-bitcoin nav-meta__item-icon" role="img">
                       <use xlink:href="#icon-svg-bitcoin"></use>
@@ -178,6 +178,23 @@
                 </a>
               </div>
             </nav>
+          </div>
+          <div class="line-chart">
+            <div class="line-chart__inner">
+              <svg style="position: absolute; width: 0; height: 0;">
+                <defs>
+                  <linearGradient id="line-chart" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#FF4FF8" />
+                    <stop offset="100%" stop-color="#00F0FF" /> </linearGradient>
+                </defs>
+              </svg>
+              <div class="line-chart__peity" data-peity='{"width":"100%","height":262.5,"fill":"none","stroke":"url(#line-chart)","strokeWidth":2}'></div>
+              <div class="line-chart__ruler line-chart__ruler--min" data-ruler="$1.0"></div>
+              <div class="line-chart__ruler line-chart__ruler--mid"></div>
+              <div class="line-chart__ruler line-chart__ruler--max" data-ruler="$5.0"></div>
+              <div class="line-chart__label"></div>
+            </div>
+            <div class="line-chart__axis-x"></div>
           </div>
         </section>
       </div>

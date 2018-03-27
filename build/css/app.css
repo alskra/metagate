@@ -532,6 +532,78 @@ fieldset[disabled] .btn {
   margin-left: auto;
   margin-right: 1.25rem
 }
+.line-chart {
+  overflow: hidden;
+  position: relative
+}
+.line-chart .peity {
+  display: block;
+  position: relative;
+  z-index: 1
+}
+.line-chart__inner {
+  position: relative;
+  margin-bottom: 2.0625rem
+}
+.line-chart__peity {
+  display: none
+}
+.line-chart__ruler {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 0.0625rem;
+  background: linear-gradient(to right, #99ceff 0.125rem, transparent 0.1875rem) repeat-x 0 0/0.375rem 100%
+}
+.line-chart__ruler[data-ruler]::before {
+  content: attr(data-currency) attr(data-ruler);
+  font-weight: 100;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #fff;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1.5625rem;
+  z-index: 2;
+  cursor: default
+}
+.line-chart__ruler--min {
+  bottom: 0
+}
+.line-chart__ruler--mid {
+  bottom: 50%
+}
+.line-chart__ruler--max {
+  top: 0
+}
+.line-chart__ruler--max::before {
+  top: 0.5rem;
+  bottom: auto
+}
+.line-chart__label {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0.0625rem;
+  height: 100%;
+  background: linear-gradient(to bottom, #99ceff, rgba(153, 206, 255, 0.25))
+}
+.line-chart__axis-x {
+  font-weight: 100;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0
+}
+.line-chart__axis-x-point {
+  position: absolute;
+  bottom: 100%;
+  transform: translateX(-50%);
+  cursor: default
+}
 .logo,
 .logo:focus,
 .logo:hover {

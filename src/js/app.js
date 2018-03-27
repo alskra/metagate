@@ -5,4 +5,6 @@
 
 $(function () {
   FormFieldLbl.init();
+
+  LineChart.init();
 });

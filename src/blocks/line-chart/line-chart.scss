@@ -1,0 +1,83 @@
+.line-chart {
+  $b: &;
+  overflow: hidden;
+  position: relative;
+  .peity {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__inner {
+    position: relative;
+    margin-bottom: 33px;
+  }
+
+  &__peity {
+    display: none;
+  }
+
+  &__ruler {
+    $e: &;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: linear-gradient(to right, $color-blue 2px, transparent 3px) repeat-x 0 0/6px 100%;
+    &[data-ruler]::before {
+      content: attr(data-currency) attr(data-ruler);
+      font-weight: 100;
+      font-size: 14px;
+      line-height: (16/14);
+      color: white;
+      position: absolute;
+      bottom: 8px;
+      left: 25px;
+      z-index: 2;
+      cursor: default;
+    }
+
+    &--min {
+      bottom: 0;
+    }
+
+    &--mid {
+      bottom: 50%;
+    }
+
+    &--max {
+      top: 0;
+      &::before {
+        top: 8px;
+        bottom: auto;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, #99CEFF, rgba(153, 206, 255, 0.25));
+  }
+
+  &__axis-x {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: (16/14);
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &-point {
+      position: absolute;
+      bottom: 100%;
+      transform: translateX(-50%);
+      cursor: default;
+    }
+  }
+}

@@ -5,6 +5,7 @@ include ../blocks/page/page
 include ../blocks/header/header
 include ../blocks/footer/footer
 include ../blocks/breadcrumb/breadcrumb
+include ../blocks/line-chart/line-chart
 
 - $.title = `${pageList.firstTime.title} - ${$.package.description}`;
 
@@ -39,7 +40,7 @@ include ../blocks/breadcrumb/breadcrumb
               +e.DIV.__item-col-2
                 +e.DIV.__item-title #Metahash
                 +e.DIV.__item-num 0.00
-            +e.DIV.__item--disabled
+            +e.DIV.__item--disabled(title='Bitcoin')
               +e.DIV.__item-col-1
                 +icon-svg#bitcoin.__item-icon
               +e.DIV.__item-col-2
@@ -51,4 +52,7 @@ include ../blocks/breadcrumb/breadcrumb
               +e.DIV.__item-col-2
                 +e.DIV.__item-title Bitcoin cash
                 +e.DIV.__item-num 0.00000
+      +line-chart({"width": "100%", "height": 262.5, "fill": "none", "stroke": "url(#line-chart)", "strokeWidth": 2})
+
+
   +footer('inner').__footer

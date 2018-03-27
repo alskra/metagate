@@ -1,0 +1,17 @@
+mixin line-chart(data)
+  +b.line-chart&attributes(attributes)
+    +e.__inner
+      <svg style="position: absolute; width: 0; height: 0;">
+        <defs>
+          <linearGradient id="line-chart" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#FF4FF8"/>
+            <stop offset="100%" stop-color="#00F0FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      +e.__peity(data-peity=data)
+      +e.__ruler--min(data-ruler='$1.0')
+      +e.__ruler--mid
+      +e.__ruler--max(data-ruler='$5.0')
+      +e.__label
+    +e.__axis-x
