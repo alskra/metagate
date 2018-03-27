@@ -4,8 +4,6 @@
   position: relative;
   .peity {
     display: block;
-    position: relative;
-    z-index: 1;
   }
 
   &__inner {
@@ -33,7 +31,6 @@
       position: absolute;
       bottom: 8px;
       left: 25px;
-      z-index: 2;
       cursor: default;
     }
 
@@ -61,9 +58,9 @@
     left: 50%;
     width: 1px;
     height: 100%;
-    z-index: 1;
     background: linear-gradient(to bottom, #99CEFF, rgba(153, 206, 255, 0.25));
     display: none;
+    cursor: default;
     &::before {
       content: '';
       width: 9px;
@@ -125,15 +122,29 @@
     right: 0;
     bottom: 0;
     left: 0;
+    height: 33px;
 
     &-point {
       position: absolute;
-      bottom: 100%;
+      bottom: 0;
       transform: translateX(-50%);
       cursor: default;
 
       &--current {
         font-weight: 500;
+      }
+    }
+  }
+
+  &--theme-blue {
+    #{$b} {
+      &__ruler {
+        &--min {
+          background: linear-gradient(to right, $color-blue 2px, #003D69 3px) repeat-x 0 0/6px 100%;
+        }
+      }
+      &__axis-x {
+        background: #003D69;
       }
     }
   }
