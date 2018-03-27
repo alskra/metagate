@@ -1,8 +1,10 @@
 const LineChart = function () {
+  const b = 'line-chart';
   let s;
   return {
     settings: {
-      b: 'line-chart',
+      $b: $(bemS(b)),
+      $eLabel: $(bemS(b, 'label')),
       // Пример установки значений
       yMin: 1,
       yMax: 5,
@@ -33,15 +35,15 @@ const LineChart = function () {
         let date = new Date(s.xMin + i*60000), time;
         if (date.getMinutes() === 0) {
           time = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':00';
-          $(bemS(s.b, 'axis-x')).append($('<div class=' + bemC(s.b, 'axis-x-point') + '></div>').text(time).css('left', i/(s.values.length - 1)*100 + '%'));
+          $(bemS(b, 'axis-x')).append($('<div class=' + bemC(b, 'axis-x-point') + '></div>').text(time).css('left', i/(s.values.length - 1)*100 + '%'));
           s.pointsX.push({position: i/(s.values.length - 1), value: item, time: time});
         }
       });
       //console.log(s.pointsX);
 
-      s.peity = $(bemS(s.b, 'peity')).text(s.values.join(',')).peity('line', {min: s.yMin, max: s.yMax});
-      $(bemS(s.b, 'ruler', 'min')).attr('data-ruler', s.currency + s.yMin);
-      $(bemS(s.b, 'ruler', 'max')).attr('data-ruler', s.currency + s.yMax);
+      s.peity = $(bemS(b, 'peity')).text(s.values.join(',')).peity('line', {min: s.yMin, max: s.yMax});
+      $(bemS(b, 'ruler', 'min')).attr('data-ruler', s.currency + s.yMin);
+      $(bemS(b, 'ruler', 'max')).attr('data-ruler', s.currency + s.yMax);
 
       this.bindUIActions();
     },
@@ -52,7 +54,14 @@ const LineChart = function () {
       });
 
       // Label on pointsX
-      $(bemS(s.b, 'inner')).on('mousemove', function (e) {
+      $(bemS(b, 'inner'))
+        .on('mouseenter', function () {
+          s.$eLabel.addClass(bemC(b, 'label', 'visible'));
+        })
+        .on('mouseleave', function () {
+          s.$eLabel.removeClass(bemC(b, 'label', 'visible'));
+        })
+        .on('mousemove', function (e) {
         let width = $(this).width(),
           height = $(this).height(),
           pointIndex = 0,
@@ -63,9 +72,10 @@ const LineChart = function () {
             minDelta = Math.abs(e.clientX - item.position*width);
           }
         });
-        $(bemS(s.b, 'label')).text(s.pointsX[pointIndex].value)
-          .css({left: s.pointsX[pointIndex].position*width, height: (s.pointsX[pointIndex].value - s.yMin)/(s.yMax - s.yMin)*height});
-        console.log('Current point: ' + s.pointsX[pointIndex].time + ' - ' + s.pointsX[pointIndex].value);
+        s.$eLabel.css({left: s.pointsX[pointIndex].position*width, height: (s.pointsX[pointIndex].value - s.yMin)/(s.yMax - s.yMin)*height});
+        $(bemS(b, 'label-num')).text(s.pointsX[pointIndex].value);
+
+        //console.log('Current point: ' + s.pointsX[pointIndex].time + ' - ' + s.pointsX[pointIndex].value);
       });
     }
   }

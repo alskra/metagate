@@ -587,7 +587,55 @@ fieldset[disabled] .btn {
   width: 0.0625rem;
   height: 100%;
   z-index: 1;
-  background: linear-gradient(to bottom, #99ceff, rgba(153, 206, 255, 0.25))
+  background: linear-gradient(to bottom, #99ceff, rgba(153, 206, 255, 0.25));
+  display: none
+}
+.line-chart__label::before {
+  content: '';
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 50%;
+  background: #99ceff;
+  border: 0.0625rem solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%)
+}
+.line-chart__label-num {
+  font-weight: 100;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #fff;
+  padding: 0.4375rem 0.625rem;
+  background: #2f7bc2;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.line-chart__label-num::before {
+  content: '';
+  border-bottom: 0.375rem solid #2f7bc2;
+  border-left: 0.375rem solid transparent;
+  border-right: 0.375rem solid transparent;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.line-chart__label-num::after {
+  content: '';
+  border-top: 0.375rem solid #2f7bc2;
+  border-left: 0.375rem solid transparent;
+  border-right: 0.375rem solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.line-chart__label--visible {
+  display: block
 }
 .line-chart__axis-x {
   font-weight: 100;
