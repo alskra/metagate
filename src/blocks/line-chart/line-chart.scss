@@ -55,6 +55,7 @@
   }
 
   &__label {
+    $e: &;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -72,7 +73,7 @@
       border: 1px solid white;
       position: absolute;
       top: 0;
-      left: 0;
+      left: 50%;
       transform: translate(-50%, -50%);
     }
 
@@ -115,6 +116,7 @@
   }
 
   &__axis-x {
+    $e: &;
     font-weight: 100;
     font-size: 14px;
     line-height: (16/14);
@@ -129,6 +131,10 @@
       bottom: 100%;
       transform: translateX(-50%);
       cursor: default;
+
+      &--current {
+        font-weight: 500;
+      }
     }
   }
 }

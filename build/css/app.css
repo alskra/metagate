@@ -599,7 +599,7 @@ fieldset[disabled] .btn {
   border: 0.0625rem solid #fff;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   transform: translate(-50%, -50%)
 }
 .line-chart__label-num {
@@ -652,6 +652,9 @@ fieldset[disabled] .btn {
   bottom: 100%;
   transform: translateX(-50%);
   cursor: default
+}
+.line-chart__axis-x-point--current {
+  font-weight: 500
 }
 .logo,
 .logo:focus,

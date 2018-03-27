@@ -104,6 +104,7 @@ var LineChart = function() {
         s.$eLabel.addClass(bemC(b, 'label', 'visible'));
       }).on('mouseleave', function() {
         s.$eLabel.removeClass(bemC(b, 'label', 'visible'));
+        $(bemS(b, 'axis-x-point')).removeClass(bemC(b, 'axis-x-point', 'current'));
       }).on('mousemove', function(e) {
         var width = $(this).width(),
           height = $(this).height(),
@@ -119,7 +120,8 @@ var LineChart = function() {
           left: s.pointsX[pointIndex].position * width,
           height: (s.pointsX[pointIndex].value - s.yMin) / (s.yMax - s.yMin) * height
         });
-        $(bemS(b, 'label-num')).text(s.pointsX[pointIndex].value); //console.log('Current point: ' + s.pointsX[pointIndex].time + ' - ' + s.pointsX[pointIndex].value);
+        $(bemS(b, 'label-num')).text(s.pointsX[pointIndex].value);
+        $(bemS(b, 'axis-x-point')).removeClass(bemC(b, 'axis-x-point', 'current')).eq(pointIndex).addClass(bemC(b, 'axis-x-point', 'current')); //console.log('Current point: ' + s.pointsX[pointIndex].time + ' - ' + s.pointsX[pointIndex].value);
       });
     }
   };

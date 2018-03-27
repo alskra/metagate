@@ -1,0 +1,58 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/line-chart/line-chart
+
+- $.title = `${pageList.newWallet.title} - ${$.package.description}`;
+
++page.--theme-dark
+  +header.__header
+  +e.__main
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid
+          .row
+            .col-10.mt-40.d-flex.align-items-start
+              +b.H1.title.__title #[strong #Meta]Wallet
+              +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
+            .col-2.mt-10.d-flex.flex-column.align-items-end
+              +logo.__logo.mb-35
+              +e.NAV.__actions
+                +e.A.__actions-item(href=js)
+                  +icon-svg#user.__actions-icon
+                  | User Login
+      .container-fluid
+        +b.NAV.nav-meta.mb-70
+          +e.__inner
+            +e.A.__item(href=js title='Ethereum')
+              +e.DIV.__item-col-1
+                +icon-svg#ethereum.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title Ethereum
+                +e.DIV.__item-num 2.03201
+            +e.A.__item--active(href=js title='#Metahash')
+              +e.DIV.__item-col-1
+                +icon-svg#metahash.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title #Metahash
+                +e.DIV.__item-num 1,780,320.00
+            +e.DIV.__item--disabled(title='Bitcoin')
+              +e.DIV.__item-col-1
+                +icon-svg#bitcoin.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title Bitcoin
+                +e.DIV.__item-num 0.00000
+            +e.A.__item(href=js title='Bitcoin cash')
+              +e.DIV.__item-col-1
+                +icon-svg#bitcoin-cash.__item-icon
+              +e.DIV.__item-col-2
+                +e.DIV.__item-title Bitcoin cash
+                +e.DIV.__item-num 0.52047
+      +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2})
+
+
+  +footer('inner').__footer

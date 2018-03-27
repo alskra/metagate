@@ -60,23 +60,28 @@ const LineChart = function () {
         })
         .on('mouseleave', function () {
           s.$eLabel.removeClass(bemC(b, 'label', 'visible'));
+          $(bemS(b, 'axis-x-point')).removeClass(bemC(b, 'axis-x-point', 'current'));
         })
         .on('mousemove', function (e) {
-        let width = $(this).width(),
-          height = $(this).height(),
-          pointIndex = 0,
-          minDelta = Math.abs(e.clientX - s.pointsX[0].position*width);
-        s.pointsX.forEach(function (item, i, arr) {
-          if (i > 0 && Math.abs(e.clientX - item.position*width) < minDelta) {
-            pointIndex = i;
-            minDelta = Math.abs(e.clientX - item.position*width);
-          }
-        });
-        s.$eLabel.css({left: s.pointsX[pointIndex].position*width, height: (s.pointsX[pointIndex].value - s.yMin)/(s.yMax - s.yMin)*height});
-        $(bemS(b, 'label-num')).text(s.pointsX[pointIndex].value);
+          let width = $(this).width(),
+            height = $(this).height(),
+            pointIndex = 0,
+            minDelta = Math.abs(e.clientX - s.pointsX[0].position * width);
+          s.pointsX.forEach(function (item, i, arr) {
+            if (i > 0 && Math.abs(e.clientX - item.position * width) < minDelta) {
+              pointIndex = i;
+              minDelta = Math.abs(e.clientX - item.position * width);
+            }
+          });
+          s.$eLabel.css({
+            left: s.pointsX[pointIndex].position * width,
+            height: (s.pointsX[pointIndex].value - s.yMin) / (s.yMax - s.yMin) * height
+          });
+          $(bemS(b, 'label-num')).text(s.pointsX[pointIndex].value);
+          $(bemS(b, 'axis-x-point')).removeClass(bemC(b, 'axis-x-point', 'current')).eq(pointIndex).addClass(bemC(b, 'axis-x-point', 'current'));
 
-        //console.log('Current point: ' + s.pointsX[pointIndex].time + ' - ' + s.pointsX[pointIndex].value);
-      });
+          //console.log('Current point: ' + s.pointsX[pointIndex].time + ' - ' + s.pointsX[pointIndex].value);
+        });
     }
   }
 }();

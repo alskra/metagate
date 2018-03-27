@@ -7,7 +7,7 @@ include ../blocks/footer/footer
 include ../blocks/breadcrumb/breadcrumb
 include ../blocks/line-chart/line-chart
 
-- $.title = `${pageList.firstTime.title} - ${$.package.description}`;
+- $.title = `${pageList.wallet.title} - ${$.package.description}`;
 
 +page.--theme-dark
   +header.__header
@@ -52,7 +52,7 @@ include ../blocks/line-chart/line-chart
               +e.DIV.__item-col-2
                 +e.DIV.__item-title Bitcoin cash
                 +e.DIV.__item-num 0.52047
-      +line-chart({"width": "100%", "height": 262.5, "fill": "none", "stroke": "url(#line-chart)", "strokeWidth": 2})
+      +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2})
 
 
   +footer('inner').__footer
