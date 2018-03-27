@@ -1,4 +1,5 @@
 .btn {
+  $b: &;
   display: inline-block;
   vertical-align: top;
   text-align: center;
@@ -21,7 +22,7 @@
   &--primary {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.25;
+    line-height: 20px;
     color: white;
     text-transform: uppercase;
     padding: 17.5px 20px;
@@ -32,6 +33,35 @@
     @include hover {
       &:not(:disabled) {
         background: darken($color-dark-blue, 5%);
+      }
+    }
+  }
+
+  &--light {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-blue;
+    padding: 0;
+    border: 0;
+    background: none;
+    transition: $btn-transition;
+    @include hover {
+      &:not(:disabled) {
+        color: white;
+      }
+    }
+
+    #{$b}__icon {
+      vertical-align: top;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      &.isvg-plus {
+        transform: scale((12/20));
+      }
+      &.isvg-import {
+        transform: scale((14/20));
       }
     }
   }

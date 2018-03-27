@@ -13,6 +13,7 @@
     height: 60px;
     margin: 0 10px 20px;
     transition: color $btn-transition-base;
+    max-width: calc(100% - 20px);
     @include plain-hover-focus {
       text-decoration: none;
     }
@@ -32,16 +33,16 @@
     }
 
     &-icon {
-      &.icon-svg-ethereum {
+      &.isvg-ethereum {
         font-size: 37px;
       }
-      &.icon-svg-metahash {
+      &.isvg-metahash {
         font-size: 26px;
       }
-      &.icon-svg-bitcoin {
+      &.isvg-bitcoin {
         font-size: 32px;
       }
-      &.icon-svg-bitcoin-cash {
+      &.isvg-bitcoin-cash {
         font-size: 21px;
       }
     }
@@ -50,7 +51,7 @@
       display: flex;
       flex-flow: column;
       justify-content: center;
-      width: 138px;
+      min-width: 138px;
       padding: 5px 12px;
       background: #0A4982;
     }
@@ -70,6 +71,9 @@
       font-size: 24px;
       line-height: (28/24);
       margin-top: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &--active {
@@ -84,7 +88,7 @@
               content: '';
               width: 17.47px;
               height: 17.47px;
-              background: inherit;
+              background: $color-dark-blue;
               position: absolute;
               bottom: 0;
               left: 50%;
@@ -99,7 +103,7 @@
           }
 
           &-col-2 {
-            width: 250px;
+            min-width: 250px;
           }
 
           &-num {

@@ -6,7 +6,7 @@ include ../../../node_modules/bemto.pug/bemto.pug
     modifier: '--'
   })
 
-mixin icon-svg(id)
+mixin isvg(id)
   - attributes.id ? id = attributes.id : null; attributes.id = undefined;
-  +b.SVG(class=`icon-svg-${id}` role="img")&attributes(attributes)
-    use(xlink:href=`#icon-svg-${id}`)
+  +b.SVG(class=`isvg-${id}` role="img")&attributes(attributes)
+    use(xlink:href=`#isvg-${id}`)

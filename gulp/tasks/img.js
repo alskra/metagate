@@ -50,8 +50,8 @@ module.exports = function () {
         }),
         $.gp.svgSymbols(
           {
-            id: 'icon-svg-%f',
-            class: '.icon-svg-%f',
+            id: 'isvg-%f',
+            class: '.isvg-%f',
             fontSize: 16,
             svgAttrs: {
               class: 'svg-symbols'

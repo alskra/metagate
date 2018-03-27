@@ -50,96 +50,104 @@
   position: absolute!important;
   width: 0.0625rem!important
 }
-[class*=' icon-svg-'],
-[class^='icon-svg-'] {
+[class*=' isvg-'],
+[class^='isvg-'] {
   fill: currentColor;
   stroke: inherit
 }
-[class*=' icon-svg-'] use,
-[class^='icon-svg-'] use {
+[class*=' isvg-'] use,
+[class^='isvg-'] use {
   pointer-events: none
 }
-.icon-svg-angle-1-down {
+.isvg-angle-1-down {
   width: 1.66667em;
   height: 1em
 }
-.icon-svg-angle-left {
+.isvg-angle-left {
   width: 0.66631em;
   height: 1em
 }
-.icon-svg-bitcoin-cash {
+.isvg-bitcoin-cash {
   width: 1.57121em;
   height: 1em
 }
-.icon-svg-bitcoin {
+.isvg-bitcoin {
   width: 0.75em;
   height: 1em
 }
-.icon-svg-buy-mhc {
+.isvg-buy-mhc {
   width: 1em;
   height: 1em
 }
-.icon-svg-buy {
+.isvg-buy {
   width: 1em;
   height: 1em
 }
-.icon-svg-dialog {
+.isvg-dialog {
   width: 1.03005em;
   height: 1em
 }
-.icon-svg-envelope {
+.isvg-envelope {
   width: 1.63517em;
   height: 1em
 }
-.icon-svg-ethereum {
+.isvg-ethereum {
   width: 0.6217em;
   height: 1em
 }
-.icon-svg-history {
+.isvg-history {
   width: 1em;
   height: 1em
 }
-.icon-svg-key {
+.isvg-import {
+  width: 1em;
+  height: 1em
+}
+.isvg-key {
   width: 0.938em;
   height: 1em
 }
-.icon-svg-logo_mail {
+.isvg-logo_mail {
   width: 4.80769em;
   height: 1em
 }
-.icon-svg-metaapps {
+.isvg-metaapps {
   width: 1.35771em;
   height: 1em
 }
-.icon-svg-metahash {
+.isvg-metahash {
   width: 1.3252em;
   height: 1em
 }
-.icon-svg-metawallet {
+.isvg-metawallet {
   width: 1.17592em;
   height: 1em
 }
-.icon-svg-refresh {
+.isvg-plus {
+  width: 1em;
+  height: 1em
+}
+.isvg-refresh {
   width: 1.29351em;
   height: 1em
 }
-.icon-svg-safe {
+.isvg-safe {
   width: 0.83378em;
   height: 1em
 }
-.icon-svg-settings {
+.isvg-settings {
   width: 1em;
   height: 1em
 }
-.icon-svg-transfer {
+.isvg-transfer {
   width: 1em;
   height: 1em
 }
-.icon-svg-user {
+.isvg-user {
   width: 1.0661em;
   height: 1em
 }
-.icon-svg-wallet {
+.isvg-wallet {
   width: 1.313em;
   height: 1em
 }
@@ -236,7 +244,7 @@ fieldset[disabled] .btn {
 .btn--primary {
   font-weight: 500;
   font-size: 1rem;
-  line-height: 1.25;
+  line-height: 1.25rem;
   color: #fff;
   text-transform: uppercase;
   padding: 1.09375rem 1.25rem;
@@ -247,6 +255,31 @@ fieldset[disabled] .btn {
 }
 .btn--primary:hover:not(:disabled) {
   background: #2a6ead
+}
+.btn--light {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #99ceff;
+  padding: 0;
+  border: 0;
+  background: none;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+}
+.btn--light:hover:not(:disabled) {
+  color: #fff
+}
+.btn--light .btn__icon {
+  vertical-align: top;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem
+}
+.btn--light .btn__icon.isvg-plus {
+  transform: scale(0.6)
+}
+.btn--light .btn__icon.isvg-import {
+  transform: scale(0.7)
 }
 .container-fluid {
   max-width: 80rem
@@ -395,10 +428,10 @@ fieldset[disabled] .btn {
   pointer-events: none;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
 }
-.form-field-lbl__icon.icon-svg-envelope {
+.form-field-lbl__icon.isvg-envelope {
   font-size: 0.6875rem
 }
-.form-field-lbl__icon.icon-svg-safe {
+.form-field-lbl__icon.isvg-safe {
   font-size: 1.125rem
 }
 .form-field-lbl--focus::before,
@@ -455,10 +488,10 @@ fieldset[disabled] .btn {
   margin-right: 0.5rem;
   transform: translateY(-0.0625rem)
 }
-.form-start__link-icon.icon-svg-key {
+.form-start__link-icon.isvg-key {
   font-size: 1rem
 }
-.form-start__link-icon.icon-svg-user {
+.form-start__link-icon.isvg-user {
   font-size: 0.9375rem
 }
 .form-start__row {
@@ -711,13 +744,13 @@ fieldset[disabled] .btn {
   flex: none;
   margin-right: 0.3125rem
 }
-.menu__item-icon.icon-svg-buy {
+.menu__item-icon.isvg-buy {
   font-size: 1.0625rem
 }
-.menu__item-icon.icon-svg-metaapps {
+.menu__item-icon.isvg-metaapps {
   font-size: 0.875rem
 }
-.menu__item-icon.icon-svg-metawallet {
+.menu__item-icon.isvg-metawallet {
   font-size: 1.0625rem
 }
 .menu__item-icon.settings {
@@ -744,7 +777,8 @@ fieldset[disabled] .btn {
   display: flex;
   height: 3.75rem;
   margin: 0 0.625rem 1.25rem;
-  transition: color 0.15s ease-in-out
+  transition: color 0.15s ease-in-out;
+  max-width: calc(100% - 1.25rem)
 }
 .nav-meta__item,
 .nav-meta__item:focus,
@@ -766,16 +800,16 @@ fieldset[disabled] .btn {
   align-items: center;
   background: #2f7bc2
 }
-.nav-meta__item-icon.icon-svg-ethereum {
+.nav-meta__item-icon.isvg-ethereum {
   font-size: 2.3125rem
 }
-.nav-meta__item-icon.icon-svg-metahash {
+.nav-meta__item-icon.isvg-metahash {
   font-size: 1.625rem
 }
-.nav-meta__item-icon.icon-svg-bitcoin {
+.nav-meta__item-icon.isvg-bitcoin {
   font-size: 2rem
 }
-.nav-meta__item-icon.icon-svg-bitcoin-cash {
+.nav-meta__item-icon.isvg-bitcoin-cash {
   font-size: 1.3125rem
 }
 .nav-meta__item-col-2 {
@@ -785,7 +819,7 @@ fieldset[disabled] .btn {
   flex-flow: column;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 8.625rem;
+  min-width: 8.625rem;
   padding: 0.3125rem 0.75rem;
   background: #0a4982
 }
@@ -802,7 +836,10 @@ fieldset[disabled] .btn {
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.16667;
-  margin-top: 0.0625rem
+  margin-top: 0.0625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
 }
 .nav-meta__item--active {
   color: #fff;
@@ -816,7 +853,7 @@ fieldset[disabled] .btn {
   content: '';
   width: 1.09188rem;
   height: 1.09188rem;
-  background: inherit;
+  background: #2f7bc2;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -828,7 +865,7 @@ fieldset[disabled] .btn {
   transform: scale(1.53846)
 }
 .nav-meta__item--active .nav-meta__item-col-2 {
-  width: 15.625rem
+  min-width: 15.625rem
 }
 .nav-meta__item--active .nav-meta__item-num {
   font-weight: 400;
@@ -890,6 +927,7 @@ fieldset[disabled] .btn {
   word-wrap: break-word
 }
 .section__logo {
+  display: block;
   font-size: 2.125rem
 }
 .section__actions {
@@ -919,7 +957,7 @@ fieldset[disabled] .btn {
   margin-right: 0.5rem;
   transform: translateY(-0.0625rem)
 }
-.section__actions-icon.icon-svg-user {
+.section__actions-icon.isvg-user {
   font-size: 0.9375rem
 }
 .subsection {
@@ -929,22 +967,26 @@ fieldset[disabled] .btn {
 .subsection__title {
   font-weight: 300;
   font-size: 2rem;
-  line-height: 1.1875
+  line-height: 2.375rem;
+  margin: 0
 }
 .subsection__title-icon {
-  display: inline-block;
-  width: 2.0625rem
+  vertical-align: top;
+  width: 2.375rem;
+  height: 2.375rem;
+  margin-right: -0.375rem;
+  transform-origin: 0 50% 0;
+  position: relative;
+  top: 0.0625rem
 }
-.subsection__title-icon .icon-svg-wallet {
-  font-size: 1rem;
-  vertical-align: 0.125rem
+.subsection__title-icon.isvg-wallet {
+  transform: scale(0.52632)
 }
-.subsection__title-icon .icon-svg-transfer {
-  font-size: 1.5rem;
-  vertical-align: -0.125rem
+.subsection__title-icon.isvg-transfer {
+  transform: scale(0.63158)
 }
-.subsection__title-icon .icon-svg-history {
-  font-size: 1.0625rem
+.subsection__title-icon.isvg-history {
+  transform: scale(0.44737)
 }
 .subsection--dark {
   background: #002c54

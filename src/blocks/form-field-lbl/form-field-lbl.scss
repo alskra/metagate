@@ -50,10 +50,10 @@
     cursor: text;
     pointer-events: none;
     transition: $input-transition;
-    &.icon-svg-envelope {
+    &.isvg-envelope {
       font-size: 11px;
     }
-    &.icon-svg-safe {
+    &.isvg-safe {
       font-size: 18px;
     }
   }

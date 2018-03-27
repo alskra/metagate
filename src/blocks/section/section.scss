@@ -9,6 +9,7 @@
   }
 
   &__logo {
+    display: block;
     font-size: 34px;
   }
 
@@ -34,7 +35,7 @@
       height: 16px;
       margin-right: 8px;
       transform: translateY(-1px);
-      &.icon-svg-user {
+      &.isvg-user {
         font-size: 15px;
       }
     }

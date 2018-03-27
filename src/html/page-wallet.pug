@@ -23,32 +23,32 @@ include ../blocks/line-chart/line-chart
               +logo.__logo.mb-35
               +e.NAV.__actions
                 +e.A.__actions-item(href=js)
-                  +icon-svg#user.__actions-icon
+                  +isvg#user.__actions-icon
                   | User Login
       .container-fluid
         +b.NAV.nav-meta.mb-70
           +e.__inner
             +e.A.__item(href=js title='Ethereum')
               +e.DIV.__item-col-1
-                +icon-svg#ethereum.__item-icon
+                +isvg#ethereum.__item-icon
               +e.DIV.__item-col-2
                 +e.DIV.__item-title Ethereum
                 +e.DIV.__item-num 2.03201
             +e.A.__item--active(href=js title='#Metahash')
               +e.DIV.__item-col-1
-                +icon-svg#metahash.__item-icon
+                +isvg#metahash.__item-icon
               +e.DIV.__item-col-2
                 +e.DIV.__item-title #Metahash
                 +e.DIV.__item-num 1,780,320.00
             +e.DIV.__item--disabled(title='Bitcoin')
               +e.DIV.__item-col-1
-                +icon-svg#bitcoin.__item-icon
+                +isvg#bitcoin.__item-icon
               +e.DIV.__item-col-2
                 +e.DIV.__item-title Bitcoin
                 +e.DIV.__item-num 0.00000
             +e.A.__item(href=js title='Bitcoin cash')
               +e.DIV.__item-col-1
-                +icon-svg#bitcoin-cash.__item-icon
+                +isvg#bitcoin-cash.__item-icon
               +e.DIV.__item-col-2
                 +e.DIV.__item-title Bitcoin cash
                 +e.DIV.__item-num 0.52047
@@ -56,26 +56,34 @@ include ../blocks/line-chart/line-chart
       +b.SECTION.subsection
         .container-fluid
           +e.HEADER.__header
-            .row
-              .col-8
+            .row.align-items-center
+              .col-auto
                 +e.H2.__title
-                  +e.__title-icon
-                    +icon-svg#wallet
+                  +isvg#wallet.__title-icon
                   | My Wallets
-              .col-4
+              .col
+                +b.A.btn--light(href=js)
+                  +isvg#plus.__icon
+                  | Add wallet
+              .col-auto
+                +b.A.btn--light(href=js)
+                  +isvg#import.__icon
+                  | Import wallet
+              .col-auto
+                +b.A.btn--light(href=js)
+                  +isvg#plus.__icon
+                  | Wallet backup
       +b.SECTION.subsection--dark
         .container-fluid
           +e.HEADER.__header
             +e.H2.__title
-              +e.__title-icon
-                +icon-svg#transfer
+              +isvg#transfer.__title-icon
               | Transfer
       +b.SECTION.subsection--transparent
         .container-fluid
           +e.HEADER.__header
             +e.H2.__title
-              +e.__title-icon
-                +icon-svg#history
+              +isvg#history.__title-icon
               | History
 
 

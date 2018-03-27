@@ -9,21 +9,25 @@
   &__title {
     font-weight: 300;
     font-size: 32px;
-    line-height: (38/32);
+    line-height: 38px;
+    margin: 0;
 
     &-icon {
-      display: inline-block;
-      width: 33px;
-      .icon-svg-wallet {
-        font-size: 16px;
-        vertical-align: 2px;
+      vertical-align: top;
+      width: 38px;
+      height: 38px;
+      margin-right: -6px;
+      transform-origin: 0 50% 0;
+      position: relative;
+      top: 1px;
+      &.isvg-wallet {
+        transform: scale((20/38));
       }
-      .icon-svg-transfer {
-        font-size: 24px;
-        vertical-align: -2px;
+      &.isvg-transfer {
+        transform: scale((24/38));
       }
-      .icon-svg-history {
-        font-size: 17px;
+      &.isvg-history {
+        transform: scale((17/38));
       }
     }
   }
