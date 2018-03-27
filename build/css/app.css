@@ -586,6 +586,7 @@ fieldset[disabled] .btn {
   left: 50%;
   width: 0.0625rem;
   height: 100%;
+  z-index: 1;
   background: linear-gradient(to bottom, #99ceff, rgba(153, 206, 255, 0.25))
 }
 .line-chart__axis-x {
