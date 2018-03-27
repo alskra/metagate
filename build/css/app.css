@@ -1040,9 +1040,9 @@ fieldset[disabled] .btn {
 }
 .wallet__head-icon {
   color: #99ceff;
-  width: 1.875rem;
+  width: 1.25rem;
   height: 100%;
-  transform: scale(0.33333)
+  transform: scale(0.5)
 }
 .wallet__img {
   display: block;
