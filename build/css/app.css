@@ -63,6 +63,10 @@
   width: 1.66667em;
   height: 1em
 }
+.isvg-angle-d {
+  width: 1.42694em;
+  height: 1em
+}
 .isvg-angle-left {
   width: 0.66631em;
   height: 1em
@@ -1030,7 +1034,15 @@ fieldset[disabled] .btn {
   margin-right: 0.625rem
 }
 .wallet__head-col-2 {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   overflow: hidden
+}
+.wallet__head-icon {
+  color: #99ceff;
+  width: 1.875rem;
+  height: 100%;
+  transform: scale(0.33333)
 }
 .wallet__img {
   display: block;

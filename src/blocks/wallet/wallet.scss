@@ -14,8 +14,15 @@
     }
 
     &-col-2 {
+      flex: 1 1 auto;
       overflow: hidden;
+    }
 
+    &-icon {
+      color: $color-blue;
+      width: 30px;
+      height: 100%;
+      transform: scale((10/30));
     }
   }
 
