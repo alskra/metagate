@@ -67,6 +67,10 @@
   width: 0.66631em;
   height: 1em
 }
+.isvg-backup {
+  width: 0.88241em;
+  height: 1em
+}
 .isvg-bitcoin-cash {
   width: 1.57121em;
   height: 1em
@@ -280,6 +284,9 @@ fieldset[disabled] .btn {
 }
 .btn--light .btn__icon.isvg-import {
   transform: scale(0.7)
+}
+.btn--light .btn__icon.isvg-backup {
+  transform: scale(0.85)
 }
 .container-fluid {
   max-width: 80rem
@@ -865,7 +872,8 @@ fieldset[disabled] .btn {
   transform: scale(1.53846)
 }
 .nav-meta__item--active .nav-meta__item-col-2 {
-  min-width: 15.625rem
+  min-width: 15.625rem;
+  background: rgba(47, 123, 194, 0.7)
 }
 .nav-meta__item--active .nav-meta__item-num {
   font-weight: 400;
