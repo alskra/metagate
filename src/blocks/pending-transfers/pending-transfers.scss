@@ -1,6 +1,7 @@
 .pending-transfers {
   font-size: 12px;
   line-height: 14px;
+  table-layout: fixed;
   width: 100%;
   th {
     font-weight: 700;
@@ -19,6 +20,12 @@
     &:last-child {
       padding-right: 0;
     }
+    &:nth-child(1), &:nth-child(2) {
+      width: 20%;
+    }
+    &:nth-child(5) {
+      width: 20%;
+    }
   }
   a {
     color: $color-blue;
@@ -31,12 +38,18 @@
     }
   }
 
-  &__addr {
-    word-break: break-word;
+  &__nowrap {
+    //word-break: break-word;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__status {
-    display: flex;
+    display: inline-flex;
+    max-width: 100%;
 
     &-unit {
       flex: none;
@@ -55,6 +68,8 @@
 
     &-lbl {
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       margin-left: 10px;
     }
 

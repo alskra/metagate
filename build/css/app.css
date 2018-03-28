@@ -1113,6 +1113,7 @@ fieldset[disabled] .btn {
 .pending-transfers {
   font-size: 0.75rem;
   line-height: 0.875rem;
+  table-layout: fixed;
   width: 100%
 }
 .pending-transfers th {
@@ -1135,6 +1136,16 @@ fieldset[disabled] .btn {
 .pending-transfers th:last-child {
   padding-right: 0
 }
+.pending-transfers td:nth-child(1),
+.pending-transfers td:nth-child(2),
+.pending-transfers th:nth-child(1),
+.pending-transfers th:nth-child(2) {
+  width: 20%
+}
+.pending-transfers td:nth-child(5),
+.pending-transfers th:nth-child(5) {
+  width: 20%
+}
 .pending-transfers a {
   color: #99ceff;
   transition: color 0.15s ease-in-out
@@ -1147,12 +1158,17 @@ fieldset[disabled] .btn {
 .pending-transfers a:hover {
   color: #fff
 }
-.pending-transfers__addr {
-  word-break: break-word
+.pending-transfers__nowrap {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
 }
 .pending-transfers__status {
-  display: -ms-flexbox;
-  display: flex
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 100%
 }
 .pending-transfers__status-unit {
   -ms-flex: none;
@@ -1170,6 +1186,8 @@ fieldset[disabled] .btn {
 }
 .pending-transfers__status-lbl {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-left: 0.625rem
 }
 .pending-transfers__status--active {

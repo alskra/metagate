@@ -140,12 +140,12 @@ include ../blocks/help/help
                   th More:
               tbody
                 tr
-                  td: +e.__addr Default address
-                  td: +e.__addr: a(href=js) 0x0e4599a990d32f60402a0f5f4594ddab28e761c9
+                  td: +e.__nowrap Default address
+                  td: +e.A.__nowrap(href=js) 0x0e4599a990d32f60402a0f5f4594ddab28e761c9
                   td: strong 25.00&nbsp;#MHC
                   td: strong 00:02:15
                   td
-                    +e.__status
+                    +e.__status(title='Core node')
                       +e.__status-unit--active
                       +e.__status-unit--active
                       +e.__status-unit--active
@@ -153,14 +153,14 @@ include ../blocks/help/help
                       +e.__status-unit
                       +e.__status-unit
                       +e.__status-lbl Core node
-                  td: strong: a(href=js) Blockchain&nbsp;info
+                  td: strong: a(href=js) Blockchain info
                 tr
-                  td: +e.__addr My address #2
-                  td: +e.__addr: a(href=js) 0x0e4599a990d32f60402a0f5f4594ddab28e761c9
+                  td: +e.__nowrap My address #2
+                  td: +e.A.__nowrap(href=js) 0x0e4599a990d32f60402a0f5f4594ddab28e761c9
                   td: strong 5.00&nbsp;#MHC
                   td: strong 00:03:01
                   td
-                    +e.__status--active
+                    +e.__status--active(title='Verified')
                       +e.__status-unit--active
                       +e.__status-unit--active
                       +e.__status-unit--active
@@ -168,7 +168,7 @@ include ../blocks/help/help
                       +e.__status-unit--active
                       +e.__status-unit--active
                       +e.__status-lbl Verified
-                  td: strong: a(href=js) Blockchain&nbsp;info
+                  td: strong: a(href=js) Blockchain info
       +b.SECTION.subsection--transparent
         .container-fluid
           +e.HEADER.__header.mb-25
