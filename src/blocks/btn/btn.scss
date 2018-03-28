@@ -35,6 +35,11 @@
         background: darken($color-dark-blue, 5%);
       }
     }
+    &:active {
+      &:not(:disabled) {
+        background: darken($color-dark-blue, 10%);
+      }
+    }
   }
 
   &--light {

@@ -268,6 +268,9 @@ fieldset[disabled] .btn {
 .btn--primary:hover:not(:disabled) {
   background: #2a6ead
 }
+.btn--primary:active:not(:disabled) {
+  background: #256199
+}
 .btn--light {
   font-weight: 400;
   font-size: 1rem;
@@ -513,6 +516,11 @@ fieldset[disabled] .btn {
   flex: 1 1 auto;
   margin-right: 0.9375rem
 }
+.form-select .filter-option-inner {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
 .form-select .isvg-angle-d {
   -ms-flex: none;
   flex: none;
@@ -531,6 +539,9 @@ fieldset[disabled] .btn {
 .form-select .dropdown-item:hover {
   background: #99ceff
 }
+.form-select .dropdown-item:focus {
+  outline: 0
+}
 .form-select .dropdown-item.active {
   background: #2f7bc2
 }
@@ -538,7 +549,8 @@ fieldset[disabled] .btn {
   display: block!important
 }
 .form-select__menu {
-  border-radius: 0
+  border-radius: 0;
+  max-width: 100%
 }
 .form-select__opt {
   display: -ms-flexbox;
@@ -629,9 +641,10 @@ fieldset[disabled] .btn {
 .form-transfer__arrow {
   -ms-flex: none;
   flex: none;
-  font-size: 1.25rem;
   color: #99ceff;
-  margin: 0 0.25rem 1.09375rem
+  width: 1.375rem;
+  height: 1.25rem;
+  margin: 0 -0.625rem 1.09375rem
 }
 .header {
   padding: 1.1875rem 0.625rem;

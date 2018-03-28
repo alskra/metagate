@@ -352,10 +352,10 @@
               </header>
               <form class="form-transfer" action="">
                 <div class="row flex-nowrap align-items-end mb-40">
-                  <div class="col-6">
+                  <div class="col-6 pr-25">
                     <label class="form-label form-transfer__label" for="from">
                       <strong>From</strong> #MHC address</label>
-                    <select class="form-select w-100">
+                    <select class="form-select w-100" id="from">
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-5.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;My wallet #1&lt;/span&gt;&lt;/span&gt;">My wallet #1</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-1.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;Another strange wallet&lt;/span&gt;&lt;/span&gt;">Another strange wallet</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-2.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;My wallet #2&lt;/span&gt;&lt;/span&gt;">My wallet #2</option>
@@ -366,16 +366,45 @@
                   <svg class="isvg-arr-r form-transfer__arrow" role="img">
                     <use xlink:href="#isvg-arr-r"></use>
                   </svg>
-                  <div class="col-6">
+                  <div class="col-6 pl-25">
                     <label class="form-label form-transfer__label" for="to">
                       <strong>To</strong> #MHC address</label>
-                    <select class="form-select w-100">
+                    <select class="form-select w-100" id="to">
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-6.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1&lt;/span&gt;&lt;/span&gt;">0×001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-1.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;Another strange wallet&lt;/span&gt;&lt;/span&gt;">Another strange wallet</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-2.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;My wallet #2&lt;/span&gt;&lt;/span&gt;">My wallet #2</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-3.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;For my bae’s birthday&lt;/span&gt;&lt;/span&gt;">For my bae’s birthday</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-4.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;Default wallet&lt;/span&gt;&lt;/span&gt;">Default wallet</option>
                     </select>
+                  </div>
+                </div>
+                <div class="row flex-nowrap align-items-end mb-40">
+                  <div class="col-6 pr-25">
+                    <div class="row flex-nowrap align-items-end">
+                      <div class="col-7">
+                        <label class="form-label form-transfer__label" for="amount">#MHC amount</label>
+                        <input class="form-field w-100" id="amount" type="text" value="200.00" />
+                      </div>
+                      <div class="col-5">
+                        <label class="form-label form-transfer__label" for="fee">#MHC fee</label>
+                        <select class="form-select w-100" id="fee">
+                          <option>0.03</option>
+                          <option>0.05</option>
+                          <option>0.08</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 pl-25">
+                    <div class="row flex-nowrap align-items-end">
+                      <div class="col-6">
+                        <label class="form-label form-transfer__label" for="password">Wallet password</label>
+                        <input class="form-field w-100" id="password" type="password" />
+                      </div>
+                      <div class="col-6">
+                        <button class="btn btn--primary w-100">Send</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
