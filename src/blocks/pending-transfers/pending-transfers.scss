@@ -27,21 +27,22 @@
       width: 20%;
     }
   }
-  a {
+  //a {
+  //  color: $color-blue;
+  //  transition: color $btn-transition-base;
+  //  @include plain-hover-focus {
+  //    text-decoration: none;
+  //  }
+  //  @include hover {
+  //    color: white;
+  //  }
+  //}
+
+  &__blue {
     color: $color-blue;
-    transition: color $btn-transition-base;
-    @include plain-hover-focus {
-      text-decoration: none;
-    }
-    @include hover {
-      color: white;
-    }
   }
 
   &__nowrap {
-    //word-break: break-word;
-    display: inline-block;
-    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

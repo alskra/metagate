@@ -1146,21 +1146,10 @@ fieldset[disabled] .btn {
 .pending-transfers th:nth-child(5) {
   width: 20%
 }
-.pending-transfers a {
-  color: #99ceff;
-  transition: color 0.15s ease-in-out
-}
-.pending-transfers a,
-.pending-transfers a:focus,
-.pending-transfers a:hover {
-  text-decoration: none
-}
-.pending-transfers a:hover {
-  color: #fff
+.pending-transfers__blue {
+  color: #99ceff
 }
 .pending-transfers__nowrap {
-  display: inline-block;
-  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis
