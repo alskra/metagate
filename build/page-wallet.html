@@ -351,7 +351,7 @@
                   </svg>Transfer</h2>
               </header>
               <form class="form-transfer" action="">
-                <div class="row flex-nowrap align-items-end mb-40">
+                <div class="row flex-nowrap mb-40">
                   <div class="col-6 pr-25">
                     <label class="form-label form-transfer__label" for="from">
                       <strong>From</strong> #MHC address</label>
@@ -362,6 +362,10 @@
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-3.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;For my bae’s birthday&lt;/span&gt;&lt;/span&gt;">For my bae’s birthday</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-4.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;Default wallet&lt;/span&gt;&lt;/span&gt;">Default wallet</option>
                     </select>
+                    <div class="field-info form-transfer__info">
+                      <div class="field-info__item">0×001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
+                      <div class="field-info__item">350.15 #MHC</div>
+                    </div>
                   </div>
                   <svg class="isvg-arr-r form-transfer__arrow" role="img">
                     <use xlink:href="#isvg-arr-r"></use>
@@ -376,14 +380,23 @@
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-3.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;For my bae’s birthday&lt;/span&gt;&lt;/span&gt;">For my bae’s birthday</option>
                       <option data-content="&lt;span class=&quot;form-select__opt&quot;&gt;&lt;img src=&quot;upload/wallets/wallet-4.png&quot; alt=&quot;&quot; class=&quot;form-select__opt-icon&quot;&gt;&lt;span class=&quot;form-select__opt-txt&quot;&gt;Default wallet&lt;/span&gt;&lt;/span&gt;">Default wallet</option>
                     </select>
+                    <div class="field-info form-transfer__info">
+                      <div class="field-info__item">Кошелек Глеба</div>
+                      <div class="field-info__item">0.00 #MHC</div>
+                    </div>
                   </div>
                 </div>
-                <div class="row flex-nowrap align-items-end mb-40">
+                <div class="row flex-nowrap mb-40">
                   <div class="col-6 pr-25">
-                    <div class="row flex-nowrap align-items-end">
+                    <div class="row flex-nowrap">
                       <div class="col-7">
                         <label class="form-label form-transfer__label" for="amount">#MHC amount</label>
                         <input class="form-field w-100" id="amount" type="text" value="200.00" />
+                        <div class="field-info form-transfer__info">
+                          <div class="field-info__item">
+                            <a href="javascript:">All available</a>
+                          </div>
+                        </div>
                       </div>
                       <div class="col-5">
                         <label class="form-label form-transfer__label" for="fee">#MHC fee</label>
@@ -392,6 +405,9 @@
                           <option>0.05</option>
                           <option>0.08</option>
                         </select>
+                        <div class="field-info form-transfer__info">
+                          <div class="field-info__item">Transfer time: 3 sec</div>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -3,6 +3,11 @@
   line-height: 14px;
   color: $color-blue;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  vertical-align: top;
   strong {
     color: white;
   }

@@ -3,8 +3,8 @@
   .form-field {
     font-size: 20px;
     text-align: left;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: (55px - 20px*1.25 - 2)/2;
+    padding-bottom: (55px - 20px*1.25 - 2)/2;
     position: relative;
     z-index: 1;
     display: flex;

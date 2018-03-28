@@ -1,6 +1,6 @@
 mixin form-transfer(data)
   +b.FORM.form-transfer&attributes(attributes)(action='')
-    .row.flex-nowrap.align-items-end.mb-40
+    .row.flex-nowrap.mb-40
       .col-6.pr-25
         +b.LABEL.form-label.__label(for='from') #[strong From] #MHC address
         +b.SELECT.form-select.w-100#from
@@ -9,6 +9,9 @@ mixin form-transfer(data)
           option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-2.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">My wallet #2</span></span>') My wallet #2
           option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-3.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">For my bae’s birthday</span></span>') For my bae’s birthday
           option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-4.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">Default wallet</span></span>') Default wallet
+        +b.field-info.__info
+          +e.__item 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+          +e.__item 350.15 #MHC
       +isvg#arr-r.__arrow
       .col-6.pl-25
         +b.LABEL.form-label.__label(for='to') #[strong To] #MHC address
@@ -18,18 +21,25 @@ mixin form-transfer(data)
           option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-2.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">My wallet #2</span></span>') My wallet #2
           option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-3.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">For my bae’s birthday</span></span>') For my bae’s birthday
           option(data-content='<span class="form-select__opt"><img src="upload/wallets/wallet-4.png" alt="" class="form-select__opt-icon"><span class="form-select__opt-txt">Default wallet</span></span>') Default wallet
-    .row.flex-nowrap.align-items-end.mb-40
+        +b.field-info.__info
+          +e.__item Кошелек Глеба
+          +e.__item 0.00 #MHC
+    .row.flex-nowrap.mb-40
       .col-6.pr-25
-        .row.flex-nowrap.align-items-end
+        .row.flex-nowrap
           .col-7
             +b.LABEL.form-label.__label(for='amount') #MHC amount
             +b.INPUT.form-field.w-100#amount(type='text' value='200.00')
+            +b.field-info.__info
+              +e.__item: a(href=js) All available
           .col-5
             +b.LABEL.form-label.__label(for='fee') #MHC fee
             +b.SELECT.form-select.w-100#fee
               option 0.03
               option 0.05
               option 0.08
+            +b.field-info.__info
+              +e.__item Transfer time: 3 sec
       .col-6.pl-25
         .row.flex-nowrap.align-items-end
           .col-6

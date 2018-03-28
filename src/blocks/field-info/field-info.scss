@@ -1,0 +1,19 @@
+.field-info {
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-blue;
+  display: flex;
+  padding: 8px 15px;
+  background: rgba(#050B1F, 0.1);
+
+  &__item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    & + & {
+      flex: none;
+      padding-left: 20px;
+      margin-left: auto;
+    }
+  }
+}
