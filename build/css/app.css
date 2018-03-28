@@ -1147,8 +1147,7 @@ fieldset[disabled] .btn {
 .pending-transfers a:hover {
   color: #fff
 }
-.pending-transfers__to {
-  color: #99ceff;
+.pending-transfers__addr {
   word-break: break-word
 }
 .pending-transfers__status {
