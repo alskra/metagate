@@ -155,6 +155,10 @@
   width: 1em;
   height: 1em
 }
+.isvg-star {
+  width: 1.0525em;
+  height: 1em
+}
 .isvg-time {
   width: 0.72267em;
   height: 1em
@@ -679,8 +683,10 @@ fieldset[disabled] .btn {
   -ms-flex: none;
   flex: none;
   color: #99ceff;
-  font-size: 1.25rem;
-  margin: 2.40625rem -0.6875rem 0
+  width: 3.125rem;
+  height: 3.4375rem;
+  transform: scale(0.44);
+  margin: 1.3125rem -1.5625rem 0
 }
 .form-transfer__info {
   margin-top: 0.25rem
@@ -1110,78 +1116,6 @@ fieldset[disabled] .btn {
 .page--theme-dark .page__body-inner {
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/whatis-satelit.png) no-repeat right 11.5625rem top 18.125rem fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c
 }
-.pending-transfers {
-  font-size: 0.75rem;
-  line-height: 0.875rem;
-  table-layout: fixed;
-  width: 100%
-}
-.pending-transfers th {
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.3125rem 0.625rem
-}
-.pending-transfers td {
-  padding: 0.625rem 0.625rem
-}
-.pending-transfers td,
-.pending-transfers th {
-  vertical-align: baseline
-}
-.pending-transfers td:first-child,
-.pending-transfers th:first-child {
-  padding-left: 0
-}
-.pending-transfers td:last-child,
-.pending-transfers th:last-child {
-  padding-right: 0
-}
-.pending-transfers td:nth-child(1),
-.pending-transfers td:nth-child(2),
-.pending-transfers th:nth-child(1),
-.pending-transfers th:nth-child(2) {
-  width: 20%
-}
-.pending-transfers td:nth-child(5),
-.pending-transfers th:nth-child(5) {
-  width: 20%
-}
-.pending-transfers__blue {
-  color: #99ceff
-}
-.pending-transfers__nowrap {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis
-}
-.pending-transfers__status {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 100%
-}
-.pending-transfers__status-unit {
-  -ms-flex: none;
-  flex: none;
-  width: 1.0625rem;
-  height: 0.5625rem;
-  background: #235d91;
-  margin-top: 0.1875rem
-}
-.pending-transfers__status-unit + .pending-transfers__status-unit {
-  margin-left: 0.125rem
-}
-.pending-transfers__status-unit--active {
-  background: #7ad604
-}
-.pending-transfers__status-lbl {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-left: 0.625rem
-}
-.pending-transfers__status--active {
-  color: #7ad604
-}
 .popover {
   font-family: inherit;
   border-color: transparent;
@@ -1299,7 +1233,113 @@ fieldset[disabled] .btn {
   margin-right: 0
 }
 .subsection--inner .subsection__title-icon.isvg-time {
-  transform: scale(0.64286)
+  transform: scale(0.64286) translateX(-0.125rem)
+}
+.table-data {
+  font-size: 0.75rem;
+  line-height: 1.16667;
+  table-layout: fixed;
+  width: 100%
+}
+.table-data th {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.3125rem 0.625rem
+}
+.table-data td {
+  padding: 0.625rem 0.625rem
+}
+.table-data td,
+.table-data th {
+  vertical-align: baseline
+}
+.table-data td:first-child,
+.table-data th:first-child {
+  padding-left: 0
+}
+.table-data td:last-child,
+.table-data th:last-child {
+  padding-right: 0
+}
+.table-data__blue {
+  color: #99ceff
+}
+.table-data__green {
+  color: #7ad604
+}
+.table-data__pink {
+  color: #ff4ff8
+}
+.table-data__nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.table-data__status {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 100%
+}
+.table-data__status-unit {
+  -ms-flex: none;
+  flex: none;
+  width: 1.0625rem;
+  height: 0.5625rem;
+  background: #235d91;
+  margin-top: 0.1875rem
+}
+.table-data__status-unit + .table-data__status-unit {
+  margin-left: 0.125rem
+}
+.table-data__status-unit--active {
+  background: #7ad604
+}
+.table-data__status-lbl {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 0.625rem
+}
+.table-data__status--active {
+  color: #7ad604
+}
+.table-data__favorites {
+  font-size: 1.0625rem;
+  color: transparent;
+  stroke: #99ceff;
+  vertical-align: -0.125rem
+}
+.table-data__favorites--active {
+  color: #99ceff
+}
+.table-data--pending-transfers td:nth-child(1),
+.table-data--pending-transfers td:nth-child(2),
+.table-data--pending-transfers td:nth-child(5),
+.table-data--pending-transfers th:nth-child(1),
+.table-data--pending-transfers th:nth-child(2),
+.table-data--pending-transfers th:nth-child(5) {
+  width: 20%
+}
+.table-data--pending-transfers td:nth-child(4),
+.table-data--pending-transfers th:nth-child(4) {
+  width: 6.25rem
+}
+.table-data--history-transfers td:nth-child(1),
+.table-data--history-transfers td:nth-child(6),
+.table-data--history-transfers th:nth-child(1),
+.table-data--history-transfers th:nth-child(6) {
+  width: 6.25rem
+}
+.table-data--history-transfers td:nth-child(2),
+.table-data--history-transfers td:nth-child(3),
+.table-data--history-transfers th:nth-child(2),
+.table-data--history-transfers th:nth-child(3) {
+  width: 20%
+}
+.table-data--history-transfers td:nth-child(4),
+.table-data--history-transfers th:nth-child(4) {
+  width: 4.375rem;
+  text-align: center
 }
 .title {
   font-weight: 100;

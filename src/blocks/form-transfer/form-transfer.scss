@@ -11,8 +11,10 @@
   &__arrow {
     flex: none;
     color: $color-blue;
-    font-size: 20px;
-    margin: (17.5px + 21px) -11px 0;
+    width: 50px;
+    height: 55px;
+    transform: scale((22/50));
+    margin: 21px -25px 0;
   }
 
   &__info {

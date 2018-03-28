@@ -1,6 +1,6 @@
-.pending-transfers {
+.table-data {
   font-size: 12px;
-  line-height: 14px;
+  line-height: (14/12);
   table-layout: fixed;
   width: 100%;
   th {
@@ -20,26 +20,18 @@
     &:last-child {
       padding-right: 0;
     }
-    &:nth-child(1), &:nth-child(2) {
-      width: 20%;
-    }
-    &:nth-child(5) {
-      width: 20%;
-    }
   }
-  //a {
-  //  color: $color-blue;
-  //  transition: color $btn-transition-base;
-  //  @include plain-hover-focus {
-  //    text-decoration: none;
-  //  }
-  //  @include hover {
-  //    color: white;
-  //  }
-  //}
 
   &__blue {
     color: $color-blue;
+  }
+
+  &__green {
+    color: $color-green;
+  }
+
+  &__pink {
+    color: $color-pink;
   }
 
   &__nowrap {
@@ -63,7 +55,7 @@
       }
 
       &--active {
-        background: #7AD604;
+        background: $color-green;
       }
     }
 
@@ -75,7 +67,44 @@
     }
 
     &--active {
-      color: #7AD604;
+      color: $color-green;
+    }
+  }
+
+  &__favorites {
+    font-size: 17px;
+    color: transparent;
+    stroke: $color-blue;
+    vertical-align: -2px;
+
+    &--active {
+      color: $color-blue;
+    }
+  }
+
+  &--pending-transfers {
+    th, td {
+      &:nth-child(1), &:nth-child(2), &:nth-child(5) {
+        width: 20%;
+      }
+      &:nth-child(4) {
+        width: 100px;
+      }
+    }
+  }
+
+  &--history-transfers {
+    th, td {
+      &:nth-child(1), &:nth-child(6) {
+        width: 100px;
+      }
+      &:nth-child(2), &:nth-child(3) {
+        width: 20%;
+      }
+      &:nth-child(4) {
+        width: 70px;
+        text-align: center;
+      }
     }
   }
 }

@@ -54,7 +54,7 @@
           height: 28px;
           margin-right: 0;
           &.isvg-time {
-            transform: scale((18/28));
+            transform: scale((18/28)) translateX(-2px);
           }
         }
       }

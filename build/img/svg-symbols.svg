@@ -52,6 +52,7 @@
 <symbol id="isvg-refresh" viewBox="0 0 22 17"><use xlink:href="#refresh-a" transform="translate(2.703 .473)"/><use xlink:href="#refresh-b" transform="translate(.834 8.708)"/><use xlink:href="#refresh-c" transform="translate(5.985 5.612)"/><use xlink:href="#refresh-d" transform="translate(14.816 3.012)"/></symbol>
 <symbol id="isvg-safe" viewBox="0 0 15 18"><use xlink:href="#safe-a" transform="translate(.1 .224)"/></symbol>
 <symbol id="isvg-settings" viewBox="0 0 17 17"><use xlink:href="#settings-a" transform="translate(.24 .106)"/></symbol>
+<symbol id="isvg-star" viewBox="0 0 20.211 19.193"><path class="st0" d="M10.105 1.515l2.15 6.15 6.5.15-5.2 3.9 1.9 6.25-5.35-3.7-5.35 3.7 1.9-6.25-5.2-3.9 6.5-.15 2.15-6.15z"/></symbol>
 <symbol id="isvg-time" viewBox="0 0 13 18"><use xlink:href="#time-a" transform="translate(.3 .326)"/></symbol>
 <symbol id="isvg-transfer" viewBox="0 0 24 24"><use xlink:href="#transfer-a" transform="translate(7.58 .755)"/><use xlink:href="#transfer-b" transform="translate(0 6.443)"/></symbol>
 <symbol id="isvg-user" viewBox="0 0 16 15"><use xlink:href="#user-a" transform="translate(.95 .608)"/></symbol>
