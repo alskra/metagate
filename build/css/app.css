@@ -107,6 +107,10 @@
   width: 0.6217em;
   height: 1em
 }
+.isvg-help {
+  width: 1em;
+  height: 1em
+}
 .isvg-history {
   width: 1em;
   height: 1em
@@ -663,6 +667,10 @@ fieldset[disabled] .btn {
 .form-transfer__label {
   margin-bottom: 0.4375rem
 }
+.form-transfer__help {
+  vertical-align: top;
+  margin: 0.0625rem 0 0.4375rem
+}
 .form-transfer__arrow {
   -ms-flex: none;
   flex: none;
@@ -738,6 +746,22 @@ fieldset[disabled] .btn {
 .header__menu {
   margin-left: auto;
   margin-right: 1.25rem
+}
+.help {
+  display: inline-block;
+  cursor: pointer
+}
+.help,
+.help:focus,
+.help:hover {
+  color: #99ceff
+}
+.help:focus {
+  outline: 0
+}
+.help__icon {
+  font-size: 0.8125rem;
+  display: block
 }
 .line-chart {
   overflow: hidden;
@@ -1048,7 +1072,7 @@ fieldset[disabled] .btn {
 }
 .page ::selection {
   color: #fff;
-  background-color: #99ceff
+  background-color: #2f7bc2
 }
 .page__body {
   height: 100%
@@ -1081,6 +1105,33 @@ fieldset[disabled] .btn {
 }
 .page--theme-dark .page__body-inner {
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/whatis-satelit.png) no-repeat right 11.5625rem top 18.125rem fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c
+}
+.popover {
+  font-family: inherit;
+  border-color: transparent;
+  border-radius: 0.3125rem
+}
+.popover .arrow::before {
+  content: normal
+}
+.popover .popover-header {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  color: #050b1f;
+  padding: 0.9375rem;
+  background-color: transparent;
+  border-bottom: 0
+}
+.popover .popover-header + .popover-body {
+  padding-top: 0;
+  margin-top: -0.3125rem
+}
+.popover .popover-body {
+  font-size: 0.75rem;
+  line-height: 1.16667;
+  color: #636363;
+  padding: 0.9375rem
 }
 .section__header {
   margin-bottom: 3.125rem

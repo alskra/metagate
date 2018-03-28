@@ -1,0 +1,15 @@
+.help {
+  display: inline-block;
+  cursor: pointer;
+  @include plain-hover-focus {
+    color: $color-blue;
+  }
+  &:focus {
+    outline: 0;
+  }
+
+  &__icon  {
+    font-size: 13px;
+    display: block;
+  }
+}

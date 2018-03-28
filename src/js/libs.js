@@ -5,5 +5,6 @@
 //=require ../../node_modules/bootstrap/js/dist/collapse.js
 //=require ../../node_modules/bootstrap/js/dist/dropdown.js
 //=require ../../node_modules/bootstrap/js/dist/tooltip.js
+//=require ../../node_modules/bootstrap/js/dist/popover.js
 //=require ../../node_modules/bootstrap-select/dist/js/bootstrap-select.js
 //=require ../vendor/peity/jquery.peity.js

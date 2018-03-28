@@ -3,6 +3,11 @@
     margin-bottom: 7px;
   }
 
+  &__help {
+    vertical-align: top;
+    margin: 1px 0 7px;
+  }
+
   &__arrow {
     flex: none;
     color: $color-blue;

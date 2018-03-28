@@ -152,5 +152,6 @@ $(function() {
   FormFieldLbl.init();
   LineChart.init();
   FormSelect.init();
+  $('[data-toggle="popover"]').popover();
 });
 //# sourceMappingURL=app.js.map
