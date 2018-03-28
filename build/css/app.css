@@ -155,6 +155,10 @@
   width: 1em;
   height: 1em
 }
+.isvg-time {
+  width: 0.72267em;
+  height: 1em
+}
 .isvg-transfer {
   width: 1em;
   height: 1em
@@ -1106,6 +1110,72 @@ fieldset[disabled] .btn {
 .page--theme-dark .page__body-inner {
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/whatis-satelit.png) no-repeat right 11.5625rem top 18.125rem fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c
 }
+.pending-transfers {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  width: 100%
+}
+.pending-transfers th {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.3125rem 0.625rem
+}
+.pending-transfers td {
+  padding: 0.625rem 0.625rem
+}
+.pending-transfers td,
+.pending-transfers th {
+  vertical-align: baseline
+}
+.pending-transfers td:first-child,
+.pending-transfers th:first-child {
+  padding-left: 0
+}
+.pending-transfers td:last-child,
+.pending-transfers th:last-child {
+  padding-right: 0
+}
+.pending-transfers a {
+  color: #99ceff;
+  transition: color 0.15s ease-in-out
+}
+.pending-transfers a,
+.pending-transfers a:focus,
+.pending-transfers a:hover {
+  text-decoration: none
+}
+.pending-transfers a:hover {
+  color: #fff
+}
+.pending-transfers__to {
+  color: #99ceff;
+  word-break: break-word
+}
+.pending-transfers__status {
+  display: -ms-flexbox;
+  display: flex
+}
+.pending-transfers__status-unit {
+  -ms-flex: none;
+  flex: none;
+  width: 1.0625rem;
+  height: 0.5625rem;
+  background: #235d91;
+  margin-top: 0.1875rem
+}
+.pending-transfers__status-unit + .pending-transfers__status-unit {
+  margin-left: 0.125rem
+}
+.pending-transfers__status-unit--active {
+  background: #7ad604
+}
+.pending-transfers__status-lbl {
+  white-space: nowrap;
+  margin-left: 0.625rem
+}
+.pending-transfers__status--active {
+  color: #7ad604
+}
 .popover {
   font-family: inherit;
   border-color: transparent;
@@ -1207,6 +1277,23 @@ fieldset[disabled] .btn {
 }
 .subsection--transparent {
   background: transparent
+}
+.subsection--inner {
+  padding: 0;
+  background: transparent
+}
+.subsection--inner .subsection__title {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #99ceff
+}
+.subsection--inner .subsection__title-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0
+}
+.subsection--inner .subsection__title-icon.isvg-time {
+  transform: scale(0.64286)
 }
 .title {
   font-weight: 100;

@@ -350,7 +350,7 @@
                     <use xlink:href="#isvg-transfer"></use>
                   </svg>Transfer</h2>
               </header>
-              <form class="form-transfer" action="">
+              <form class="form-transfer mb-45" action="">
                 <div class="row flex-nowrap mb-40">
                   <div class="col-6 pr-25">
                     <label class="form-label form-transfer__label" for="from">
@@ -386,7 +386,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="row flex-nowrap mb-40">
+                <div class="row flex-nowrap">
                   <div class="col-6 pr-25">
                     <div class="row flex-nowrap">
                       <div class="col-7">
@@ -429,6 +429,84 @@
                   </div>
                 </div>
               </form>
+              <section class="subsection subsection--inner mb-40">
+                <header class="subsection__header mb-20">
+                  <h2 class="subsection__title">
+                    <svg class="isvg-time subsection__title-icon" role="img">
+                      <use xlink:href="#isvg-time"></use>
+                    </svg>Pending transfers</h2>
+                </header>
+                <table class="pending-transfers">
+                  <thead>
+                    <tr>
+                      <th>From:</th>
+                      <th>To:</th>
+                      <th>Amount:</th>
+                      <th>Time:</th>
+                      <th>Status:</th>
+                      <th>More:</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Default address</td>
+                      <td>
+                        <div class="pending-transfers__to">0×0e4599a990d32f60402a0f5f4594ddab28e761c9</div>
+                      </td>
+                      <td>
+                        <strong>25.00 #MHC</strong>
+                      </td>
+                      <td>
+                        <strong>00:02:15</strong>
+                      </td>
+                      <td>
+                        <div class="pending-transfers__status">
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit"></div>
+                          <div class="pending-transfers__status-unit"></div>
+                          <div class="pending-transfers__status-unit"></div>
+                          <div class="pending-transfers__status-lbl">Core node</div>
+                        </div>
+                      </td>
+                      <td>
+                        <strong>
+                          <a href="javascript:">Blockchain info</a>
+                        </strong>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>My address #2</td>
+                      <td>
+                        <div class="pending-transfers__to">0×0e4599a990d32f60402a0f5f4594ddab28e761c9</div>
+                      </td>
+                      <td>
+                        <strong>5.00 #MHC</strong>
+                      </td>
+                      <td>
+                        <strong>00:03:01</strong>
+                      </td>
+                      <td>
+                        <div class="pending-transfers__status pending-transfers__status--active">
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-unit pending-transfers__status-unit--active"></div>
+                          <div class="pending-transfers__status-lbl">Verified</div>
+                        </div>
+                      </td>
+                      <td>
+                        <strong>
+                          <a href="javascript:">Blockchain info</a>
+                        </strong>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
             </div>
           </section>
           <section class="subsection subsection--transparent">

@@ -1,0 +1,66 @@
+.pending-transfers {
+  font-size: 12px;
+  line-height: 14px;
+  width: 100%;
+  th {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+
+  }
+  td {
+    padding: 10px 10px;
+  }
+  th, td {
+    vertical-align: baseline;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  a {
+    color: $color-blue;
+    transition: color $btn-transition-base;
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+    @include hover {
+      color: white;
+    }
+  }
+
+  &__to {
+    color: $color-blue;
+    word-break: break-word;
+  }
+
+  &__status {
+    display: flex;
+
+    &-unit {
+      flex: none;
+      width: 17px;
+      height: 9px;
+      background: #235D91;
+      margin-top: 3px;
+      & + & {
+        margin-left: 2px;
+      }
+
+      &--active {
+        background: #7AD604;
+      }
+    }
+
+    &-lbl {
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+
+    &--active {
+      color: #7AD604;
+    }
+  }
+}

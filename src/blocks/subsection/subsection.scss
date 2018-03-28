@@ -1,4 +1,5 @@
 .subsection {
+  $b: &;
   padding: 35px 0;
   background: #003D69;
 
@@ -38,5 +39,25 @@
 
   &--transparent {
     background: transparent;
+  }
+
+  &--inner {
+    padding: 0;
+    background: transparent;
+    #{$b} {
+      &__title {
+        font-size: 24px;
+        line-height: 28px;
+        color: $color-blue;
+        &-icon {
+          width: 28px;
+          height: 28px;
+          margin-right: 0;
+          &.isvg-time {
+            transform: scale((18/28));
+          }
+        }
+      }
+    }
   }
 }

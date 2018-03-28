@@ -123,7 +123,52 @@ include ../blocks/help/help
             +e.H2.__title
               +isvg#transfer.__title-icon
               | Transfer
-          +form-transfer
+          +form-transfer.mb-45
+          +b.SECTION.subsection--inner.mb-40
+            +e.HEADER.__header.mb-20
+              +e.H2.__title
+                +isvg#time.__title-icon
+                | Pending transfers
+            +b.TABLE.pending-transfers
+              thead
+                tr
+                  th From:
+                  th To:
+                  th Amount:
+                  th Time:
+                  th Status:
+                  th More:
+              tbody
+                tr
+                  td Default address
+                  td: +e.__to 0x0e4599a990d32f60402a0f5f4594ddab28e761c9
+                  td: strong 25.00&nbsp;#MHC
+                  td: strong 00:02:15
+                  td
+                    +e.__status
+                      +e.__status-unit--active
+                      +e.__status-unit--active
+                      +e.__status-unit--active
+                      +e.__status-unit
+                      +e.__status-unit
+                      +e.__status-unit
+                      +e.__status-lbl Core node
+                  td: strong: a(href=js) Blockchain&nbsp;info
+                tr
+                  td My address #2
+                  td: +e.__to 0x0e4599a990d32f60402a0f5f4594ddab28e761c9
+                  td: strong 5.00&nbsp;#MHC
+                  td: strong 00:03:01
+                  td
+                    +e.__status--active
+                      +e.__status-unit--active
+                      +e.__status-unit--active
+                      +e.__status-unit--active
+                      +e.__status-unit--active
+                      +e.__status-unit--active
+                      +e.__status-unit--active
+                      +e.__status-lbl Verified
+                  td: strong: a(href=js) Blockchain&nbsp;info
       +b.SECTION.subsection--transparent
         .container-fluid
           +e.HEADER.__header.mb-25
