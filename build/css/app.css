@@ -773,16 +773,11 @@ fieldset[disabled] .btn {
   font-size: 0.8125rem;
   display: block
 }
-.line-chart {
-  overflow: hidden;
-  position: relative
-}
 .line-chart .peity {
   display: block
 }
 .line-chart__inner {
-  position: relative;
-  margin-bottom: 4.0625rem
+  position: relative
 }
 .line-chart__peity {
   display: none
@@ -880,11 +875,9 @@ fieldset[disabled] .btn {
   font-size: 0.875rem;
   line-height: 1.14286;
   color: #fff;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 4.0625rem
+  height: 4.0625rem;
+  overflow: hidden;
+  position: relative
 }
 .line-chart__axis-x-point {
   position: absolute;
@@ -894,6 +887,13 @@ fieldset[disabled] .btn {
 }
 .line-chart__axis-x-point--current {
   font-weight: 500
+}
+.line-chart__settings {
+  margin-bottom: -0.875rem
+}
+.line-chart__select {
+  max-width: calc(100% - 0.625rem);
+  margin-left: 0.625rem!important
 }
 .line-chart--theme-blue .line-chart__ruler--min {
   background: linear-gradient(to right, #99ceff 0.125rem, #003d69 0.1875rem) repeat-x 0 0/0.375rem 100%
@@ -1183,6 +1183,78 @@ fieldset[disabled] .btn {
 }
 .section__actions-icon.isvg-user {
   font-size: 0.9375rem
+}
+.select-sm {
+  vertical-align: top
+}
+.select-sm .filter-option {
+  overflow: hidden;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-right: 0.625rem
+}
+.select-sm .filter-option-inner {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.select-sm .isvg-angle-d {
+  -ms-flex: none;
+  flex: none;
+  font-size: 0.4375rem;
+  margin: auto 0
+}
+.select-sm__toggle {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: #fff;
+  text-align: left;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0.32813rem 0.625rem;
+  border: 0;
+  background: #002547;
+  cursor: pointer;
+  position: relative;
+  z-index: 1
+}
+.select-sm__toggle:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.125rem #66b6ff
+}
+.select-sm__menu {
+  border-radius: 0;
+  max-width: 18.75rem
+}
+.select-sm__menu .dropdown-item {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  padding: 0.32813rem 0.625rem
+}
+.select-sm__menu .dropdown-item,
+.select-sm__menu .dropdown-item:focus,
+.select-sm__menu .dropdown-item:hover {
+  text-decoration: none
+}
+.select-sm__menu .dropdown-item:focus,
+.select-sm__menu .dropdown-item:hover {
+  background: #99ceff
+}
+.select-sm__menu .dropdown-item:focus {
+  outline: 0
+}
+.select-sm__menu .dropdown-item.active {
+  background: #2f7bc2
+}
+.select-sm__menu .dropdown-item .text {
+  display: block!important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.select-sm.show .isvg-angle-d {
+  transform: rotateX(180deg)
 }
 .subsection {
   padding: 2.1875rem 0;

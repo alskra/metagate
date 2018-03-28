@@ -1,5 +1,16 @@
 mixin line-chart(data)
   +b.line-chart&attributes(attributes)
+    +e.__settings
+      .container-fluid.d-flex.justify-content-end
+        +b.SELECT.select-sm.__select
+          option Ethereum/USD
+          option #MHC/USD
+          option Bitcoin
+          option Bitcoin cash
+        +b.SELECT.select-sm.__select
+          option 1 day
+          option 1 week
+          option 1 month
     +e.__inner
       <svg style="position: absolute; width: 0; height: 0;">
         <defs>

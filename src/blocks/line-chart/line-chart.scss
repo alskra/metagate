@@ -1,14 +1,14 @@
 .line-chart {
   $b: &;
-  overflow: hidden;
-  position: relative;
+  //position: relative;
   .peity {
     display: block;
   }
 
   &__inner {
     position: relative;
-    margin-bottom: 65px;
+    //margin-top: 14px;
+    //margin-bottom: 65px;
   }
 
   &__peity {
@@ -118,11 +118,9 @@
     font-size: 14px;
     line-height: (16/14);
     color: white;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
     height: 65px;
+    overflow: hidden;
+    position: relative;
 
     &-point {
       position: absolute;
@@ -134,6 +132,15 @@
         font-weight: 500;
       }
     }
+  }
+
+  &__settings {
+    margin-bottom: -14px;
+  }
+
+  &__select {
+    max-width: calc(100% - 10px);
+    margin-left: 10px !important;
   }
 
   &--theme-blue {
