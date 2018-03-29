@@ -29,6 +29,12 @@ include ../blocks/line-chart/line-chart
       .container-fluid
         +nav-meta.mb-70
       +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2}).--theme-blue
-
-
+      +b.SECTION.subsection.mb-30-inv
+        .container-fluid
+          +e.HEADER.__header.mb-25
+            .row.align-items-center
+              .col-auto.mw-100
+                +e.H2.__title
+                  +isvg#wallet.__title-icon
+                  | My Wallets
   +footer('inner').__footer
