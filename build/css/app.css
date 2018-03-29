@@ -243,15 +243,16 @@
   text-decoration: none
 }
 .btn {
-  display: inline-block;
-  vertical-align: top;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: top;
   -ms-user-select: none;
   user-select: none;
-  cursor: pointer
+  cursor: pointer;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
 }
 .btn,
 .btn:focus,
@@ -263,8 +264,7 @@
   box-shadow: 0 0 0 0.125rem #66b6ff
 }
 .btn.disabled,
-.btn:disabled,
-fieldset[disabled] .btn {
+.btn:disabled {
   cursor: default;
   opacity: .65
 }
@@ -277,15 +277,13 @@ fieldset[disabled] .btn {
   padding: 1.09375rem 1.25rem;
   border: 0;
   border-radius: 0.25rem;
-  background: #2f7bc2;
-  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+  background: #2f7bc2
 }
-.btn--primary:hover:not(.disabled),
-.btn--primary:hover:not(:disabled) {
+.btn--primary:not(:disabled):not(.disabled):hover {
+  color: #fff;
   background: #2a6ead
 }
-.btn--primary:active:not(.disabled),
-.btn--primary:active:not(:disabled) {
+.btn--primary:not(:disabled):not(.disabled):active {
   background: #256199
 }
 .btn--light {
@@ -295,11 +293,9 @@ fieldset[disabled] .btn {
   color: #99ceff;
   padding: 0;
   border: 0;
-  background: none;
-  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+  background: none
 }
-.btn--light:hover:not(.disabled),
-.btn--light:hover:not(:disabled) {
+.btn--light:not(:disabled):not(.disabled):hover {
   color: #fff
 }
 .btn--light .btn__icon {
@@ -328,16 +324,16 @@ fieldset[disabled] .btn {
   padding: 1.5rem 1.5625rem;
   border: 0.0625rem solid transparent;
   border-radius: 0.3125rem;
-  background: #012e53;
-  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+  background: #012e53
 }
-.btn--big:hover {
-  color: #99ceff
-}
-.btn--big:hover:not(.disabled),
-.btn--big:hover:not(:disabled) {
+.btn--big:not(:disabled):not(.disabled):hover {
+  color: #99ceff;
   border-color: rgba(84, 245, 255, 0.7);
   box-shadow: 0 0 0.9375rem rgba(46, 217, 255, 0.7)
+}
+.btn--big:not(:disabled):not(.disabled):hover:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.125rem #66b6ff,0 0 0.9375rem rgba(46, 217, 255, 0.7)
 }
 .btn--big .btn__lbl {
   overflow: hidden;
@@ -355,6 +351,10 @@ fieldset[disabled] .btn {
 }
 .btn--big .btn__icon.isvg-import {
   transform: scale(0.73333)
+}
+a.btn.disabled,
+a.btn:disabled {
+  pointer-events: none
 }
 .container-fluid {
   max-width: 80rem
@@ -1003,14 +1003,45 @@ fieldset[disabled] .btn {
 .menu__item-icon.isvg-metawallet {
   font-size: 1.0625rem
 }
-.menu__item-icon.settings {
+.menu__item-icon.isvg-settings {
   font-size: 1.0625rem
 }
 .menu__item-lbl {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 0.0625rem
+  text-overflow: ellipsis
+}
+.nav-filters__inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -0.625rem -0.625rem
+}
+.nav-filters__item {
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #99ceff;
+  transition: color 0.15s ease-in-out;
+  margin: 0 0.625rem 0.625rem
+}
+.nav-filters__item,
+.nav-filters__item:focus,
+.nav-filters__item:hover {
+  text-decoration: none
+}
+.nav-filters__item:hover {
+  color: #fff
+}
+.nav-filters__item-icon {
+  font-size: 1.0625rem;
+  margin-right: 0.3125rem;
+  vertical-align: -0.125rem
+}
+.nav-filters__item--active {
+  font-weight: 500;
+  color: #fff
 }
 .nav-meta__inner {
   display: -ms-flexbox;
@@ -1339,6 +1370,9 @@ fieldset[disabled] .btn {
 }
 .subsection__title-icon.isvg-history {
   transform: scale(0.44737)
+}
+.subsection__filters-history {
+  margin-top: 0.9375rem
 }
 .subsection--dark {
   background: #002c54

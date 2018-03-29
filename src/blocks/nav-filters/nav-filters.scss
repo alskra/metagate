@@ -1,0 +1,33 @@
+.nav-filters {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px -10px;
+  }
+
+  &__item {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    color: $color-blue;
+    transition: color $btn-transition-base;
+    margin: 0 10px 10px;
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+    &:hover {
+      color: white;
+    }
+
+    &-icon {
+      font-size: 17px;
+      margin-right: 5px;
+      vertical-align: -2px;
+    }
+
+    &--active {
+      font-weight: 500;
+      color: white;
+    }
+  }
+}

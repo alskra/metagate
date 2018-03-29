@@ -172,9 +172,20 @@ include ../blocks/help/help
       +b.SECTION.subsection--transparent
         .container-fluid
           +e.HEADER.__header.mb-25
-            +e.H2.__title
-              +isvg#history.__title-icon
-              | History
+            .row
+              .col-auto
+                +e.H2.__title
+                  +isvg#history.__title-icon
+                  | History
+              .col.pl-30
+                +b.NAV.nav-filters.__filters-history
+                  +e.__inner
+                    +e.A.__item--active(href='js') All transactions
+                    +e.A.__item(href='js') Incoming
+                    +e.A.__item(href='js') Outgoing
+                    +e.A.__item(href='js')
+                      +isvg#star.__item-icon
+                      | Address book
           +b.TABLE.table-data--history-transfers
             thead
               tr

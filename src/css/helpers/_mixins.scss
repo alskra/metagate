@@ -3,25 +3,18 @@
   //outline: 1px dotted;
   //outline: 5px auto -webkit-focus-ring-color;
   outline: 0;
-  box-shadow: $shadows, $focus-box-shadow;
+  box-shadow: $focus-box-shadow, $shadows;
 }
 
-@mixin state-hover-focus {
-  &:hover, &:focus {
-    @content;
-  }
-}
-
-@mixin state-active {
-  &:not(.disabled):active {
-    @content;
-  }
-}
-
-@mixin state-disabled {
+@mixin disabled {
   &:disabled,
-  &.disabled,
-  fieldset[disabled] & {
+  &.disabled {
+    @content;
+  }
+}
+
+@mixin not-disabled {
+  &:not(:disabled):not(.disabled) {
     @content;
   }
 }

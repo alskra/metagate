@@ -519,10 +519,27 @@
           <section class="subsection subsection--transparent">
             <div class="container-fluid">
               <header class="subsection__header mb-25">
-                <h2 class="subsection__title">
-                  <svg class="isvg-history subsection__title-icon" role="img">
-                    <use xlink:href="#isvg-history"></use>
-                  </svg>History</h2>
+                <div class="row">
+                  <div class="col-auto">
+                    <h2 class="subsection__title">
+                      <svg class="isvg-history subsection__title-icon" role="img">
+                        <use xlink:href="#isvg-history"></use>
+                      </svg>History</h2>
+                  </div>
+                  <div class="col pl-30">
+                    <nav class="nav-filters subsection__filters-history">
+                      <div class="nav-filters__inner">
+                        <a class="nav-filters__item nav-filters__item--active" href="js">All transactions</a>
+                        <a class="nav-filters__item" href="js">Incoming</a>
+                        <a class="nav-filters__item" href="js">Outgoing</a>
+                        <a class="nav-filters__item" href="js">
+                          <svg class="isvg-star nav-filters__item-icon" role="img">
+                            <use xlink:href="#isvg-star"></use>
+                          </svg>Address book</a>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
               </header>
               <table class="table-data table-data--history-transfers">
                 <thead>
