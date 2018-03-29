@@ -35,7 +35,7 @@ include ../blocks/help/help
         .container-fluid
           +e.HEADER.__header.mb-25
             .row.align-items-center
-              .col-auto
+              .col-auto.mw-100
                 +e.H2.__title
                   +isvg#wallet.__title-icon
                   | My Wallets
@@ -43,11 +43,11 @@ include ../blocks/help/help
                 +b.A.btn--light(href=js)
                   +isvg#plus.__icon
                   | Add wallet
-              .col-auto
+              .col-auto.mw-100
                 +b.A.btn--light(href=js)
                   +isvg#import.__icon
                   | Import wallet
-              .col-auto
+              .col-auto.mw-100
                 +b.A.btn--light(href=js)
                   +isvg#backup.__icon
                   | Wallet backup
@@ -172,8 +172,8 @@ include ../blocks/help/help
       +b.SECTION.subsection--transparent
         .container-fluid
           +e.HEADER.__header.mb-25
-            .row
-              .col-auto
+            .row.ml-30-inv
+              .col-auto.pl-30.mw-100
                 +e.H2.__title
                   +isvg#history.__title-icon
                   | History
