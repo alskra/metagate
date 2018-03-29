@@ -10,10 +10,11 @@ include ../blocks/form-start/form-start
 
 +page
   +header.__header
-  +e.__main.d-flex.flex-column.justify-content-center
+  +e.__main
     .container-fluid
+      +logo.__logo.mt-20.mb-25
       .row
         .col-4.offset-4
           +b.H1.title.mb-30 #[strong #Meta]Gate
           +form-start('login')
-  +footer('start').__footer
+  +footer('inner').__footer

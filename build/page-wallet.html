@@ -184,7 +184,7 @@
               <div class="container-fluid d-flex justify-content-end">
                 <select class="select-sm line-chart__select">
                   <option>Ethereum/USD</option>
-                  <option>#MHC/USD</option>
+                  <option selected="selected">#MHC/USD</option>
                   <option>Bitcoin</option>
                   <option>Bitcoin cash</option>
                 </select>
@@ -595,14 +595,19 @@
         </section>
       </div>
       <footer class="footer page__footer">
-        <div class="footer__inner">
-          <a class="action-support footer__support" href="javascript:">
-            <svg class="isvg-dialog action-support__icon" role="img">
-              <use xlink:href="#isvg-dialog"></use>
-            </svg>
-            <span class="action-support__text">
-              <small>Have questions?</small>Ask our support</span>
-          </a>
+        <div class="container-fluid">
+          <div class="row align-items-end">
+            <div class="col-6">ver 0.4.32</div>
+            <div class="col-6 d-flex align-items-start">
+              <a class="action-support footer__support" href="javascript:">
+                <svg class="isvg-dialog action-support__icon" role="img">
+                  <use xlink:href="#isvg-dialog"></use>
+                </svg>
+                <span class="action-support__text">
+                  <small>Have questions?</small>Ask our support</span>
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

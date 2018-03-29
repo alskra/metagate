@@ -1,4 +1,6 @@
 .logo {
+  display: inline-block;
+  vertical-align: top;
   @include plain-hover-focus {
     color: white;
     text-decoration: none;

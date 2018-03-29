@@ -124,7 +124,7 @@
   height: 1em
 }
 .isvg-logo_mail {
-  width: 4.80769em;
+  width: 4.78862em;
   height: 1em
 }
 .isvg-metaapps {
@@ -195,6 +195,9 @@
   flex: none;
   font-size: 2.0625rem;
   margin-right: 0.75rem
+}
+.action-support__text {
+  white-space: nowrap
 }
 .action-support__text small {
   font-size: 0.875rem;
@@ -375,6 +378,11 @@ fieldset[disabled] .btn {
   padding-left: 1.25rem;
   margin-left: auto
 }
+.footer {
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  padding: 1.875rem 0
+}
 .footer__inner {
   display: -ms-flexbox;
   display: flex;
@@ -386,7 +394,7 @@ fieldset[disabled] .btn {
   margin: 0 1.875rem 1.875rem auto
 }
 .footer__support {
-  margin: 0 1.875rem 1.875rem auto
+  margin: 0 0 0 auto
 }
 .form-checkbox {
   font-size: 0.875rem;
@@ -901,6 +909,10 @@ fieldset[disabled] .btn {
 .line-chart--theme-blue .line-chart__axis-x {
   background: #003d69
 }
+.logo {
+  display: inline-block;
+  vertical-align: top
+}
 .logo,
 .logo:focus,
 .logo:hover {
@@ -1113,6 +1125,9 @@ fieldset[disabled] .btn {
   -ms-flex: none;
   flex: none
 }
+.page__logo {
+  font-size: 3.25rem
+}
 .page--theme-dark .page__body-inner {
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/whatis-satelit.png) no-repeat right 11.5625rem top 18.125rem fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c
 }
@@ -1151,8 +1166,7 @@ fieldset[disabled] .btn {
   word-wrap: break-word
 }
 .section__logo {
-  display: block;
-  font-size: 2.125rem
+  font-size: 2.14688rem
 }
 .section__actions {
   font-size: 0.875rem;

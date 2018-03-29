@@ -90,8 +90,13 @@
           </nav>
         </div>
       </header>
-      <div class="page__main d-flex flex-column justify-content-center">
+      <div class="page__main">
         <div class="container-fluid">
+          <a class="logo page__logo mt-20 mb-25" href="index.html">
+            <svg class="isvg-logo_mail logo__img" role="img">
+              <use xlink:href="#isvg-logo_mail"></use>
+            </svg>
+          </a>
           <div class="row">
             <div class="col-4 offset-4">
               <h1 class="title mb-30">
@@ -161,12 +166,19 @@
         </div>
       </div>
       <footer class="footer page__footer">
-        <div class="footer__inner">
-          <a class="logo footer__logo" href="index.html">
-            <svg class="isvg-logo_mail logo__img" role="img">
-              <use xlink:href="#isvg-logo_mail"></use>
-            </svg>
-          </a>
+        <div class="container-fluid">
+          <div class="row align-items-end">
+            <div class="col-6">ver 0.4.32</div>
+            <div class="col-6 d-flex align-items-start">
+              <a class="action-support footer__support" href="javascript:">
+                <svg class="isvg-dialog action-support__icon" role="img">
+                  <use xlink:href="#isvg-dialog"></use>
+                </svg>
+                <span class="action-support__text">
+                  <small>Have questions?</small>Ask our support</span>
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

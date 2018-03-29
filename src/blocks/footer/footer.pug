@@ -6,11 +6,15 @@ mixin footer(data)
       +e.__inner
         +logo.__logo
     else if data === 'inner'
-      +e.__inner
-        +b.A.action-support(href=js).__support
-          +isvg#dialog.__icon
-          +e.__text
-            small Have questions?
-            | Ask our support
+      .container-fluid
+        .row.align-items-end
+          .col-6
+            | ver 0.4.32
+          .col-6.d-flex.align-items-start
+            +b.A.action-support(href=js).__support
+              +isvg#dialog.__icon
+              +e.__text
+                small Have questions?
+                | Ask our support
     else
       block

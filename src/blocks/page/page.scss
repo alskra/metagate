@@ -37,6 +37,10 @@
     flex: none;
   }
 
+  &__logo {
+    font-size: 52px;
+  }
+
   &--theme-dark {
     #{$b} {
       &__body {
