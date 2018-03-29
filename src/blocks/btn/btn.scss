@@ -31,12 +31,12 @@
     background: $color-dark-blue;
     transition: $btn-transition;
     @include hover {
-      &:not(:disabled) {
+      &:not(:disabled), &:not(.disabled) {
         background: darken($color-dark-blue, 5%);
       }
     }
     &:active {
-      &:not(:disabled) {
+      &:not(:disabled), &:not(.disabled) {
         background: darken($color-dark-blue, 10%);
       }
     }
@@ -52,7 +52,7 @@
     background: none;
     transition: $btn-transition;
     @include hover {
-      &:not(:disabled) {
+      &:not(:disabled), &:not(.disabled) {
         color: white;
       }
     }
@@ -70,6 +70,50 @@
       }
       &.isvg-backup {
         transform: scale((17/20));
+      }
+    }
+  }
+
+  &--big {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-blue;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 24px 25px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: #012E53;
+    transition: $btn-transition;
+    @include hover {
+      color: $color-blue;
+      &:not(:disabled), &:not(.disabled) {
+        border-color: rgba(84, 245, 255, 0.7);
+        box-shadow: 0 0 15px rgba(46, 217, 255, 0.7);
+      }
+    }
+    &:active {
+      &:not(:disabled), &:not(.disabled) {
+
+      }
+    }
+
+    #{$b} {
+      &__lbl {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &__icon {
+        width: 30px;
+        height: 30px;
+        flex: none;
+        margin-left: 25px;
+        &.isvg-plus {
+          transform: scale((24/30));
+        }
+        &.isvg-import {
+          transform: scale((22/30));
+        }
       }
     }
   }

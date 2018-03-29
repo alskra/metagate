@@ -29,6 +29,19 @@ include ../blocks/line-chart/line-chart
       .container-fluid
         +nav-meta.mb-70
       +line-chart({"width": "100%", "height": 210, "fill": "none", "stroke": "url(#line-chart)", "strokeWidth": 2})
-
-
+      +b.SECTION.subsection--transparent
+        .container-fluid
+          +e.HEADER.__header.mb-25
+            +e.H2.__title
+              +isvg#wallet.__title-icon
+              | My Wallets
+          .row
+            .col-3
+              +b.A.btn--big.w-100(href=js)
+                +e.__lbl Create #MHC wallet
+                +isvg#plus.__icon
+            .col-3
+              +b.A.btn--big.w-100(href=js)
+                +e.__lbl Import #MHC wallet
+                +isvg#import.__icon
   +footer('inner').__footer

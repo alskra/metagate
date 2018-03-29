@@ -280,9 +280,11 @@ fieldset[disabled] .btn {
   background: #2f7bc2;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
 }
+.btn--primary:hover:not(.disabled),
 .btn--primary:hover:not(:disabled) {
   background: #2a6ead
 }
+.btn--primary:active:not(.disabled),
 .btn--primary:active:not(:disabled) {
   background: #256199
 }
@@ -296,6 +298,7 @@ fieldset[disabled] .btn {
   background: none;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
 }
+.btn--light:hover:not(.disabled),
 .btn--light:hover:not(:disabled) {
   color: #fff
 }
@@ -313,6 +316,45 @@ fieldset[disabled] .btn {
 }
 .btn--light .btn__icon.isvg-backup {
   transform: scale(0.85)
+}
+.btn--big {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #99ceff;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.5rem 1.5625rem;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.3125rem;
+  background: #012e53;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+}
+.btn--big:hover {
+  color: #99ceff
+}
+.btn--big:hover:not(.disabled),
+.btn--big:hover:not(:disabled) {
+  border-color: rgba(84, 245, 255, 0.7);
+  box-shadow: 0 0 0.9375rem rgba(46, 217, 255, 0.7)
+}
+.btn--big .btn__lbl {
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.btn--big .btn__icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  -ms-flex: none;
+  flex: none;
+  margin-left: 1.5625rem
+}
+.btn--big .btn__icon.isvg-plus {
+  transform: scale(0.8)
+}
+.btn--big .btn__icon.isvg-import {
+  transform: scale(0.73333)
 }
 .container-fluid {
   max-width: 80rem
