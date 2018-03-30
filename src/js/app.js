@@ -8,6 +8,7 @@ $(function () {
   LineChart.init();
   FormSelect.init();
   SelectSm.init();
+  Wallet.init();
 
   $('[data-toggle="popover"]').popover();
 });

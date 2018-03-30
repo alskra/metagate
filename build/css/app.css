@@ -95,8 +95,16 @@
   width: 1em;
   height: 1em
 }
+.isvg-copy {
+  width: 0.86674em;
+  height: 1em
+}
 .isvg-dialog {
   width: 1.03005em;
+  height: 1em
+}
+.isvg-edit {
+  width: 1em;
   height: 1em
 }
 .isvg-envelope {
@@ -140,6 +148,10 @@
   height: 1em
 }
 .isvg-plus {
+  width: 1em;
+  height: 1em
+}
+.isvg-qr-code {
   width: 1em;
   height: 1em
 }
@@ -249,6 +261,9 @@
   text-overflow: ellipsis;
   display: inline-block;
   vertical-align: top;
+  padding: 0;
+  border: 0;
+  background: none;
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
@@ -290,10 +305,7 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  color: #99ceff;
-  padding: 0;
-  border: 0;
-  background: none
+  color: #99ceff
 }
 .btn--light:not(:disabled):not(.disabled):hover {
   color: #fff
@@ -1516,7 +1528,9 @@ a.btn:disabled {
   color: #99ceff
 }
 .wallet {
-  background: #012e53
+  background: #012e53;
+  position: relative;
+  padding-bottom: 1.25rem
 }
 .wallet__head {
   display: -ms-flexbox;
@@ -1572,7 +1586,14 @@ a.btn:disabled {
 }
 .wallet__body {
   padding: 0.1875rem 0.9375rem;
-  background: #00294f
+  background: #00294f;
+  position: absolute;
+  top: 3.75rem;
+  right: 0;
+  left: 0
+}
+.wallet__body-hidden {
+  display: none
 }
 .wallet__number {
   font-size: 0.75rem;
@@ -1580,5 +1601,69 @@ a.btn:disabled {
   color: #99ceff;
   overflow: hidden;
   text-overflow: ellipsis
+}
+.wallet__desc {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: #fff;
+  background: rgba(2, 36, 67, 0.5);
+  resize: none;
+  display: block;
+  width: 100%;
+  height: 3.125rem;
+  padding: 0.625rem;
+  border: 0;
+  margin-top: 0.75rem
+}
+.wallet__desc:focus {
+  outline: 0
+}
+.wallet__actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 1.25rem -0.3125rem 0
+}
+.wallet__action {
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
+  color: #99ceff;
+  text-transform: uppercase;
+  margin: 0 0.3125rem
+}
+.wallet__action:not(:disabled):not(.disabled):hover {
+  color: #fff
+}
+.wallet__action:not(:disabled):not(.disabled):focus {
+  box-shadow: none
+}
+.wallet__action-icon {
+  vertical-align: top;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  margin-right: 0.5rem
+}
+.wallet__action-icon.isvg-copy {
+  transform: scale(0.88235)
+}
+.wallet__action-icon.isvg-qr-code {
+  transform: scale(0.88235)
+}
+.wallet--open {
+  z-index: 1
+}
+.wallet--open .wallet__head-icon {
+  transform: scale(0.5) rotateX(180deg)
+}
+.wallet--open .wallet__body {
+  padding-top: 0.9375rem;
+  padding-bottom: 1.25rem
+}
+.wallet--open .wallet__body-hidden {
+  display: block
+}
+.wallet--open .wallet__number {
+  word-wrap: break-word
 }
 /*# sourceMappingURL=app.css.map */

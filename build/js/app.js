@@ -170,11 +170,31 @@ var SelectSm = function() {
   };
 }();
 
+var Wallet = function() {
+  var b = 'wallet';
+  var s;
+  return {
+    settings: {
+      $b: $(bemS(b))
+    },
+    init: function init() {
+      s = this.settings;
+      this.bindUIActions();
+    },
+    bindUIActions: function bindUIActions() {
+      $(document).on('click', bemS(b, 'head'), function(e) {
+        $(this).closest(bemS(b)).toggleClass(bemC(b, '', 'open'));
+      });
+    }
+  };
+}();
+
 $(function() {
   FormFieldLbl.init();
   LineChart.init();
   FormSelect.init();
   SelectSm.init();
+  Wallet.init();
   $('[data-toggle="popover"]').popover();
 });
 //# sourceMappingURL=app.js.map

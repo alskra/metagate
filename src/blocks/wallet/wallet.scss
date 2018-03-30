@@ -1,5 +1,8 @@
 .wallet {
+  $b: &;
   background: #012E53;
+  position: relative;
+  padding-bottom: 20px;
 
   &__head {
     display: flex;
@@ -60,6 +63,13 @@
   &__body {
     padding: 3px 15px;
     background: #00294F;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    &-hidden {
+      display: none;
+    }
   }
 
   &__number {
@@ -68,5 +78,78 @@
     color: $color-blue;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 14px;
+    color: white;
+    background: rgba(#022443, 0.5);
+    resize: none;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 0;
+    margin-top: 12px;
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px -5px 0;
+  }
+
+  &__action {
+    font-size: 12px;
+    line-height: 17px;
+    color: $color-blue;
+    text-transform: uppercase;
+    margin: 0 5px;
+    @include not-disabled {
+      &:hover {
+        color: white;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &-icon {
+      vertical-align: top;
+      width: 17px;
+      height: 17px;
+      margin-right: 8px;
+      &.isvg-copy {
+        transform: scale((15/17));
+      }
+      &.isvg-qr-code {
+        transform: scale((15/17));
+      }
+    }
+  }
+
+  &--open {
+    z-index: 1;
+    #{$b} {
+      &__head {
+        &-icon {
+          transform: scale((10/20)) rotateX(180deg);
+        }
+      }
+      &__body {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        &-hidden {
+          display: block;
+        }
+      }
+      &__number {
+        word-wrap: break-word;
+      }
+    }
   }
 }
