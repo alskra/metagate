@@ -1,19 +1,25 @@
 const FormFieldLbl = function () {
+  const b = 'form-field-lbl';
   let s;
   return {
     settings: {
-      b: 'form-field-lbl'
+      $b: $(bemS(b))
     },
     init: function () {
       s = this.settings;
       this.bindUIActions();
+
+      s.$b.each(function () {
+        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(this).find('input').val());
+      });
     },
     bindUIActions: function () {
-      $(document).on('focus', bemS(s.b), function () {
-        $(this).addClass(bemC(s.b, '', 'focus'));
-      }).on('blur', bemS(s.b), function (e) {
-        $(this).removeClass(bemC(s.b, '', 'focus'))
-          .toggleClass(bemC(s.b, '', 'has-value'), !!$(e.target).val());
+      $(document).on('focus', bemS(b), function () {
+        $(this).addClass(bemC(b, '', 'focus'));
+      }).on('blur', bemS(b), function (e) {
+        $(this).removeClass(bemC(b, '', 'focus'));
+      }).on('change', bemS(b), function (e) {
+        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(e.target).val());
       });
     }
   }

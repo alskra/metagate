@@ -1,0 +1,111 @@
+.form-create {
+  padding: 45px 70px 50px 86px;
+  background: rgba(#235D91, 0.5);
+
+  &__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+    margin: 0 0 15px;
+  }
+
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__col-1 {
+    position: relative;
+    &::before {
+      content: '';
+      width: 1px;
+      background: rgba(153, 206, 255, 0.3);
+      position: absolute;
+      top: 35px;
+      right: 0;
+      bottom: 35px;
+    }
+  }
+
+  &__number {
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-blue;
+    display: flex;
+    align-items: flex-start;
+
+    &-value {
+      word-wrap: break-word;
+      overflow: hidden;
+    }
+
+    &-refresh {
+      color: white;
+      flex: none;
+      margin-left: auto;
+      &:focus {
+        box-shadow: none;
+      }
+
+      &-icon {
+        display: block;
+        width: 19px;
+        height: 19px;
+        transform: scale((17/19));
+      }
+    }
+  }
+
+  &__wallet-thumbnail {
+    font-size: 8px;
+    line-height: 9px;
+    color: $color-blue;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    width: 65px;
+    height: 65px;
+    background: #2F7BC2;
+    margin-right: 15px;
+
+    &-icon {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 5px;
+    }
+
+    &-text {
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      padding: 0 5px;
+    }
+  }
+
+  &__wallet-name {
+    flex: 1 1 auto;
+  }
+
+  &__action {
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-blue;
+    text-decoration: underline;
+    margin-top: 7px;
+
+    @include not-disabled {
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__msg-info {
+    color: $color-green-1;
+  }
+}

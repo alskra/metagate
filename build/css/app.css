@@ -95,6 +95,10 @@
   width: 1em;
   height: 1em
 }
+.isvg-check {
+  width: 1.18169em;
+  height: 1em
+}
 .isvg-copy {
   width: 0.86674em;
   height: 1em
@@ -155,6 +159,10 @@
   width: 1em;
   height: 1em
 }
+.isvg-refresh-1 {
+  width: 1em;
+  height: 1em
+}
 .isvg-refresh {
   width: 1.29351em;
   height: 1em
@@ -185,6 +193,10 @@
 }
 .isvg-wallet {
   width: 1.313em;
+  height: 1em
+}
+.isvg-warning {
+  width: 1.072em;
   height: 1em
 }
 .action-support {
@@ -493,6 +505,110 @@ a.btn:disabled {
   margin-top: 0.125rem;
   margin-left: 0.875rem
 }
+.form-create {
+  padding: 2.8125rem 4.375rem 3.125rem 5.375rem;
+  background: rgba(35, 93, 145, 0.5)
+}
+.form-create__title {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #fff;
+  margin: 0 0 0.9375rem
+}
+.form-create__row {
+  margin-bottom: 1.25rem
+}
+.form-create__col-1 {
+  position: relative
+}
+.form-create__col-1::before {
+  content: '';
+  width: 0.0625rem;
+  background: rgba(153, 206, 255, 0.3);
+  position: absolute;
+  top: 2.1875rem;
+  right: 0;
+  bottom: 2.1875rem
+}
+.form-create__number {
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #99ceff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+.form-create__number-value {
+  word-wrap: break-word;
+  overflow: hidden
+}
+.form-create__number-refresh {
+  color: #fff;
+  -ms-flex: none;
+  flex: none;
+  margin-left: auto
+}
+.form-create__number-refresh:focus {
+  box-shadow: none
+}
+.form-create__number-refresh-icon {
+  display: block;
+  width: 1.1875rem;
+  height: 1.1875rem;
+  transform: scale(0.89474)
+}
+.form-create__wallet-thumbnail {
+  font-size: 0.5rem;
+  line-height: 0.5625rem;
+  color: #99ceff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex: none;
+  flex: none;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  background: #2f7bc2;
+  margin-right: 0.9375rem
+}
+.form-create__wallet-thumbnail-icon {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin-bottom: 0.3125rem
+}
+.form-create__wallet-thumbnail-text {
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  padding: 0 0.3125rem
+}
+.form-create__wallet-name {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+.form-create__action {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: #99ceff;
+  text-decoration: underline;
+  margin-top: 0.4375rem
+}
+.form-create__action:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  text-decoration: none
+}
+.form-create__msg-info {
+  color: #39c948
+}
 .form-field-lbl {
   display: block;
   margin: 0;
@@ -511,19 +627,18 @@ a.btn:disabled {
   pointer-events: none;
   transition: 0.15s ease-in-out;
   position: absolute;
-  top: 1.28125rem;
-  right: 3.1875rem;
-  left: 1.3125rem
+  top: 1.32813rem;
+  right: 2.875rem;
+  left: 1rem
 }
 .form-field-lbl__input {
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.25;
   color: #99ceff;
-  text-transform: uppercase;
   display: block;
   width: 100%;
-  padding: 2.15625rem 3.125rem 0.40625rem 1.25rem;
+  padding: 1.71875rem 2.8125rem 0.34375rem 0.9375rem;
   border: 0.0625rem solid transparent;
   background: rgba(5, 11, 31, 0.2);
   box-shadow: 0 0 0.625rem rgba(153, 206, 255, 0.2);
@@ -534,7 +649,7 @@ a.btn:disabled {
   width: 1.25rem;
   position: absolute;
   top: 50%;
-  right: 1.25rem;
+  right: 1rem;
   transform: translateY(-50%);
   cursor: text;
   pointer-events: none;
@@ -545,6 +660,9 @@ a.btn:disabled {
 }
 .form-field-lbl__icon.isvg-safe {
   font-size: 1.125rem
+}
+.form-field-lbl__icon.isvg-check {
+  font-size: 0.6875rem
 }
 .form-field-lbl--focus::before,
 .form-field-lbl--has-value::before {
@@ -562,6 +680,10 @@ a.btn:disabled {
 .form-field-lbl--focus .form-field-lbl__icon,
 .form-field-lbl--has-value .form-field-lbl__icon {
   color: #fff
+}
+.form-field-lbl--focus .form-field-lbl__icon.isvg-check,
+.form-field-lbl--has-value .form-field-lbl__icon.isvg-check {
+  color: #39c948
 }
 .form-field {
   vertical-align: top;

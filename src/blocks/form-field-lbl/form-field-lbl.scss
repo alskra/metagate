@@ -16,28 +16,23 @@
     pointer-events: none;
     transition: $input-transition-base;
     position: absolute;
-    top: 20.5px;
-    right: 51px;
-    left: 21px;
+    top: (65px - 18px*1.25)/2;
+    right: 46px;
+    left: 16px;
   }
 
   &__input {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.25;
     color: $color-blue;
-    text-transform: uppercase;
     display: block;
     width: 100%;
-    padding: 34.5px 50px 6.5px 20px;
+    padding: (65px - 24px*1.25 - 2px)/2 + 11px 45px (65px - 24px*1.25 - 2px)/2 - 11px 15px;
     border: 1px solid transparent;
     background: rgba(#050B1F, 0.2);
     box-shadow: 0 0 10px rgba($color-blue, 0.2);
     transition: $input-transition;
-  }
-
-  &__placeholder {
-
   }
 
   &__icon {
@@ -45,7 +40,7 @@
     width: 20px;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 16px;
     transform: translateY(-50%);
     cursor: text;
     pointer-events: none;
@@ -55,6 +50,9 @@
     }
     &.isvg-safe {
       font-size: 18px;
+    }
+    &.isvg-check {
+      font-size: 11px;
     }
   }
 
@@ -73,6 +71,9 @@
       }
       &__icon {
         color: white;
+        &.isvg-check {
+          color: $color-green-1;
+        }
       }
     }
   }
