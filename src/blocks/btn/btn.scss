@@ -6,6 +6,7 @@
   text-overflow: ellipsis;
   display: inline-block;
   vertical-align: top;
+  max-width: 100%;
   padding: 0;
   border: 0;
   background: none;
@@ -109,6 +110,117 @@
         &.isvg-import {
           transform: scale((22/30));
         }
+      }
+    }
+  }
+
+  &--primary-sm {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    text-transform: uppercase;
+    padding: (45px - 20px)/2 20px;
+    border: 0;
+    border-radius: 4px;
+    background: $color-dark-blue;
+    @include not-disabled {
+      &:hover {
+        color: white;
+        background: darken($color-dark-blue, 5%);
+      }
+      &:active {
+        background: darken($color-dark-blue, 10%);
+      }
+    }
+  }
+
+  &--primary-xs {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    padding: (40px - 20px)/2 20px;
+    border: 0;
+    border-radius: 4px;
+    background: $color-dark-blue;
+    @include not-disabled {
+      &:hover {
+        color: white;
+        background: darken($color-dark-blue, 5%);
+      }
+      &:active {
+        background: darken($color-dark-blue, 10%);
+      }
+    }
+  }
+
+  &--cancel {
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-blue;
+    text-transform: uppercase;
+    display: inline-flex;
+    @include not-disabled {
+      &:hover {
+        color: white;
+      }
+    }
+    #{$b}__icon {
+      flex: none;
+      width: 14px;
+      height: 14px;
+      margin-left: 10px;
+      transform: scale((13/14)) translateY(1px);
+    }
+  }
+
+  &--refresh {
+    font-size: 17px;
+    color: white;
+    #{$b}__icon {
+      display: block;
+    }
+  }
+
+  &--collapse {
+    font-size: 18px;
+    line-height: 23px;
+    color: white;
+    text-align: left;
+    display: inline-flex;
+    @include not-disabled {
+      &:hover {
+        color: white;
+      }
+    }
+    &.collapsed {
+      #{$b} {
+        &__icon {
+          &.isvg-angle-d {
+            transform: scale((10/23)) rotate(-90deg);
+          }
+        }
+      }
+    }
+    #{$b} {
+      &__icon {
+        flex: none;
+        width: 23px;
+        height: 23px;
+        &.isvg-angle-d {
+          margin-left: 10px;
+          transform: scale((10/23));
+        }
+        &.isvg-security {
+          color: $color-blue;
+          margin-right: 15px;
+        }
+      }
+      &__lbl {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1 1 auto;
       }
     }
   }

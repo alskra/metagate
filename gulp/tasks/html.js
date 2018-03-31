@@ -15,7 +15,15 @@ module.exports = function () {
         }
       }),
       $.gp.prettify({indent_inner_html: true, indent_size: 2, unformatted: ['pre', 'code']}),
-      $.gp.typograf({locale: ['ru', 'en-US'], htmlEntity: {type: 'UTF-8'}}),
+      // $.gp.typograf({
+      //   locale: ['ru', 'en-US'],
+      //   htmlEntity: {type: 'default'},
+      //   safeTags: [
+      //     ['<\\?php', '\\?>'],
+      //     ['<no-typography>', '</no-typography>'],
+      //     ['<textarea>', '</textarea>']
+      //   ]
+      // }),
       $.gp.debug({title: 'Debug task "html"'}),
       $.gulp.dest('build'),
       $.browserSync.stream()

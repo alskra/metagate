@@ -6,9 +6,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100%;
+  display: inline-block;
   vertical-align: top;
+  max-width: 100%;
   strong {
     color: white;
+  }
+
+  &--lg {
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    text-transform: none;
   }
 }

@@ -14,6 +14,27 @@ var bemC = function bemC(b) {
 }; // return BEM class
 
 
+var FieldFile = function() {
+  var b = 'field-file';
+  var s;
+  return {
+    settings: {
+      $b: $(bemS(b))
+    },
+    init: function init() {
+      s = this.settings;
+      this.bindUIActions();
+      $(bemS(b, 'input')).trigger('change');
+    },
+    bindUIActions: function bindUIActions() {
+      $(document).on('change', bemS(b), function(e) {
+        var hasValue = !!e.target.files.length;
+        $(this).find(bemS(b, 'fake')).text(hasValue ? e.target.files[0].name : $(this).data('placeholder')).toggleClass('form-field-sm--has-value', hasValue);
+      });
+    }
+  };
+}();
+
 var FormFieldLbl = function() {
   var b = 'form-field-lbl';
   var s;
@@ -24,14 +45,36 @@ var FormFieldLbl = function() {
     init: function init() {
       s = this.settings;
       this.bindUIActions();
-      s.$b.each(function() {
-        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(this).find('input').val());
-      });
+      $(bemS(b, 'input')).trigger('change');
     },
     bindUIActions: function bindUIActions() {
       $(document).on('focus', bemS(b), function() {
         $(this).addClass(bemC(b, '', 'focus'));
-      }).on('blur', bemS(b), function(e) {
+      }).on('blur', bemS(b), function() {
+        $(this).removeClass(bemC(b, '', 'focus'));
+      }).on('change', bemS(b), function(e) {
+        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(e.target).val());
+      });
+    }
+  };
+}();
+
+var FormFieldSm = function() {
+  var b = 'form-field-sm';
+  var s;
+  return {
+    settings: {
+      $b: $(bemS(b))
+    },
+    init: function init() {
+      s = this.settings;
+      this.bindUIActions();
+      s.$b.trigger('change');
+    },
+    bindUIActions: function bindUIActions() {
+      $(document).on('focus', bemS(b), function() {
+        $(this).addClass(bemC(b, '', 'focus'));
+      }).on('blur', bemS(b), function() {
         $(this).removeClass(bemC(b, '', 'focus'));
       }).on('change', bemS(b), function(e) {
         $(this).toggleClass(bemC(b, '', 'has-value'), !!$(e.target).val());
@@ -201,6 +244,8 @@ $(function() {
   FormSelect.init();
   SelectSm.init();
   Wallet.init();
+  FormFieldSm.init();
+  FieldFile.init();
   $('[data-toggle="popover"]').popover();
 });
 //# sourceMappingURL=app.js.map

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="page page--theme-dark no-js" lang="en">
   <head>
-    <title>NewWallet — MetaGate</title>
+    <title>NewWallet - MetaGate</title>
     <!-- Meta-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1280" />
@@ -101,7 +101,7 @@
                   <nav class="breadcrumb section__breadcrumb mt-30 ml-50" aria-label="breadcrumb">
                     <ol class="breadcrumb__inner">
                       <li class="breadcrumb__item">
-                        <a class="breadcrumb__item-link" href="javascript:">My Wallets</a>
+                        <a class="breadcrumb__item-link" href="javascript:">My Wallets</a>
                       </li>
                       <li class="breadcrumb__item">
                         <a class="breadcrumb__item-link" href="javascript:">Transfer</a>
@@ -221,22 +221,29 @@
                     <h2 class="subsection__title">
                       <svg class="isvg-wallet subsection__title-icon" role="img">
                         <use xlink:href="#isvg-wallet"></use>
-                      </svg>My Wallets</h2>
+                      </svg>My Wallets</h2>
                   </div>
                 </div>
               </header>
               <form class="form-create" action="">
+                <a class="btn btn--cancel form-create__btn-cancel" href="javascript:">Cancel
+                  <svg class="isvg-cancel btn__icon" role="img">
+                    <use xlink:href="#isvg-cancel"></use>
+                  </svg>
+                </a>
+                <h2 class="form-create__title">Create new wallet</h2>
                 <div class="row">
                   <div class="form-create__col-1 col-6 pr-40">
-                    <h2 class="form-create__title">Create new wallet</h2>
                     <div class="form-create__row">
-                      <div class="form-create__number">
-                        <div class="form-create__number-value">0×001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
-                        <button class="form-create__number-refresh btn" type="button" title="Refresh">
-                          <svg class="isvg-refresh-1 form-create__number-refresh-icon" role="img">
-                            <use xlink:href="#isvg-refresh-1"></use>
-                          </svg>
-                        </button>
+                      <div class="row flex-nowrap">
+                        <div class="form-create__number col">0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
+                        <div class="col-auto">
+                          <button class="btn btn--refresh form-create__btn-refresh" type="button" title="Refresh">
+                            <svg class="isvg-refresh-1 btn__icon" role="img">
+                              <use xlink:href="#isvg-refresh-1"></use>
+                            </svg>
+                          </button>
+                        </div>
                       </div>
                     </div>
                     <div class="form-create__row d-flex">
@@ -245,6 +252,19 @@
                           <use xlink:href="#isvg-warning"></use>
                         </svg>
                         <div class="form-create__wallet-thumbnail-text">Offline</div>
+                      </div>
+                      <div class="form-create__wallet-name">
+                        <label class="form-field-lbl" data-placeholder="Wallet name">
+                          <input class="form-field-lbl__input" type="text" />
+                          <svg class="isvg-check form-field-lbl__icon" role="img">
+                            <use xlink:href="#isvg-check"></use>
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-create__row d-flex">
+                      <div class="form-create__wallet-thumbnail">
+                        <img class="form-create__wallet-thumbnail-img" src="upload/wallets/wallet-5.png" alt="" role="presentation" />
                       </div>
                       <div class="form-create__wallet-name">
                         <label class="form-field-lbl" data-placeholder="Wallet name">
@@ -260,7 +280,7 @@
                         <input class="form-field-lbl__input" type="text" />
                       </label>
                     </div>
-                    <div class="form-create__row mb-25">
+                    <div class="form-create__row mb-15">
                       <div class="row">
                         <div class="col-6">
                           <label class="form-field-lbl" data-placeholder="Create password">
@@ -269,7 +289,7 @@
                               <use xlink:href="#isvg-safe"></use>
                             </svg>
                           </label>
-                          <a class="form-create__action btn" href="javascript:">Generate and fill</a>
+                          <button class="form-create__action btn" type="button">Generate and fill</button>
                         </div>
                         <div class="col-6">
                           <label class="form-field-lbl" data-placeholder="Confirm password">
@@ -281,10 +301,68 @@
                         </div>
                       </div>
                       <div class="form-create__msg-info text-right">Save and store password securely
-                        <br/>We will not be able to restore it in case of its loss/in case you forget it?</div>
+                        <br/>We will not be able to restore it in case of its loss/in case you forget it?</div>
+                    </div>
+                    <div class="row align-items-end">
+                      <div class="col-6">
+                        <div class="form-create__balance">
+                          <div>Balance</div>
+                          <span class="form-create__balance-num">0.00</span>&nbsp;#MHC</div>
+                      </div>
+                      <div class="col-6 text-right">
+                        <button class="btn btn--primary-sm form-create__btn-continue px-55">Continue</button>
+                      </div>
                     </div>
                   </div>
-                  <div class="form-create__col-2 col-6"></div>
+                  <div class="form-create__col-2 col-6">
+                    <button class="btn btn--collapse collapsed" type="button" data-toggle="collapse" data-target="#advanced-security" aria-expanded="false" aria-controls="advanced-security">
+                      <svg class="isvg-security btn__icon" role="img">
+                        <use xlink:href="#isvg-security"></use>
+                      </svg>
+                      <span class="btn__lbl">Advanced security</span>
+                      <svg class="isvg-angle-d btn__icon" role="img">
+                        <use xlink:href="#isvg-angle-d"></use>
+                      </svg>
+                    </button>
+                    <div class="collapse" id="advanced-security">
+                      <div class="mt-30">
+                        <div class="form-create__row">
+                          <div class="row flex-nowrap">
+                            <div class="col overflow-hidden">
+                              <label class="form-label form-label--lg form-create__label" for="source-text">Source text</label>
+                              <a class="help form-create__help" tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" title="Source text" data-content="Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!">
+                                <svg class="isvg-help help__icon" role="img">
+                                  <use xlink:href="#isvg-help"></use>
+                                </svg>
+                              </a>
+                            </div>
+                            <div class="col-auto">
+                              <button class="btn btn--refresh form-create__btn-refresh" type="button" title="Refresh">
+                                <svg class="isvg-refresh-1 btn__icon" role="img">
+                                  <use xlink:href="#isvg-refresh-1"></use>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <textarea class="form-field-sm form-field-sm--textarea w-100" id="source-text">3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV....</textarea>
+                        </div>
+                        <div class="form-create__row mb-0">
+                          <label class="form-label form-label--lg form-create__label" for="source-file">Source file</label>
+                          <a class="help form-create__help" tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" title="Source file" data-content="Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!">
+                            <svg class="isvg-help help__icon" role="img">
+                              <use xlink:href="#isvg-help"></use>
+                            </svg>
+                          </a>
+                          <label class="field-file" data-placeholder="No file chosen">
+                            <input class="field-file__input" type="file" id="source-file" />
+                            <span class="form-field-sm field-file__fake"></span>
+                            <span class="btn btn--primary-xs field-file__btn">Select file</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="font-weight-light mt-20">You can change automatically generated values to your preference.</div>
+                  </div>
                 </div>
               </form>
             </div>

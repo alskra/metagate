@@ -9,6 +9,8 @@ $(function () {
   FormSelect.init();
   SelectSm.init();
   Wallet.init();
+  FormFieldSm.init();
+  FieldFile.init();
 
   $('[data-toggle="popover"]').popover();
 });

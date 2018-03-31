@@ -1,5 +1,5 @@
-const FormFieldLbl = function () {
-  const b = 'form-field-lbl';
+const FormFieldSm = function () {
+  const b = 'form-field-sm';
   let s;
   return {
     settings: {
@@ -9,7 +9,7 @@ const FormFieldLbl = function () {
       s = this.settings;
       this.bindUIActions();
 
-      $(bemS(b, 'input')).trigger('change');
+      s.$b.trigger('change');
     },
     bindUIActions: function () {
       $(document).on('focus', bemS(b), function () {
