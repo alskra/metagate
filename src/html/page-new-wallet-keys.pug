@@ -43,35 +43,37 @@ include ../blocks/help/help
               | Cancel
               +isvg#cancel.__icon
             .row
-              +e.__col-1.col-6.pr-40
-                +e.__row.mb-40
-                  .row.flex-nowrap.mx-5-inv
-                    .col-auto.px-5
-                      +e.__wallet-thumbnail--view
-                        +e.IMG.__wallet-thumbnail-img(src='upload/wallets/wallet-5.png')
-                    .col.overflow-hidden.px-5
-                      +e.__wallet-name--view My wallet #1
-                      +e.__number--view 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
-                +e.__row
-                  +b.LABEL.form-label--lg.__label(for='source-text') Source text
-                  //-+help.__help(title='Source text' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
-                  +b.TEXTAREA.form-field-sm--textarea.w-100#source-text(rows='2' readonly='') 3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg...
-                +e.__row.mb-0
-                  +b.LABEL.form-label--lg.__label(for='source-file') Source file
-                  //-+help.__help(title='Source file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
-                  +b.INPUT.form-field-sm.w-100#source-file(type='text' value='\\\\home\\files\\myfile.txt' readonly='')
-              +e.__col-2.col-6
-                +e.__row
-                  +b.LABEL.form-label--lg.__label(for='source-file') Security Keys file
-                  +help.__help(title='Security Keys file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
-                  +e.__keys-filename 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1.mtg
-                  +b.LABEL.field-file(data-placeholder='No folder chosen')
-                    +e.INPUT.__input(type='file')#source-file
-                    +b.form-field-sm.__fake
-                    +b.btn--primary-xs.__btn Select folder
-                  +e.__msg-info.mt-30.
-                    Remember to keep your Keys safe. <br> We will not be able to help you if you lose your keys.
-                +b.BUTTON.btn--primary
-                  | Save keys & create wallet
-                  +isvg#check-1.__icon
+              +e.__col-1.col-5.offset-1
+                .ml-20-inv.pr-30
+                  +e.__row.mb-40
+                    .row.flex-nowrap.mx-5-inv
+                      .col-auto.px-5
+                        +e.__wallet-thumbnail--view
+                          +e.IMG.__wallet-thumbnail-img(src='upload/wallets/wallet-5.png')
+                      .col.overflow-hidden.px-5
+                        +e.__wallet-name--view My wallet #1
+                        +e.__number--view 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                  +e.__row
+                    +b.LABEL.form-label--lg.__label(for='source-text') Source text
+                    //-+help.__help(title='Source text' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                    +b.TEXTAREA.form-field-sm--textarea.w-100#source-text(rows='2' readonly='') 3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg...
+                  +e.__row.mb-0
+                    +b.LABEL.form-label--lg.__label(for='source-file') Source file
+                    //-+help.__help(title='Source file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                    +b.INPUT.form-field-sm.w-100#source-file(type='text' value='\\\\home\\files\\myfile.txt' readonly='')
+              +e.__col-2.col-5.offset-1
+                .ml-20-inv.pr-70
+                  +e.__row
+                    +b.LABEL.form-label--lg.__label(for='security-keys') Security Keys file
+                    +help.__help(title='Security Keys file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                    +e.__keys-filename 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1.mtg
+                    +b.LABEL.field-file(data-placeholder='No folder chosen')
+                      +e.INPUT.__input#security-keys(type='file')
+                      +b.form-field-sm.__fake
+                      +b.btn--primary-xs.__btn Select folder
+                    +e.__msg-info.mt-30.
+                      Remember to keep your Keys safe. <br> We will not be able to help you if you lose your keys.
+                  +b.BUTTON.btn--primary
+                    | Save keys & create wallet
+                    +isvg#check-1.__icon
   +footer('inner').__footer

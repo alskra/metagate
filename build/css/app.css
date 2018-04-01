@@ -79,6 +79,10 @@
   width: 0.88241em;
   height: 1em
 }
+.isvg-basket {
+  width: 0.85714em;
+  height: 1em
+}
 .isvg-bitcoin-cash {
   width: 1.57121em;
   height: 1em
@@ -344,6 +348,59 @@
 .btn--primary .btn__icon.isvg-check-1 {
   transform: scale(0.85)
 }
+.btn--primary-lg {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1.40625rem 2.1875rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: #2f7bc2
+}
+.btn--primary-lg:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  background: #2a6ead
+}
+.btn--primary-lg:not(:disabled):not(.disabled):active {
+  background: #256199
+}
+.btn--primary-sm {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.78125rem 1.25rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: #2f7bc2
+}
+.btn--primary-sm:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  background: #2a6ead
+}
+.btn--primary-sm:not(:disabled):not(.disabled):active {
+  background: #256199
+}
+.btn--primary-xs {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: #2f7bc2
+}
+.btn--primary-xs:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  background: #2a6ead
+}
+.btn--primary-xs:not(:disabled):not(.disabled):active {
+  background: #256199
+}
 .btn--light {
   font-weight: 400;
   font-size: 1rem;
@@ -367,6 +424,22 @@
 }
 .btn--light .btn__icon.isvg-backup {
   transform: scale(0.85)
+}
+.btn--light-1 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: rgba(153, 206, 255, 0.3);
+  text-transform: uppercase
+}
+.btn--light-1:not(:disabled):not(.disabled):hover {
+  color: rgba(255, 255, 255, 0.3)
+}
+.btn--light-1 .btn__icon {
+  vertical-align: top;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-left: 0.5rem
 }
 .btn--big {
   font-size: 1.25rem;
@@ -406,41 +479,6 @@
 }
 .btn--big .btn__icon.isvg-import {
   transform: scale(0.73333)
-}
-.btn--primary-sm {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #fff;
-  text-transform: uppercase;
-  padding: 0.78125rem 1.25rem;
-  border: 0;
-  border-radius: 0.25rem;
-  background: #2f7bc2
-}
-.btn--primary-sm:not(:disabled):not(.disabled):hover {
-  color: #fff;
-  background: #2a6ead
-}
-.btn--primary-sm:not(:disabled):not(.disabled):active {
-  background: #256199
-}
-.btn--primary-xs {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  color: #fff;
-  padding: 0.625rem 1.25rem;
-  border: 0;
-  border-radius: 0.25rem;
-  background: #2f7bc2
-}
-.btn--primary-xs:not(:disabled):not(.disabled):hover {
-  color: #fff;
-  background: #2a6ead
-}
-.btn--primary-xs:not(:disabled):not(.disabled):active {
-  background: #256199
 }
 .btn--cancel {
   font-size: 0.75rem;
@@ -657,7 +695,7 @@ a.btn:disabled {
   margin-left: 0.875rem
 }
 .form-create {
-  padding: 2.8125rem 4.375rem 3.125rem 5.375rem;
+  padding: 2.8125rem 0 3.125rem;
   background: rgba(35, 93, 145, 0.5);
   position: relative
 }
@@ -687,9 +725,6 @@ a.btn:disabled {
   top: 0;
   right: -0.0625rem;
   bottom: 0
-}
-.form-create__col-2 {
-  padding-left: 6rem
 }
 .form-create__number {
   font-size: 1rem;
@@ -764,6 +799,11 @@ a.btn:disabled {
 }
 .form-create__msg-info {
   color: #39c948
+}
+.form-create__msg-info-1 {
+  color: #99ceff;
+  font-size: 0.75rem;
+  line-height: 0.875rem
 }
 .form-create__balance {
   font-size: 0.875rem;
@@ -933,6 +973,11 @@ a.btn:disabled {
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #fff;
+  text-transform: none
+}
+.form-label--md {
+  font-size: 0.875rem;
+  line-height: 1rem;
   text-transform: none
 }
 .form-select {

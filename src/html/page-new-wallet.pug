@@ -42,77 +42,82 @@ include ../blocks/help/help
             +b.A.btn--cancel(href=js).__btn-cancel
               | Cancel
               +isvg#cancel.__icon
-            +e.H2.__title Create new wallet
             .row
-              +e.__col-1.col-6.pr-40
-                +e.__row
-                  .row.flex-nowrap
-                    +e.__number.col 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
-                    .col-auto
-                      +b.BUTTON.btn--refresh.__btn-refresh(type='button' title='Refresh')
-                        +isvg#refresh-1.__icon
-                +e.__row.d-flex
-                  +e.__wallet-thumbnail
-                    +isvg#warning.__wallet-thumbnail-icon
-                    +e.__wallet-thumbnail-text Offline
-                  +e.__wallet-name
-                    +b.LABEL.form-field-lbl(data-placeholder='Wallet name')
+              .col-11.offset-1
+                .ml-20-inv.pr-70
+                  +e.H2.__title Create new wallet
+            .row
+              +e.__col-1.col-5.offset-1
+                .ml-20-inv.pr-30
+                  +e.__row
+                    .row.flex-nowrap
+                      +e.__number.col 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                      .col-auto
+                        +b.BUTTON.btn--refresh.__btn-refresh(type='button' title='Refresh')
+                          +isvg#refresh-1.__icon
+                  +e.__row.d-flex
+                    +e.__wallet-thumbnail
+                      +isvg#warning.__wallet-thumbnail-icon
+                      +e.__wallet-thumbnail-text Offline
+                    +e.__wallet-name
+                      +b.LABEL.form-field-lbl(data-placeholder='Wallet name')
+                        +e.INPUT.__input(type='text')
+                        +isvg#check.__icon
+                  +e.__row.d-flex
+                    +e.__wallet-thumbnail
+                      +e.IMG.__wallet-thumbnail-img(src='upload/wallets/wallet-5.png')
+                    +e.__wallet-name
+                      +b.LABEL.form-field-lbl(data-placeholder='Wallet name')
+                        +e.INPUT.__input(type='text' value='My wallet #1')
+                        +isvg#check.__icon
+                  +e.__row
+                    +b.LABEL.form-field-lbl(data-placeholder='Additional notes')
                       +e.INPUT.__input(type='text')
-                      +isvg#check.__icon
-                +e.__row.d-flex
-                  +e.__wallet-thumbnail
-                    +e.IMG.__wallet-thumbnail-img(src='upload/wallets/wallet-5.png')
-                  +e.__wallet-name
-                    +b.LABEL.form-field-lbl(data-placeholder='Wallet name')
-                      +e.INPUT.__input(type='text' value='My wallet #1')
-                      +isvg#check.__icon
-                +e.__row
-                  +b.LABEL.form-field-lbl(data-placeholder='Additional notes')
-                    +e.INPUT.__input(type='text')
-                +e.__row.mb-15
-                  .row
+                  +e.__row.mb-15
+                    .row
+                      .col-6
+                        +b.LABEL.form-field-lbl(data-placeholder='Create password')
+                          +e.INPUT.__input(type='password')
+                          +isvg#safe.__icon
+                        +e.BUTTON.__action.btn(type='button') Generate and fill
+                      .col-6
+                        +b.LABEL.form-field-lbl(data-placeholder='Confirm password')
+                          +e.INPUT.__input(type='password')
+                          +isvg#safe.__icon
+                    +e.__msg-info.text-right
+                      | Save and store password securely  #[br]We will not be able to&nbsp;restore it in&nbsp;case of its&nbsp;loss/in case you forget&nbsp;it?
+                  .row.align-items-end
                     .col-6
-                      +b.LABEL.form-field-lbl(data-placeholder='Create password')
-                        +e.INPUT.__input(type='password')
-                        +isvg#safe.__icon
-                      +e.BUTTON.__action.btn(type='button') Generate and fill
-                    .col-6
-                      +b.LABEL.form-field-lbl(data-placeholder='Confirm password')
-                        +e.INPUT.__input(type='password')
-                        +isvg#safe.__icon
-                  +e.__msg-info.text-right
-                    | Save and store password securely  #[br]We will not be able to restore it in case of its loss/in case you forget it?
-                .row.align-items-end
-                  .col-6
-                    +e.__balance
-                      div Balance
-                      +e.SPAN.__balance-num 0.00
-                      | &nbsp;#MHC
-                  .col-6.text-right
-                    +b.BUTTON.btn--primary-sm.__btn-continue.px-55 Continue
-              +e.__col-2.col-6
-                +b.BUTTON.btn--collapse.collapsed(type='button' data-toggle='collapse' data-target='#advanced-security' aria-expanded="false" aria-controls="advanced-security")
-                  +isvg#security.__icon
-                  +e.SPAN.__lbl Advanced security
-                  +isvg#angle-d.__icon
-                .collapse#advanced-security
-                  .mt-30
-                    +e.__row
-                      .row.flex-nowrap
-                        .col.overflow-hidden
-                          +b.LABEL.form-label--lg.__label(for='source-text') Source text
-                          +help.__help(title='Source text' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
-                        .col-auto
-                          +b.BUTTON.btn--refresh.__btn-refresh(type='button' title='Refresh')
-                            +isvg#refresh-1.__icon
-                      +b.TEXTAREA.form-field-sm--textarea.w-100#source-text(rows='5') 3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV....
-                    +e.__row.mb-0
-                      +b.LABEL.form-label--lg.__label(for='source-file') Source file
-                      +help.__help(title='Source file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
-                      +b.LABEL.field-file(data-placeholder='No file chosen')
-                        +e.INPUT.__input(type='file')#source-file
-                        +b.form-field-sm.__fake
-                        +b.btn--primary-xs.__btn Select file
-                .font-weight-light.mt-20.
-                  You can change automatically generated values to your preference.
+                      +e.__balance
+                        div Balance
+                        +e.SPAN.__balance-num 0.00
+                        | &nbsp;#MHC
+                    .col-6.text-right
+                      +b.BUTTON.btn--primary-sm.__btn-continue.px-55 Continue
+              +e.__col-2.col-5.offset-1
+                .ml-20-inv.pr-70
+                  +b.BUTTON.btn--collapse.collapsed(type='button' data-toggle='collapse' data-target='#advanced-security' aria-expanded="false" aria-controls="advanced-security")
+                    +isvg#security.__icon
+                    +e.SPAN.__lbl Advanced security
+                    +isvg#angle-d.__icon
+                  .collapse#advanced-security
+                    .mt-30
+                      +e.__row
+                        .row.flex-nowrap
+                          .col.overflow-hidden
+                            +b.LABEL.form-label--lg.__label(for='source-text') Source text
+                            +help.__help(title='Source text' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                          .col-auto
+                            +b.BUTTON.btn--refresh.__btn-refresh(type='button' title='Refresh')
+                              +isvg#refresh-1.__icon
+                        +b.TEXTAREA.form-field-sm--textarea.w-100#source-text(rows='5') 3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV....
+                      +e.__row.mb-0
+                        +b.LABEL.form-label--lg.__label(for='source-file') Source file
+                        +help.__help(title='Source file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                        +b.LABEL.field-file(data-placeholder='No file chosen')
+                          +e.INPUT.__input#source-file(type='file')
+                          +b.form-field-sm.__fake
+                          +b.btn--primary-xs.__btn Select file
+                  .font-weight-light.mt-20.
+                    You can change automatically generated values to your preference.
   +footer('inner').__footer

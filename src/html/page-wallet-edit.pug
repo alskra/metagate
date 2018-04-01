@@ -1,0 +1,94 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/nav-meta/nav-meta
+include ../blocks/line-chart/line-chart
+include ../blocks/help/help
+
+- $.title = `${pageList.walletEdit.title} - ${$.package.description}`;
+
++page.--theme-dark
+  +header.__header
+  +e.__main
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid
+          .row
+            .col-10.mt-40.d-flex.align-items-start
+              +b.H1.title.__title #[strong #Meta]Wallet
+              +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
+            .col-2.mt-10.d-flex.flex-column.align-items-end
+              +logo.__logo.mb-35
+              +e.NAV.__actions
+                +e.A.__actions-item(href=js)
+                  +isvg#user.__actions-icon
+                  | User Login
+      .container-fluid
+        +nav-meta.mb-70
+      +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2}).--theme-blue
+      +b.SECTION.subsection.mb-30-inv
+        .container-fluid
+          +e.HEADER.__header.mb-25
+            .row.align-items-center
+              .col-auto.mw-100
+                +e.H2.__title
+                  +isvg#wallet.__title-icon
+                  | My Wallets
+          +b.FORM.form-create(action='')
+            +b.A.btn--cancel(href=js).__btn-cancel
+              | Cancel
+              +isvg#cancel.__icon
+            .row
+              .col-11.offset-1
+                .ml-20-inv.pr-70
+                  +e.H2.__title Edit wallet
+            .row
+              +e.__col-1.col-5.offset-1
+                .ml-20-inv.pr-30
+                  +e.__row
+                    .row.flex-nowrap
+                      +e.__number.col 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                  +e.__row.d-flex
+                    +e.__wallet-thumbnail
+                      +e.IMG.__wallet-thumbnail-img(src='upload/wallets/wallet-5.png')
+                    +e.__wallet-name
+                      +b.LABEL.form-field-lbl(data-placeholder='Wallet name')
+                        +e.INPUT.__input(type='text' value='My wallet #1')
+                        +isvg#check.__icon
+                  +e.__row.mb-15
+                    +b.LABEL.form-field-lbl(data-placeholder='Additional notes')
+                      +e.INPUT.__input(type='text')
+                  +e.__balance.mb-35
+                    +e.SPAN.__balance-num 1492.85
+                    | &nbsp;#MHC
+                  +e.__row.mb-0
+                    +b.LABEL.form-label--md.__label(for='password') Enter wallet password to save changes
+                    .row.flex-nowrap
+                      .col
+                        +b.LABEL.form-field-lbl(data-placeholder='Wallet password')
+                          +e.INPUT.__input#password(type='password')
+                          +isvg#safe.__icon
+                      .col-auto.pl-5
+                        +b.BUTTON.btn--primary-lg Save changes
+              +e.__col-2.col-5.offset-1
+                .ml-20-inv.pr-70
+                  +e.__row.mb-30
+                    +b.LABEL.form-label--lg.__label(for='source-text') Source text
+                    +help.__help(title='Source text' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                    +b.TEXTAREA.form-field-sm--textarea.w-100#source-text(rows='2' readonly='') 3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg...
+                  +e.__row.mb-45
+                    +b.LABEL.form-label--lg.__label(for='source-file') Source file
+                    +help.__help(title='Source file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                    +b.INPUT.form-field-sm.w-100#source-file(type='text' value='\\\\home\\files\\myfile.txt' readonly='')
+                  +e.__row.mb-0
+                    +b.LABEL.form-label--lg.__label Delete wallet
+                    +e.__msg-info-1.mb-15.
+                      You can not delete wallet that has funds. Please transfer all funds before deleting.
+                    +b.BUTTON.btn--light-1(type='button')
+                      | Delete wallet
+                      +isvg#basket.__icon
+  +footer('inner').__footer

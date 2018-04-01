@@ -1,5 +1,5 @@
 .form-create {
-  padding: 45px 70px 50px 86px;
+  padding: 45px 0 50px;
   background: rgba(#235D91, 0.5);
   position: relative;
 
@@ -35,7 +35,7 @@
   }
 
   &__col-2 {
-    padding-left: 96px;
+    //padding-left: 86px;
   }
 
   &__number {
@@ -116,6 +116,12 @@
 
   &__msg-info {
     color: $color-green-1;
+
+    &-1 {
+      color: $color-blue;
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
   &__balance {
