@@ -79,6 +79,10 @@
   width: 0.88241em;
   height: 1em
 }
+.isvg-basket-1 {
+  width: 0.8em;
+  height: 1em
+}
 .isvg-basket {
   width: 0.85714em;
   height: 1em
@@ -183,8 +187,16 @@
   width: 0.83378em;
   height: 1em
 }
+.isvg-security-1 {
+  width: 0.88863em;
+  height: 1em
+}
 .isvg-security {
   width: 1em;
+  height: 1em
+}
+.isvg-settings-1 {
+  width: 0.97276em;
   height: 1em
 }
 .isvg-settings {
@@ -539,6 +551,18 @@
   text-overflow: ellipsis;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto
+}
+.btn--remove {
+  color: #99ceff
+}
+.btn--remove:not(:disabled):not(.disabled):hover {
+  color: #fff
+}
+.btn--remove .btn__icon {
+  vertical-align: top;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: scale(0.5)
 }
 a.btn.disabled,
 a.btn:disabled {
@@ -1059,6 +1083,70 @@ a.btn:disabled {
 }
 .form-select.show .isvg-angle-d {
   transform: rotateX(180deg)
+}
+.form-settings {
+  padding: 4.375rem 0;
+  position: relative;
+  background: linear-gradient(to right, rgba(35, 93, 145, 0.5) 50%, rgba(35, 93, 145, 0.3) 50%)
+}
+.form-settings__btn-cancel {
+  position: absolute;
+  top: 1.875rem;
+  right: 1.875rem
+}
+.form-settings__title {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  color: #fff;
+  margin: 0 0 2.8125rem
+}
+.form-settings__title-icon {
+  vertical-align: top;
+  width: 2.375rem;
+  height: 2.375rem;
+  margin-right: 0.625rem
+}
+.form-settings__title-icon.isvg-settings-1 {
+  transform: scale(0.97368)
+}
+.form-settings__fieldset {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.16667;
+  color: #99ceff
+}
+.form-settings__fieldset p {
+  margin-bottom: 1.125rem
+}
+.form-settings__fieldset p:last-child {
+  margin-bottom: 0
+}
+.form-settings__legend {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #fff;
+  margin-bottom: 0.9375rem
+}
+.form-settings__legend-icon {
+  vertical-align: top;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.625rem
+}
+.form-settings__legend-icon.isvg-security-1 {
+  transform: scale(1)
+}
+.form-settings__row {
+  margin-bottom: 1.25rem
+}
+.form-settings__row--folder {
+  display: -ms-flexbox;
+  display: flex
+}
+.form-settings__btn-remove-folder {
+  margin-left: 0.5rem;
+  margin-right: -3rem
 }
 .form-start {
   font-size: 0.875rem;

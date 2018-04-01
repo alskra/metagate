@@ -1,0 +1,62 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/nav-meta/nav-meta
+include ../blocks/line-chart/line-chart
+include ../blocks/help/help
+
+- $.title = `${pageList.settingsBackup.title} - ${$.package.description}`;
+
++page.--theme-dark
+  +header.__header
+  +e.__main
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid
+          .row
+            .col-10.mt-40.d-flex.align-items-start
+              +b.H1.title.__title #[strong #Meta]Wallet
+              +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
+            .col-2.mt-10.d-flex.flex-column.align-items-end
+              +logo.__logo.mb-35
+              +e.NAV.__actions
+                +e.A.__actions-item(href=js)
+                  +isvg#user.__actions-icon
+                  | User Login
+      .container-fluid
+        +b.FORM.form-settings(action='')
+          +b.A.btn--cancel(href=js).__btn-cancel
+            | Cancel
+            +isvg#cancel.__icon
+          .row
+            .col-10.offset-1
+              +e.H2.__title
+                +isvg#settings-1.__title-icon
+                | #MetaWallet Settings
+          .row
+            +e.__col-1.col-5.offset-1.pr-55
+              +e.FIELDSET.__fieldset.mb-60
+                +e.LEGEND.__legend Default Wallets folders
+                p.
+                  MetaWallet will save new and imported Wallets here
+                  <br>When MetaWallet finds a keyfile it adds a wallet to the list
+                +e.__row.mt-35
+                  +b.INPUT.form-field-sm.w-100(type='text' readonly='' value='c://users/John/ProgrammFiles/MetaGater/Keys/')
+                +e.__row--folder.mb-30
+                  +b.INPUT.form-field-sm.w-100(type='text' value='e://MetaKeys/')
+                  +b.BUTTON.btn--remove.__btn-remove-folder(type='button' title='Remove folder')
+                    +isvg#basket-1.__icon
+                +b.BUTTON.btn--primary-xs.__btn-add-folder(type='button') Add folder
+              +e.FIELDSET.__fieldset
+                +e.LEGEND.__legend
+                  +isvg#security-1.__legend-icon
+                  | BackUp using Seed file/text/password:
+                p.
+                  If you save the combination of the password seed file and / or Seed Text you can always generate new keyfile for the Wallet.
+            +e.__col-2.col-5.pl-55
+
+  +footer('inner').__footer

@@ -1,0 +1,72 @@
+.form-settings {
+  padding: 70px 0;
+  position: relative;
+  background: linear-gradient(to right, rgba(#235D91, 0.5) 50%, rgba(#235D91, 0.3) 50%);
+
+  &__btn-cancel {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+    color: white;
+    margin: 0 0 45px;
+
+    &-icon {
+      vertical-align: top;
+      width: 38px;
+      height: 38px;
+      margin-right: 10px;
+      &.isvg-settings-1 {
+        transform: scale((37/38));
+      }
+    }
+  }
+
+  &__fieldset {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: (21/18);
+    color: $color-blue;
+    p {
+      margin-bottom: 18px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__legend {
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+    margin-bottom: 15px;
+
+    &-icon {
+      vertical-align: top;
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+      &.isvg-security-1 {
+        transform: scale((28/28));
+      }
+    }
+  }
+
+  &__row {
+    margin-bottom: 20px;
+
+    &--folder {
+      display: flex;
+    }
+  }
+
+  &__btn-remove-folder {
+    margin-left: 8px;
+    margin-right: -48px;
+  }
+}
