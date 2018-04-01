@@ -171,7 +171,58 @@
                     <p>If you save the combination of the password seed file and / or Seed Text you can always generate new keyfile for the Wallet.</p>
                   </fieldset>
                 </div>
-                <div class="form-settings__col-2 col-5 pl-55"></div>
+                <div class="form-settings__col-2 col-5 pl-55">
+                  <fieldset class="form-settings__fieldset mb-65">
+                    <legend class="form-settings__legend">Restore from Backup file</legend>
+                    <div class="form-settings__row">
+                      <label class="field-file" data-placeholder="No file chosen">
+                        <input class="field-file__input" type="file" />
+                        <span class="form-field-sm field-file__fake"></span>
+                        <span class="btn btn--primary-xs field-file__btn">Select file</span>
+                      </label>
+                    </div>
+                    <div class="form-settings__row mb-0">
+                      <div class="row flex-nowrap">
+                        <div class="col">
+                          <label class="form-field-lbl" data-placeholder="Backup Password">
+                            <input class="form-field-lbl__input" type="password" />
+                            <svg class="isvg-safe form-field-lbl__icon" role="img">
+                              <use xlink:href="#isvg-safe"></use>
+                            </svg>
+                          </label>
+                        </div>
+                        <div class="col-auto pl-5">
+                          <button class="btn btn--primary-lg" disabled="">Restore Backup</button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="form-settings__fieldset">
+                    <legend class="form-settings__legend">Create Backup file</legend>
+                    <div class="form-settings__row">
+                      <label class="field-file" data-placeholder="No folder chosen">
+                        <input class="field-file__input" type="file" />
+                        <span class="form-field-sm field-file__fake"></span>
+                        <span class="btn btn--primary-xs field-file__btn">Change folder</span>
+                      </label>
+                    </div>
+                    <div class="form-settings__row mb-0">
+                      <div class="row flex-nowrap">
+                        <div class="col">
+                          <label class="form-field-lbl" data-placeholder="Backup Password">
+                            <input class="form-field-lbl__input" type="password" />
+                            <svg class="isvg-safe form-field-lbl__icon" role="img">
+                              <use xlink:href="#isvg-safe"></use>
+                            </svg>
+                          </label>
+                        </div>
+                        <div class="col-auto pl-5">
+                          <button class="btn btn--primary-lg">Save Backup</button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
               </div>
             </form>
           </div>

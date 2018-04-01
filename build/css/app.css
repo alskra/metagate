@@ -331,7 +331,7 @@
 .btn.disabled,
 .btn:disabled {
   cursor: default;
-  opacity: .65
+  opacity: .3
 }
 .btn--primary {
   font-weight: 500;
@@ -1147,6 +1147,11 @@ a.btn:disabled {
 .form-settings__btn-remove-folder {
   margin-left: 0.5rem;
   margin-right: -3rem
+}
+.form-settings__col-2 .form-settings__legend {
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
+  color: #99ceff
 }
 .form-start {
   font-size: 0.875rem;

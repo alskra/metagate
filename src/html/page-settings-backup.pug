@@ -58,5 +58,34 @@ include ../blocks/help/help
                 p.
                   If you save the combination of the password seed file and / or Seed Text you can always generate new keyfile for the Wallet.
             +e.__col-2.col-5.pl-55
-
+              +e.FIELDSET.__fieldset.mb-65
+                +e.LEGEND.__legend Restore from Backup file
+                +e.__row
+                  +b.LABEL.field-file(data-placeholder='No file chosen')
+                    +e.INPUT.__input(type='file')
+                    +b.form-field-sm.__fake
+                    +b.btn--primary-xs.__btn Select file
+                +e.__row.mb-0
+                  .row.flex-nowrap
+                    .col
+                      +b.LABEL.form-field-lbl(data-placeholder='Backup Password')
+                        +e.INPUT.__input(type='password')
+                        +isvg#safe.__icon
+                    .col-auto.pl-5
+                      +b.BUTTON.btn--primary-lg(disabled='') Restore Backup
+              +e.FIELDSET.__fieldset
+                +e.LEGEND.__legend Create Backup file
+                +e.__row
+                  +b.LABEL.field-file(data-placeholder='No folder chosen')
+                    +e.INPUT.__input(type='file')
+                    +b.form-field-sm.__fake
+                    +b.btn--primary-xs.__btn Change folder
+                +e.__row.mb-0
+                  .row.flex-nowrap
+                    .col
+                      +b.LABEL.form-field-lbl(data-placeholder='Backup Password')
+                        +e.INPUT.__input(type='password')
+                        +isvg#safe.__icon
+                    .col-auto.pl-5
+                      +b.BUTTON.btn--primary-lg Save Backup
   +footer('inner').__footer
