@@ -211,6 +211,12 @@
   width: 1.072em;
   height: 1em
 }
+.color-white {
+  color: #fff
+}
+.color-green-1 {
+  color: #39c948
+}
 .overflow-hidden {
   overflow: hidden
 }

@@ -1,0 +1,174 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/nav-meta/nav-meta
+include ../blocks/line-chart/line-chart
+include ../blocks/form-transfer/form-transfer
+include ../blocks/help/help
+
+- $.title = `${pageList.newWalletFinished.title} - ${$.package.description}`;
+
++page.--theme-dark
+  +header.__header
+  +e.__main
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid
+          .row
+            .col-10.mt-40.d-flex.align-items-start
+              +b.H1.title.__title #[strong #Meta]Wallet
+              +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
+            .col-2.mt-10.d-flex.flex-column.align-items-end
+              +logo.__logo.mb-35
+              +e.NAV.__actions
+                +e.A.__actions-item(href=js)
+                  +isvg#user.__actions-icon
+                  | User Login
+      .container-fluid
+        +nav-meta.mb-70
+      +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2}).--theme-blue
+      +b.SECTION.subsection
+        .container-fluid
+          +e.HEADER.__header.mb-25
+            .row.align-items-center
+              .col-auto.mw-100
+                +e.H2.__title
+                  +isvg#wallet.__title-icon
+                  | My Wallets
+              .col
+                +b.A.btn--light(href=js)
+                  +isvg#plus.__icon
+                  | Add wallet
+              .col-auto.mw-100.color-green-1.text-right.
+                Congratulations! Your wallet <span class="color-white">“My wallet #1”</span> is created. Remember to keep your keys and passord securely.
+          .row.mb-20
+            .col-3.pb-20
+              +b.wallet
+                +e.__head
+                  +e.__head-col-1
+                    +e.IMG.__img(src='upload/wallets/wallet-5.png')
+                  +e.__head-col-2
+                    +e.__title My wallet #1
+                    +e.__sum
+                      +e.SPAN.__num 0.00
+                      +e.SPAN.__currency #MHC
+                  +isvg#angle-d.__head-icon
+                +e.__body
+                  +e.__number 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                  +e.__body-hidden
+                    +e.TEXTAREA.__desc Мой кошелек, собираю на пианино
+                    +e.__actions
+                      +e.A.__action.btn(href=js)
+                        +isvg#edit.__action-icon
+                        | Edit
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#copy.__action-icon
+                        | Copy
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#qr-code.__action-icon
+                        | QR code
+            .col-3.pb-20
+              +b.wallet
+                +e.__head
+                  +e.__head-col-1
+                    +e.IMG.__img(src='upload/wallets/wallet-1.png')
+                  +e.__head-col-2
+                    +e.__title Another strange wallet
+                    +e.__sum
+                      +e.SPAN.__num 126.00
+                      +e.SPAN.__currency #MHC
+                  +isvg#angle-d.__head-icon
+                +e.__body
+                  +e.__number 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                  +e.__body-hidden
+                    +e.TEXTAREA.__desc Мой кошелек, собираю на пианино
+                    +e.__actions
+                      +e.A.__action.btn(href=js)
+                        +isvg#edit.__action-icon
+                        | Edit
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#copy.__action-icon
+                        | Copy
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#qr-code.__action-icon
+                        | QR code
+            .col-3.pb-20
+              +b.wallet
+                +e.__head
+                  +e.__head-col-1
+                    +e.IMG.__img(src='upload/wallets/wallet-2.png')
+                  +e.__head-col-2
+                    +e.__title My wallet #2
+                    +e.__sum
+                      +e.SPAN.__num 12.02
+                      +e.SPAN.__currency #MHC
+                  +isvg#angle-d.__head-icon
+                +e.__body
+                  +e.__number 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                  +e.__body-hidden
+                    +e.TEXTAREA.__desc Мой кошелек, собираю на пианино
+                    +e.__actions
+                      +e.A.__action.btn(href=js)
+                        +isvg#edit.__action-icon
+                        | Edit
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#copy.__action-icon
+                        | Copy
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#qr-code.__action-icon
+                        | QR code
+            .col-3.pb-20
+              +b.wallet
+                +e.__head
+                  +e.__head-col-1
+                    +e.IMG.__img(src='upload/wallets/wallet-3.png')
+                  +e.__head-col-2
+                    +e.__title For my bae’s birthday
+                    +e.__sum
+                      +e.SPAN.__num 1,045,202.02
+                      +e.SPAN.__currency #MHC
+                  +isvg#angle-d.__head-icon
+                +e.__body
+                  +e.__number 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                  +e.__body-hidden
+                    +e.TEXTAREA.__desc Мой кошелек, собираю на пианино
+                    +e.__actions
+                      +e.A.__action.btn(href=js)
+                        +isvg#edit.__action-icon
+                        | Edit
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#copy.__action-icon
+                        | Copy
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#qr-code.__action-icon
+                        | QR code
+            .col-3.pb-20
+              +b.wallet
+                +e.__head
+                  +e.__head-col-1
+                    +e.IMG.__img(src='upload/wallets/wallet-4.png')
+                  +e.__head-col-2
+                    +e.__title Default wallet
+                    +e.__sum
+                      +e.SPAN.__num 0.02
+                      +e.SPAN.__currency #MHC
+                  +isvg#angle-d.__head-icon
+                +e.__body
+                  +e.__number 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                  +e.__body-hidden
+                    +e.TEXTAREA.__desc Мой кошелек, собираю на пианино
+                    +e.__actions
+                      +e.A.__action.btn(href=js)
+                        +isvg#edit.__action-icon
+                        | Edit
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#copy.__action-icon
+                        | Copy
+                      +e.A.btn.__action.btn(href=js)
+                        +isvg#qr-code.__action-icon
+                        | QR code
+  +footer('inner').__footer

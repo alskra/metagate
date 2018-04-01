@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="page page--theme-dark no-js" lang="en">
+  <head>
+    <title>NewWalletFinished - MetaGate</title>
+    <!-- Meta-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons-->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/libs.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- JS Inline-->
+    <!-- |-Insert svg-symbols-->
+    <script>
+      (function()
+      {
+        "use strict";
+        var request = new XMLHttpRequest();
+        request.open("GET", 'img/svg-symbols.svg', true);
+        request.onload = function()
+        {
+          if (request.status >= 200 && request.status < 400)
+          {
+            document.body.insertAdjacentHTML("afterbegin", request.responseText);
+          }
+        };
+        request.send();
+      })();
+    </script>
+    <!-- |-Fix object-fit <img>-->
+    <script>
+      function fitImg(e)
+      {
+        var s = e.style;
+        document.documentElement.style.objectFit === undefined && (s.backgroundImage = 'url(' + e.src + ')', s.paddingLeft = '100%');
+        s.visibility = 'visible';
+      }
+    </script>
+  </head>
+  <body class="page__body">
+    <div class="page__body-inner">
+      <header class="header page__header">
+        <div class="header__inner">
+          <button class="header__btn header__btn--back">
+            <svg class="isvg-angle-left" role="img">
+              <use xlink:href="#isvg-angle-left"></use>
+            </svg>
+          </button>
+          <button class="header__btn header__btn--forward" disabled="">
+            <svg class="isvg-angle-left" role="img">
+              <use xlink:href="#isvg-angle-left"></use>
+            </svg>
+          </button>
+          <button class="header__btn header__btn--reload">
+            <svg class="isvg-refresh" role="img">
+              <use xlink:href="#isvg-refresh"></use>
+            </svg>
+          </button>
+          <div class="header__loc">
+            <input class="header__loc-field" type="text" value="/MetaGate/Create" />
+          </div>
+          <nav class="menu header__menu">
+            <a class="menu__item" href="javascript:">
+              <svg class="isvg-buy menu__item-icon" role="img">
+                <use xlink:href="#isvg-buy"></use>
+              </svg>
+              <span class="menu__item-lbl">Buy#MHC</span>
+            </a>
+            <a class="menu__item" href="javascript:">
+              <svg class="isvg-metawallet menu__item-icon" role="img">
+                <use xlink:href="#isvg-metawallet"></use>
+              </svg>
+              <span class="menu__item-lbl">MetaWallet</span>
+            </a>
+            <a class="menu__item" href="javascript:">
+              <svg class="isvg-metaapps menu__item-icon" role="img">
+                <use xlink:href="#isvg-metaapps"></use>
+              </svg>
+              <span class="menu__item-lbl">MetaApps</span>
+            </a>
+            <a class="menu__item" href="javascript:">
+              <svg class="isvg-settings menu__item-icon" role="img">
+                <use xlink:href="#isvg-settings"></use>
+              </svg>
+              <span class="menu__item-lbl">Settings</span>
+            </a>
+          </nav>
+        </div>
+      </header>
+      <div class="page__main">
+        <section class="section">
+          <header class="section__header">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-10 mt-40 d-flex align-items-start">
+                  <h1 class="title section__title">
+                    <strong>#Meta</strong>Wallet</h1>
+                  <nav class="breadcrumb section__breadcrumb mt-30 ml-50" aria-label="breadcrumb">
+                    <ol class="breadcrumb__inner">
+                      <li class="breadcrumb__item">
+                        <a class="breadcrumb__item-link" href="javascript:">My Wallets</a>
+                      </li>
+                      <li class="breadcrumb__item">
+                        <a class="breadcrumb__item-link" href="javascript:">Transfer</a>
+                      </li>
+                      <li class="breadcrumb__item">
+                        <a class="breadcrumb__item-link" href="javascript:">History</a>
+                      </li>
+                      <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Settings</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div class="col-2 mt-10 d-flex flex-column align-items-end">
+                  <a class="logo section__logo mb-35" href="index.html">
+                    <svg class="isvg-logo_mail logo__img" role="img">
+                      <use xlink:href="#isvg-logo_mail"></use>
+                    </svg>
+                  </a>
+                  <nav class="section__actions">
+                    <a class="section__actions-item" href="javascript:">
+                      <svg class="isvg-user section__actions-icon" role="img">
+                        <use xlink:href="#isvg-user"></use>
+                      </svg>User Login</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="container-fluid">
+            <nav class="nav-meta mb-70">
+              <div class="nav-meta__inner">
+                <a class="nav-meta__item" href="javascript:" title="Ethereum">
+                  <div class="nav-meta__item-col-1">
+                    <svg class="isvg-ethereum nav-meta__item-icon" role="img">
+                      <use xlink:href="#isvg-ethereum"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-meta__item-col-2">
+                    <div class="nav-meta__item-title">Ethereum</div>
+                    <div class="nav-meta__item-num">2.03201</div>
+                  </div>
+                </a>
+                <a class="nav-meta__item nav-meta__item--active" href="javascript:" title="#Metahash">
+                  <div class="nav-meta__item-col-1">
+                    <svg class="isvg-metahash nav-meta__item-icon" role="img">
+                      <use xlink:href="#isvg-metahash"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-meta__item-col-2">
+                    <div class="nav-meta__item-title">#Metahash</div>
+                    <div class="nav-meta__item-num">1,780,320.00</div>
+                  </div>
+                </a>
+                <div class="nav-meta__item nav-meta__item--disabled" title="Bitcoin">
+                  <div class="nav-meta__item-col-1">
+                    <svg class="isvg-bitcoin nav-meta__item-icon" role="img">
+                      <use xlink:href="#isvg-bitcoin"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-meta__item-col-2">
+                    <div class="nav-meta__item-title">Bitcoin</div>
+                    <div class="nav-meta__item-num">0.00000</div>
+                  </div>
+                </div>
+                <a class="nav-meta__item" href="javascript:" title="Bitcoin cash">
+                  <div class="nav-meta__item-col-1">
+                    <svg class="isvg-bitcoin-cash nav-meta__item-icon" role="img">
+                      <use xlink:href="#isvg-bitcoin-cash"></use>
+                    </svg>
+                  </div>
+                  <div class="nav-meta__item-col-2">
+                    <div class="nav-meta__item-title">Bitcoin cash</div>
+                    <div class="nav-meta__item-num">0.52047</div>
+                  </div>
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="line-chart line-chart--theme-blue">
+            <div class="line-chart__settings">
+              <div class="container-fluid d-flex justify-content-end">
+                <select class="select-sm line-chart__select">
+                  <option>Ethereum/USD</option>
+                  <option selected="selected">#MHC/USD</option>
+                  <option>Bitcoin</option>
+                  <option>Bitcoin cash</option>
+                </select>
+                <select class="select-sm line-chart__select">
+                  <option>1 day</option>
+                  <option>1 week</option>
+                  <option>1 month</option>
+                </select>
+              </div>
+            </div>
+            <div class="line-chart__inner">
+              <svg style="position: absolute; width: 0; height: 0;">
+                <defs>
+                  <linearGradient id="line-chart" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#FF4FF8" />
+                    <stop offset="100%" stop-color="#00F0FF" /> </linearGradient>
+                </defs>
+              </svg>
+              <div class="line-chart__peity" data-peity='{"width":"100%","height":210,"fill":"#003D69","stroke":"url(#line-chart)","strokeWidth":2}'></div>
+              <div class="line-chart__ruler line-chart__ruler--min"></div>
+              <div class="line-chart__ruler line-chart__ruler--mid"></div>
+              <div class="line-chart__ruler line-chart__ruler--max"></div>
+              <div class="line-chart__label">
+                <div class="line-chart__label-num"></div>
+              </div>
+            </div>
+            <div class="line-chart__axis-x"></div>
+          </div>
+          <section class="subsection">
+            <div class="container-fluid">
+              <header class="subsection__header mb-25">
+                <div class="row align-items-center">
+                  <div class="col-auto mw-100">
+                    <h2 class="subsection__title">
+                      <svg class="isvg-wallet subsection__title-icon" role="img">
+                        <use xlink:href="#isvg-wallet"></use>
+                      </svg>My Wallets</h2>
+                  </div>
+                  <div class="col">
+                    <a class="btn btn--light" href="javascript:">
+                      <svg class="isvg-plus btn__icon" role="img">
+                        <use xlink:href="#isvg-plus"></use>
+                      </svg>Add wallet</a>
+                  </div>
+                  <div class="col-auto mw-100 color-green-1 text-right">Congratulations! Your wallet
+                    <span class="color-white">“My wallet #1”</span> is created. Remember to keep your keys and passord securely.</div>
+                </div>
+              </header>
+              <div class="row mb-20">
+                <div class="col-3 pb-20">
+                  <div class="wallet">
+                    <div class="wallet__head">
+                      <div class="wallet__head-col-1">
+                        <img class="wallet__img" src="upload/wallets/wallet-5.png" alt="" role="presentation" />
+                      </div>
+                      <div class="wallet__head-col-2">
+                        <div class="wallet__title">My wallet #1</div>
+                        <div class="wallet__sum">
+                          <span class="wallet__num">0.00</span>
+                          <span class="wallet__currency">#MHC</span>
+                        </div>
+                      </div>
+                      <svg class="isvg-angle-d wallet__head-icon" role="img">
+                        <use xlink:href="#isvg-angle-d"></use>
+                      </svg>
+                    </div>
+                    <div class="wallet__body">
+                      <div class="wallet__number">0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
+                      <div class="wallet__body-hidden">
+                        <textarea class="wallet__desc">Мой кошелек, собираю на пианино</textarea>
+                        <div class="wallet__actions">
+                          <a class="wallet__action btn" href="javascript:">
+                            <svg class="isvg-edit wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-edit"></use>
+                            </svg>Edit</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-copy wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-copy"></use>
+                            </svg>Copy</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-qr-code wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-qr-code"></use>
+                            </svg>QR code</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 pb-20">
+                  <div class="wallet">
+                    <div class="wallet__head">
+                      <div class="wallet__head-col-1">
+                        <img class="wallet__img" src="upload/wallets/wallet-1.png" alt="" role="presentation" />
+                      </div>
+                      <div class="wallet__head-col-2">
+                        <div class="wallet__title">Another strange wallet</div>
+                        <div class="wallet__sum">
+                          <span class="wallet__num">126.00</span>
+                          <span class="wallet__currency">#MHC</span>
+                        </div>
+                      </div>
+                      <svg class="isvg-angle-d wallet__head-icon" role="img">
+                        <use xlink:href="#isvg-angle-d"></use>
+                      </svg>
+                    </div>
+                    <div class="wallet__body">
+                      <div class="wallet__number">0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
+                      <div class="wallet__body-hidden">
+                        <textarea class="wallet__desc">Мой кошелек, собираю на пианино</textarea>
+                        <div class="wallet__actions">
+                          <a class="wallet__action btn" href="javascript:">
+                            <svg class="isvg-edit wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-edit"></use>
+                            </svg>Edit</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-copy wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-copy"></use>
+                            </svg>Copy</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-qr-code wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-qr-code"></use>
+                            </svg>QR code</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 pb-20">
+                  <div class="wallet">
+                    <div class="wallet__head">
+                      <div class="wallet__head-col-1">
+                        <img class="wallet__img" src="upload/wallets/wallet-2.png" alt="" role="presentation" />
+                      </div>
+                      <div class="wallet__head-col-2">
+                        <div class="wallet__title">My wallet #2</div>
+                        <div class="wallet__sum">
+                          <span class="wallet__num">12.02</span>
+                          <span class="wallet__currency">#MHC</span>
+                        </div>
+                      </div>
+                      <svg class="isvg-angle-d wallet__head-icon" role="img">
+                        <use xlink:href="#isvg-angle-d"></use>
+                      </svg>
+                    </div>
+                    <div class="wallet__body">
+                      <div class="wallet__number">0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
+                      <div class="wallet__body-hidden">
+                        <textarea class="wallet__desc">Мой кошелек, собираю на пианино</textarea>
+                        <div class="wallet__actions">
+                          <a class="wallet__action btn" href="javascript:">
+                            <svg class="isvg-edit wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-edit"></use>
+                            </svg>Edit</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-copy wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-copy"></use>
+                            </svg>Copy</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-qr-code wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-qr-code"></use>
+                            </svg>QR code</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 pb-20">
+                  <div class="wallet">
+                    <div class="wallet__head">
+                      <div class="wallet__head-col-1">
+                        <img class="wallet__img" src="upload/wallets/wallet-3.png" alt="" role="presentation" />
+                      </div>
+                      <div class="wallet__head-col-2">
+                        <div class="wallet__title">For my bae’s birthday</div>
+                        <div class="wallet__sum">
+                          <span class="wallet__num">1,045,202.02</span>
+                          <span class="wallet__currency">#MHC</span>
+                        </div>
+                      </div>
+                      <svg class="isvg-angle-d wallet__head-icon" role="img">
+                        <use xlink:href="#isvg-angle-d"></use>
+                      </svg>
+                    </div>
+                    <div class="wallet__body">
+                      <div class="wallet__number">0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
+                      <div class="wallet__body-hidden">
+                        <textarea class="wallet__desc">Мой кошелек, собираю на пианино</textarea>
+                        <div class="wallet__actions">
+                          <a class="wallet__action btn" href="javascript:">
+                            <svg class="isvg-edit wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-edit"></use>
+                            </svg>Edit</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-copy wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-copy"></use>
+                            </svg>Copy</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-qr-code wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-qr-code"></use>
+                            </svg>QR code</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 pb-20">
+                  <div class="wallet">
+                    <div class="wallet__head">
+                      <div class="wallet__head-col-1">
+                        <img class="wallet__img" src="upload/wallets/wallet-4.png" alt="" role="presentation" />
+                      </div>
+                      <div class="wallet__head-col-2">
+                        <div class="wallet__title">Default wallet</div>
+                        <div class="wallet__sum">
+                          <span class="wallet__num">0.02</span>
+                          <span class="wallet__currency">#MHC</span>
+                        </div>
+                      </div>
+                      <svg class="isvg-angle-d wallet__head-icon" role="img">
+                        <use xlink:href="#isvg-angle-d"></use>
+                      </svg>
+                    </div>
+                    <div class="wallet__body">
+                      <div class="wallet__number">0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1</div>
+                      <div class="wallet__body-hidden">
+                        <textarea class="wallet__desc">Мой кошелек, собираю на пианино</textarea>
+                        <div class="wallet__actions">
+                          <a class="wallet__action btn" href="javascript:">
+                            <svg class="isvg-edit wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-edit"></use>
+                            </svg>Edit</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-copy wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-copy"></use>
+                            </svg>Copy</a>
+                          <a class="wallet__btn wallet__action btn" href="javascript:">
+                            <svg class="isvg-qr-code wallet__action-icon" role="img">
+                              <use xlink:href="#isvg-qr-code"></use>
+                            </svg>QR code</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+      <footer class="footer page__footer">
+        <div class="container-fluid">
+          <div class="row align-items-end">
+            <div class="col-6">ver 0.4.32</div>
+            <div class="col-6 d-flex align-items-start">
+              <a class="action-support footer__support" href="javascript:">
+                <svg class="isvg-dialog action-support__icon" role="img">
+                  <use xlink:href="#isvg-dialog"></use>
+                </svg>
+                <span class="action-support__text">
+                  <small>Have questions?</small>Ask our support</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- JS-->
+    <script src="js/libs.js"></script>
+    <script src="js/app.js" async=""></script>
+  </body>
+</html>
