@@ -99,6 +99,10 @@
   width: 1em;
   height: 1em
 }
+.isvg-check-1 {
+  width: 1.3075em;
+  height: 1em
+}
 .isvg-check {
   width: 1.18169em;
   height: 1em
@@ -325,6 +329,15 @@
 .btn--primary:not(:disabled):not(.disabled):active {
   background: #256199
 }
+.btn--primary .btn__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  margin-left: 1.25rem
+}
+.btn--primary .btn__icon.isvg-check-1 {
+  transform: scale(0.85)
+}
 .btn--light {
   font-weight: 400;
   font-size: 1rem;
@@ -545,14 +558,15 @@ a.btn:disabled {
   box-shadow: 0 0 0 0.125rem #66b6ff
 }
 .field-file__fake {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   -ms-flex: 1 1 0;
   flex: 1 1 0
 }
 .field-file__btn {
   -ms-flex: none;
   flex: none;
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
   margin-left: 0.625rem
 }
 .field-info {
@@ -664,9 +678,9 @@ a.btn:disabled {
   width: 0.125rem;
   background: rgba(153, 206, 255, 0.3);
   position: absolute;
-  top: -0.625rem;
+  top: 0;
   right: -0.0625rem;
-  bottom: 2.1875rem
+  bottom: 0
 }
 .form-create__col-2 {
   padding-left: 6rem
@@ -716,9 +730,20 @@ a.btn:disabled {
   width: 100%;
   height: 100%
 }
+.form-create__wallet-thumbnail--view {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.3125rem 0 0
+}
 .form-create__wallet-name {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto
+}
+.form-create__wallet-name--view {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.25rem
 }
 .form-create__action {
   font-size: 0.75rem;
@@ -751,6 +776,12 @@ a.btn:disabled {
 }
 .form-create__btn-refresh {
   margin-top: 0.0625rem
+}
+.form-create__keys-filename {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  word-wrap: break-word;
+  margin: 0.3125rem 0 1.875rem
 }
 .form-field-lbl {
   display: block;
@@ -832,9 +863,6 @@ a.btn:disabled {
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #99ceff;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: inline-block;
   vertical-align: top;
   padding: 0.59375rem 0.9375rem;
@@ -842,6 +870,14 @@ a.btn:disabled {
   background: rgba(5, 11, 31, 0.2);
   box-shadow: 0 0 0.625rem rgba(153, 206, 255, 0.2);
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+}
+.form-field-sm[readonly] {
+  border-color: rgba(153, 206, 255, 0.15);
+  background: transparent;
+  box-shadow: none
+}
+.form-field-sm--focus[readonly] {
+  border-color: rgba(153, 206, 255, 0.3)
 }
 .form-field-sm--focus,
 .form-field-sm--has-value {
@@ -853,7 +889,7 @@ a.btn:disabled {
 .form-field-sm--textarea {
   white-space: pre-wrap;
   word-break: break-all;
-  min-height: 7.5rem
+  resize: none
 }
 .form-field {
   vertical-align: top;

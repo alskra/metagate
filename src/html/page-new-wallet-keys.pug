@@ -1,0 +1,77 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/page/page
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/breadcrumb/breadcrumb
+include ../blocks/nav-meta/nav-meta
+include ../blocks/line-chart/line-chart
+include ../blocks/help/help
+
+- $.title = `${pageList.newWalletKeys.title} - ${$.package.description}`;
+
++page.--theme-dark
+  +header.__header
+  +e.__main
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid
+          .row
+            .col-10.mt-40.d-flex.align-items-start
+              +b.H1.title.__title #[strong #Meta]Wallet
+              +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
+            .col-2.mt-10.d-flex.flex-column.align-items-end
+              +logo.__logo.mb-35
+              +e.NAV.__actions
+                +e.A.__actions-item(href=js)
+                  +isvg#user.__actions-icon
+                  | User Login
+      .container-fluid
+        +nav-meta.mb-70
+      +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2}).--theme-blue
+      +b.SECTION.subsection.mb-30-inv
+        .container-fluid
+          +e.HEADER.__header.mb-25
+            .row.align-items-center
+              .col-auto.mw-100
+                +e.H2.__title
+                  +isvg#wallet.__title-icon
+                  | My Wallets
+          +b.FORM.form-create(action='')
+            +b.A.btn--cancel(href=js).__btn-cancel
+              | Cancel
+              +isvg#cancel.__icon
+            .row
+              +e.__col-1.col-6.pr-40
+                +e.__row.mb-40
+                  .row.flex-nowrap.mx-5-inv
+                    .col-auto.px-5
+                      +e.__wallet-thumbnail--view
+                        +e.IMG.__wallet-thumbnail-img(src='upload/wallets/wallet-5.png')
+                    .col.overflow-hidden.px-5
+                      +e.__wallet-name--view My wallet #1
+                      +e.__number--view 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1
+                +e.__row
+                  +b.LABEL.form-label--lg.__label(for='source-text') Source text
+                  //-+help.__help(title='Source text' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                  +b.TEXTAREA.form-field-sm--textarea.w-100#source-text(rows='2' readonly='') 3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg[T18svxl(YrrthF3[|jV3-3c);S(.ryu$K=jYg5pxsx=B08WKl}MQ`2Aa=&._Rg...
+                +e.__row.mb-0
+                  +b.LABEL.form-label--lg.__label(for='source-file') Source file
+                  //-+help.__help(title='Source file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                  +b.INPUT.form-field-sm.w-100#source-file(type='text' value='\\\\home\\files\\myfile.txt' readonly='')
+              +e.__col-2.col-6
+                +e.__row.mb-30
+                  +b.LABEL.form-label--lg.__label(for='source-file') Security Keys file
+                  +help.__help(title='Security Keys file' data-content='Source text contains encrypted security data that is used to store and access information about your wallets and transactions. Only you have access to this file. Keep it safe and secure!')
+                  +e.__keys-filename 0x001cbebef6a7ac3df03918f4e2ab65d7dc881cfd684bb672d1.mtg
+                  +b.LABEL.field-file(data-placeholder='No folder chosen')
+                    +e.INPUT.__input(type='file')#source-file
+                    +b.form-field-sm.__fake
+                    +b.btn--primary-xs.__btn Select folder
+                +e.__msg-info.mb-20.
+                  Remember to keep your Keys safe. <br> We will not be able to help you if you lose your keys.
+                +b.BUTTON.btn--primary
+                  | Save keys & create wallet
+                  +isvg#check-1.__icon
+  +footer('inner').__footer

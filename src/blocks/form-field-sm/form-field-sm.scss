@@ -2,9 +2,6 @@
   font-size: 16px;
   line-height: 19px;
   color: $color-blue;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: inline-block;
   vertical-align: top;
   padding: (40px - 19px - 2px)/2 15px;
@@ -12,6 +9,17 @@
   background: rgba(#050B1F, 0.2);
   box-shadow: 0 0 10px rgba($color-blue, 0.2);
   transition: $input-transition;
+  &[readonly] {
+    border-color: rgba($color-blue, 0.15);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &--focus {
+    &[readonly] {
+      border-color: rgba(153, 206, 255, 0.3);
+    }
+  }
 
   &--focus, &--has-value {
     border-color: rgba(153, 206, 255, 0.3);
@@ -23,6 +31,6 @@
   &--textarea {
     white-space: pre-wrap;
     word-break: break-all;
-    min-height: 120px;
+    resize: none;
   }
 }

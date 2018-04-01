@@ -43,6 +43,16 @@
         background: darken($color-dark-blue, 10%);
       }
     }
+
+    #{$b}__icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: top;
+      margin-left: 20px;
+      &.isvg-check-1 {
+        transform: scale((17/20));
+      }
+    }
   }
 
   &--light {
