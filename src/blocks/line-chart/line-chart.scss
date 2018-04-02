@@ -138,7 +138,7 @@
     margin-bottom: -14px;
   }
 
-  &__select {
+  &__select:not(.bs-container) {
     max-width: calc(100% - 10px);
     margin-left: 10px !important;
   }

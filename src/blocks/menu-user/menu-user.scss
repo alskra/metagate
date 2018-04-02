@@ -1,0 +1,40 @@
+.menu-user {
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    color: $color-blue;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: none;
+    transition: color $btn-transition-base;
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+    &:hover {
+      color: white;
+    }
+    & + & {
+      margin-left: 20px;
+    }
+
+    &--login {
+      max-width: 150px;
+    }
+
+    &-lang {
+      flex: none;
+      margin-left: 20px;
+    }
+
+    &-icon {
+      vertical-align: top;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
+}

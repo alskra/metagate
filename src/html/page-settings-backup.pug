@@ -18,15 +18,21 @@ include ../blocks/help/help
       +e.HEADER.__header
         .container-fluid
           .row
-            .col-10.mt-40.d-flex.align-items-start
+            .col-9.mt-40.d-flex.align-items-start
               +b.H1.title.__title #[strong #Meta]Wallet
               +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
-            .col-2.mt-10.d-flex.flex-column.align-items-end
-              +logo.__logo.mb-35
-              +e.NAV.__actions
-                +e.A.__actions-item(href=js)
-                  +isvg#user.__actions-icon
+            .col-3.mt-10.d-flex.flex-column.align-items-end
+              +logo.__logo.mb-30
+              +b.NAV.menu-user.__menu-user.mw-100
+                +e.A.__item--login
+                  +isvg#user.__item-icon
                   | User Login
+                +e.A.__item(href=js)
+                  | Logout
+                +e.__item-lang
+                  +b.SELECT.select-sm
+                    option EN
+                    option RU
       .container-fluid
         +b.FORM.form-settings(action='')
           +b.A.btn--cancel(href=js).__btn-cancel

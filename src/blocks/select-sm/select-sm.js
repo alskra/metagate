@@ -19,7 +19,7 @@ const SelectSm = function () {
           .append('<svg class="isvg-angle-d" role="img">\n' +
             '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#isvg-angle-d"></use>\n' +
             '</svg>');
-      }).selectpicker({style: '', width: 'fit'});
+      }).selectpicker({style: '', width: 'fit', container: 'body'});
     },
     bindUIActions: function () {
 

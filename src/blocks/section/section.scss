@@ -12,31 +12,7 @@
     font-size: 34.35px;
   }
 
-  &__actions {
-    font-size: 14px;
-    line-height: (16/14);
+  &__menu-user {
 
-    &-item {
-      color: $color-blue;
-      display: flex;
-      align-items: flex-start;
-      transition: color $btn-transition-base;
-      @include plain-hover-focus {
-        text-decoration: none;
-      }
-      @include hover {
-        color: white;
-      }
-    }
-
-    &-icon {
-      flex: none;
-      height: 16px;
-      margin-right: 8px;
-      transform: translateY(-1px);
-      &.isvg-user {
-        font-size: 15px;
-      }
-    }
   }
 }
