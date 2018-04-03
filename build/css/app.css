@@ -359,13 +359,13 @@
 }
 .apps-grid__inner {
   position: relative;
-  margin: -0.9375rem -0.625rem
+  margin: -0.625rem -0.625rem
 }
 .apps-grid__item {
   color: #141414;
   position: absolute;
   width: calc(100%/6 - 1.25rem);
-  margin: 0.9375rem 0.625rem;
+  margin: 0.625rem 0.625rem;
   z-index: 1;
   outline: 0
 }

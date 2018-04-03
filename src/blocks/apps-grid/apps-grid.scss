@@ -1,7 +1,7 @@
 .apps-grid {
   &__inner {
     position: relative;
-    margin: -15px -10px;
+    margin: -10px -10px;
   }
 
   &__item {
@@ -9,7 +9,7 @@
     color: #141414;
     position: absolute;
     width: calc(100%/6 - 20px);
-    margin: 15px 10px;
+    margin: 10px 10px;
     z-index: 1;
     outline: 0;
     @include plain-hover-focus {
