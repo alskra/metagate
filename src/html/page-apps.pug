@@ -30,7 +30,60 @@ include ../blocks/menu-user/menu-user
               +e.__reserved-lbl Reserved #[br]#MHC
               +e.__reserved-num 0.00
         +b.FORM.form-search.mb-80(action='')
-          +e.INPUT.__input(type='text' placeholder='Search #MetaApps' autocomplete='off')
+          +e.INPUT.__input(type='text' placeholder='Search #MetaApps' autocomplete='off' autofocus='')
           +e.BUTTON.__btn
             +isvg#search.__btn-icon
+        +b.apps-grid
+          +e.__inner
+            +e.A(href='').__item
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#metanews.__item-icon
+                  +e.DIV.__item-amount 12
+                +e.DIV.__item-title #MetaNews
+            +e.A(href='').__item
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#metawallet-1.__item-icon
+                +e.DIV.__item-title #MetaWallet
+            +e.A(href='').__item
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#metaexchange.__item-icon
+                  +isvg#erc20.__item-icon
+                +e.DIV.__item-title #MetaExchange
+            +e.A(href='').__item
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#settings-2.__item-icon
+                +e.DIV.__item-title Settings
+            +e.DIV.__item--disabled
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#metaapps-1.__item-icon
+                  +e.__item-badge Coming soon
+                +e.DIV.__item-title #MetaApps
+            +e.DIV.__item--disabled
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#submit-apps.__item-icon
+                  +e.__item-badge Coming soon
+                +e.DIV.__item-title Submit Apps
+
+            +e.A(href='').__item
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#buy.__item-icon
+                +e.DIV.__item-title Buy #MHC
+            +e.A(href='').__item
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#network-status.__item-icon
+                +e.DIV.__item-title #MetaHash Network Status
+            +e.DIV.__item--disabled
+              +e.DIV.__item-inner
+                +e.DIV.__item-top
+                  +isvg#fullnode-admin.__item-icon
+                  +e.__item-badge Coming soon
+                +e.DIV.__item-title #MetaHash FullNode Admin
   +footer('start').__footer

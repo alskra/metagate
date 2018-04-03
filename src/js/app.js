@@ -11,6 +11,7 @@ $(function () {
   Wallet.init();
   FormFieldSm.init();
   FieldFile.init();
+  AppsGrid.init();
 
   $('[data-toggle="popover"]').popover();
 });

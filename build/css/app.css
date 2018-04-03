@@ -137,8 +137,20 @@
   width: 1.63517em;
   height: 1em
 }
+.isvg-erc20 {
+  width: 3.91733em;
+  height: 1em
+}
 .isvg-ethereum {
   width: 0.6217em;
+  height: 1em
+}
+.isvg-fullnode-admin {
+  width: 1em;
+  height: 1em
+}
+.isvg-group {
+  width: 1em;
   height: 1em
 }
 .isvg-help {
@@ -161,16 +173,44 @@
   width: 4.78862em;
   height: 1em
 }
+.isvg-meta-news {
+  width: 0.77183em;
+  height: 1em
+}
+.isvg-metaapps-1 {
+  width: 1.10435em;
+  height: 1em
+}
 .isvg-metaapps {
   width: 1.35771em;
+  height: 1em
+}
+.isvg-metaapss {
+  width: 1.10435em;
+  height: 1em
+}
+.isvg-metaexchange {
+  width: 1em;
   height: 1em
 }
 .isvg-metahash {
   width: 1.3252em;
   height: 1em
 }
+.isvg-metanews {
+  width: 0.77183em;
+  height: 1em
+}
+.isvg-metawallet-1 {
+  width: 1.23374em;
+  height: 1em
+}
 .isvg-metawallet {
   width: 1.17592em;
+  height: 1em
+}
+.isvg-network-status {
+  width: 1.32772em;
   height: 1em
 }
 .isvg-plus {
@@ -209,12 +249,20 @@
   width: 0.97276em;
   height: 1em
 }
+.isvg-settings-2 {
+  width: 1em;
+  height: 1em
+}
 .isvg-settings {
   width: 1em;
   height: 1em
 }
 .isvg-star {
   width: 1.0525em;
+  height: 1em
+}
+.isvg-submit-apps {
+  width: 1.01167em;
   height: 1em
 }
 .isvg-time {
@@ -275,6 +323,138 @@
   line-height: 1.14286;
   color: #99ceff;
   display: block
+}
+.apps-grid {
+  opacity: 0
+}
+.apps-grid__inner {
+  position: relative;
+  margin: -1.5rem -0.625rem
+}
+.apps-grid__item {
+  color: #141414;
+  position: absolute;
+  width: calc(100%/6 - 1.25rem);
+  margin: 1.5rem 0.625rem;
+  z-index: 1
+}
+.apps-grid__item,
+.apps-grid__item:focus,
+.apps-grid__item:hover {
+  text-decoration: none
+}
+.apps-grid__item:not(.apps-grid__item--disabled):hover {
+  color: #141414
+}
+.apps-grid__item.muuri-item-dragging {
+  z-index: 3
+}
+.apps-grid__item.muuri-item-releasing {
+  z-index: 2
+}
+.apps-grid__item.muuri-item-hidden {
+  z-index: 0
+}
+.apps-grid__item-top {
+  padding-top: 100%;
+  background: linear-gradient(180deg, #032854 0, #0a5e82 100%);
+  border-radius: 1.875rem;
+  position: relative
+}
+.apps-grid__item-icon {
+  color: #fff;
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto
+}
+.apps-grid__item-icon.isvg-metanews {
+  font-size: 5.75rem
+}
+.apps-grid__item-icon.isvg-metawallet-1 {
+  font-size: 4.8125rem
+}
+.apps-grid__item-icon.isvg-metaexchange {
+  font-size: 5.625rem
+}
+.apps-grid__item-icon.isvg-erc20 {
+  font-size: 0.75rem
+}
+.apps-grid__item-icon.isvg-settings-2 {
+  font-size: 5.0625rem
+}
+.apps-grid__item-icon.isvg-metaapps-1 {
+  font-size: 4.1875rem
+}
+.apps-grid__item-icon.isvg-submit-apps {
+  font-size: 5.3125rem
+}
+.apps-grid__item-icon.isvg-buy {
+  font-size: 5.875rem
+}
+.apps-grid__item-icon.isvg-network-status {
+  font-size: 3.625rem
+}
+.apps-grid__item-icon.isvg-fullnode-admin {
+  font-size: 4.5rem
+}
+.apps-grid__item-amount {
+  font-size: 1.125rem;
+  line-height: 2.5rem;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  border-radius: 1.25rem;
+  background: #fb5e5b;
+  position: absolute;
+  top: -0.625rem;
+  left: -0.4375rem
+}
+.apps-grid__item-badge {
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 6.25rem;
+  max-width: calc(100% - 1.25rem);
+  padding: 0.8125rem 0.9375rem;
+  background: #8a8a8a;
+  border-radius: 0.625rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0.625rem)
+}
+.apps-grid__item-title {
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 2.625rem;
+  margin-top: 0.9375rem
+}
+.apps-grid__item--disabled {
+  color: rgba(20, 20, 20, 0.5)
+}
+.apps-grid__item--disabled .apps-grid__item-top {
+  background: #bababa
+}
+.apps-grid__item--disabled .apps-grid__item-icon {
+  color: rgba(255, 255, 255, 0.5)
 }
 .breadcrumb {
   font-weight: 100;
@@ -1090,8 +1270,8 @@ a.btn:disabled {
 }
 .form-search__input:focus {
   outline: 0;
-  border-color: #99ceff;
-  box-shadow: 0 0 0.3125rem rgba(153, 206, 255, 0.5)
+  border-color: #2f7bc2;
+  box-shadow: 0 0 0.3125rem rgba(47, 123, 194, 0.5)
 }
 .form-search__btn {
   color: #a09f9f;
@@ -1108,6 +1288,9 @@ a.btn:disabled {
   width: 4.125rem;
   height: 3.4375rem;
   transform: scale(0.27273) translateY(0.125rem)
+}
+:focus ~ .form-search__btn {
+  color: #2f7bc2
 }
 .form-select {
   vertical-align: top
