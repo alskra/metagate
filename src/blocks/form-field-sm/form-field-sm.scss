@@ -1,3 +1,10 @@
+@keyframes form-field-sm-autofill {
+  to {
+    color: $color-blue;
+    background: rgba(5, 11, 31, 0.6);
+  }
+}
+
 .form-field-sm {
   font-size: 16px;
   line-height: 19px;
@@ -9,6 +16,10 @@
   background: rgba(#050B1F, 0.2);
   box-shadow: 0 0 10px rgba($color-blue, 0.2);
   transition: $input-transition;
+  &:-webkit-autofill {
+    animation-name: form-field-sm-autofill;
+    animation-fill-mode: both;
+  }
   &[readonly] {
     border-color: rgba($color-blue, 0.15);
     background: transparent;

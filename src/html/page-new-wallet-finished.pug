@@ -9,6 +9,7 @@ include ../blocks/nav-meta/nav-meta
 include ../blocks/line-chart/line-chart
 include ../blocks/form-transfer/form-transfer
 include ../blocks/help/help
+include ../blocks/menu-user/menu-user
 
 - $.title = `${pageList.newWalletFinished.title} - ${$.package.description}`;
 
@@ -24,16 +25,7 @@ include ../blocks/help/help
               +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
             .col-3.mt-10.d-flex.flex-column.align-items-end
               +logo.__logo.mb-30
-              +b.NAV.menu-user.__menu-user.mw-100
-                +e.A.__item--login
-                  +isvg#user.__item-icon
-                  | User Login
-                +e.A.__item(href=js)
-                  | Logout
-                +e.__item-lang
-                  +b.SELECT.select-sm
-                    option EN
-                    option RU
+              +menu-user.mw-100
       .container-fluid
         +nav-meta.mb-70
       +line-chart({"width": "100%", "height": 210, "fill": "#003D69", "stroke": "url(#line-chart)", "strokeWidth": 2}).--theme-blue

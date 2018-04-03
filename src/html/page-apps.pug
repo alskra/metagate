@@ -7,25 +7,30 @@ include ../blocks/footer/footer
 include ../blocks/breadcrumb/breadcrumb
 include ../blocks/nav-meta/nav-meta
 include ../blocks/line-chart/line-chart
+include ../blocks/menu-user/menu-user
 
 - $.title = `${pageList.apps.title} - ${$.package.description}`;
 
 +page.--theme-light
   +header.__header
   +e.__main
-    +b.SECTION.section
-      +e.HEADER.__header
-        .container-fluid
-          .row
-            .col-10.mt-40.d-flex.align-items-start
-              +b.H1.title.__title #[strong #Meta]Wallet
-              +breadcrumb(['My Wallets', 'Transfer', 'History', 'Settings']).__breadcrumb.mt-30.ml-50
-            .col-2.mt-10.d-flex.flex-column.align-items-end
-              +logo.__logo.mb-35
-              +e.NAV.__actions
-                +e.A.__actions-item(href=js)
-                  +isvg#user.__actions-icon
-                  | User Login
+    +b.SECTION.section-start
       .container-fluid
-
-  +footer('inner').__footer
+        .row.mb-80
+          .col-3.offset-9.d-flex.flex-column.align-items-end
+            +menu-user.--dark-blue.mw-100
+          .col-12
+            +e.H1.__title Current stage: Pre-ICO
+          .col-6
+            +b.A.btn--primary-xl(href=js)
+              | Buy #MetaHashCoins
+              +isvg#buy.__icon
+          .col-6.d-flex.justify-content-end
+            +e.__reserved
+              +e.__reserved-lbl Reserved #[br]#MHC
+              +e.__reserved-num 0.00
+        +b.FORM.form-search.mb-80(action='')
+          +e.INPUT.__input(type='text' placeholder='Search #MetaApps' autocomplete='off')
+          +e.BUTTON.__btn
+            +isvg#search.__btn-icon
+  +footer('start').__footer

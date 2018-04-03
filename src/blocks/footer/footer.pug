@@ -3,7 +3,7 @@ include ../logo/logo
 mixin footer(data)
   +b.FOOTER.footer&attributes(attributes)
     if data === 'start'
-      +e.__inner
+      .container-fluid.d-flex.align-items-start
         +logo.__logo
     else if data === 'inner'
       .container-fluid

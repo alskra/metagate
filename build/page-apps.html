@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="page no-js" lang="en">
+<html class="page page--theme-light no-js" lang="en">
   <head>
-    <title>Login - MetaGate</title>
+    <title>Apps - MetaGate</title>
     <!-- Meta-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1280" />
@@ -91,79 +91,66 @@
         </div>
       </header>
       <div class="page__main">
-        <div class="container-fluid">
-          <a class="logo page__logo mt-20 mb-25" href="index.html">
+        <section class="section-start">
+          <div class="container-fluid">
+            <div class="row mb-80">
+              <div class="col-3 offset-9 d-flex flex-column align-items-end">
+                <nav class="menu-user menu-user--dark-blue mw-100">
+                  <ul class="menu-user__inner">
+                    <li class="menu-user__item menu-user__item--login">
+                      <a class="menu-user__link" href="javascript:" title="user_login@example.com">
+                        <svg class="isvg-user menu-user__icon" role="img">
+                          <use xlink:href="#isvg-user"></use>
+                        </svg>user_login@example.com</a>
+                    </li>
+                    <li class="menu-user__item">
+                      <a class="menu-user__link" href="javascript:">Logout</a>
+                    </li>
+                    <li class="menu-user__item">
+                      <select class="select-sm">
+                        <option>EN</option>
+                        <option>RU</option>
+                      </select>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-12">
+                <h1 class="section-start__title">Current stage: Pre-ICO</h1>
+              </div>
+              <div class="col-6">
+                <a class="btn btn--primary-xl" href="javascript:">Buy #MetaHashCoins
+                  <svg class="isvg-buy btn__icon" role="img">
+                    <use xlink:href="#isvg-buy"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="col-6 d-flex justify-content-end">
+                <div class="section-start__reserved">
+                  <div class="section-start__reserved-lbl">Reserved
+                    <br/>#MHC</div>
+                  <div class="section-start__reserved-num">0.00</div>
+                </div>
+              </div>
+            </div>
+            <form class="form-search mb-80" action="">
+              <input class="form-search__input" type="text" placeholder="Search #MetaApps" autocomplete="off" />
+              <button class="form-search__btn">
+                <svg class="isvg-search form-search__btn-icon" role="img">
+                  <use xlink:href="#isvg-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+      <footer class="footer page__footer">
+        <div class="container-fluid d-flex align-items-start">
+          <a class="logo footer__logo" href="index.html">
             <svg class="isvg-logo_mail logo__img" role="img">
               <use xlink:href="#isvg-logo_mail"></use>
             </svg>
           </a>
-          <div class="row">
-            <div class="col-4 offset-4">
-              <h1 class="title mb-30">
-                <strong>#Meta</strong>Gate</h1>
-              <form class="form-start" action="">
-                <div class="form-start__header row">
-                  <div class="col-6">
-                    <div class="form-start__title">User login</div>
-                  </div>
-                  <div class="col-6 text-right">
-                    <a class="form-start__link" href="javascript:">
-                      <svg class="isvg-key form-start__link-icon" role="img">
-                        <use xlink:href="#isvg-key"></use>
-                      </svg>Create Account</a>
-                  </div>
-                </div>
-                <div class="form-start__row">
-                  <label class="form-field-lbl" data-placeholder="E-mail account">
-                    <input class="form-field-lbl__input" type="email" name="email" />
-                    <svg class="isvg-envelope form-field-lbl__icon" role="img">
-                      <use xlink:href="#isvg-envelope"></use>
-                    </svg>
-                  </label>
-                </div>
-                <div class="form-start__row">
-                  <label class="form-field-lbl" data-placeholder="Password">
-                    <input class="form-field-lbl__input" type="password" name="password" />
-                    <svg class="isvg-safe form-field-lbl__icon" role="img">
-                      <use xlink:href="#isvg-safe"></use>
-                    </svg>
-                  </label>
-                </div>
-                <div class="row mt-30 mb-50">
-                  <div class="col-6">
-                    <label class="form-checkbox">
-                      <input class="form-checkbox__input" type="checkbox" />
-                      <span class="form-checkbox__fake"></span>
-                      <span class="form-checkbox__lbl">Remember account</span>
-                    </label>
-                  </div>
-                  <div class="col-6 text-right">
-                    <a href="javascript:">Forgot password?</a>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button class="btn btn--primary w-100 mb-45">Login</button>
-                  <a class="form-start__link-continue" href="javascript:">Continue without login</a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer class="footer page__footer">
-        <div class="container-fluid">
-          <div class="row align-items-end">
-            <div class="col-6">ver 0.4.32</div>
-            <div class="col-6 d-flex align-items-start">
-              <a class="action-support footer__support" href="javascript:">
-                <svg class="isvg-dialog action-support__icon" role="img">
-                  <use xlink:href="#isvg-dialog"></use>
-                </svg>
-                <span class="action-support__text">
-                  <small>Have questions?</small>Ask our support</span>
-              </a>
-            </div>
-          </div>
         </div>
       </footer>
     </div>

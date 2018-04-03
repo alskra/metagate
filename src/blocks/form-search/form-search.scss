@@ -1,0 +1,41 @@
+.form-search {
+  border-radius: 4px;
+  display: flex;
+
+  &__input {
+    font-size: 16px;
+    line-height: 20px;
+    color: #636363;
+    width: 100%;
+    padding: (55px - 20px - 2px)/2 65px (55px - 20px - 2px)/2 25px;
+    border: 1px solid #BABABA;
+    border-radius: inherit;
+    background: white;
+    transition: $input-transition;
+    &::placeholder {
+      color: #636363;
+    }
+    &:focus {
+      outline: 0;
+      border-color: $color-blue;
+      box-shadow: 0 0 5px rgba($color-blue, 0.5);
+    }
+  }
+
+  &__btn {
+    color: #A09F9F;
+    padding: 0;
+    border: 0;
+    background: 0;
+    flex: none;
+    transition: $btn-transition;
+    margin-left: -66px;
+
+    &-icon {
+      display: block;
+      width: 66px;
+      height: 55px;
+      transform: scale((15/55)) translateY(2px);
+    }
+  }
+}

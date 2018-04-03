@@ -10,11 +10,11 @@ mixin form-start(data)
             | Create Account
       +e.__row
         +b.LABEL.form-field-lbl(data-placeholder='E-mail account')
-          +e.INPUT.__input(type='email')
+          +e.INPUT.__input(type='email' name='email')
           +isvg#envelope.__icon
       +e.__row
         +b.LABEL.form-field-lbl(data-placeholder='Password')
-          +b.INPUT.__input(type='password')
+          +b.INPUT.__input(type='password' name='password')
           +isvg#safe.__icon
       .row.mt-30.mb-50
         .col-6

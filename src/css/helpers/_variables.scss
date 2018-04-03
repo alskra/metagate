@@ -24,6 +24,11 @@ $spacers: (
   65: ($spacer * 13),
   70: ($spacer * 14),
   75: ($spacer * 15),
+  80: ($spacer * 16),
+  85: ($spacer * 17),
+  90: ($spacer * 18),
+  95: ($spacer * 19),
+  100: ($spacer * 20),
 
   5-inv: ($spacer * -1),
   10-inv: ($spacer * -2),
@@ -39,7 +44,12 @@ $spacers: (
   60-inv: ($spacer * -12),
   65-inv: ($spacer * -13),
   70-inv: ($spacer * -14),
-  75-inv: ($spacer * -15)
+  75-inv: ($spacer * -15),
+  80-inv: ($spacer * -16),
+  85-inv: ($spacer * -17),
+  90-inv: ($spacer * -18),
+  95-inv: ($spacer * -19),
+  100-inv: ($spacer * -20)
 );
 
 $body-color: #FFFFFF;

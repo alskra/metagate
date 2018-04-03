@@ -53,7 +53,7 @@ var FormFieldLbl = function() {
       }).on('blur', bemS(b), function() {
         $(this).removeClass(bemC(b, '', 'focus'));
       }).on('change', bemS(b), function(e) {
-        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(e.target).val());
+        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(e.target).val() || $(e.target).is(':-webkit-autofill'));
       });
     }
   };
@@ -77,7 +77,7 @@ var FormFieldSm = function() {
       }).on('blur', bemS(b), function() {
         $(this).removeClass(bemC(b, '', 'focus'));
       }).on('change', bemS(b), function(e) {
-        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(e.target).val());
+        $(this).toggleClass(bemC(b, '', 'has-value'), !!$(e.target).val() || $(e.target).is(':-webkit-autofill'));
       });
     }
   };

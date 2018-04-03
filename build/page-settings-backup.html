@@ -119,18 +119,24 @@
                       <use xlink:href="#isvg-logo_mail"></use>
                     </svg>
                   </a>
-                  <nav class="menu-user section__menu-user mw-100">
-                    <a class="menu-user__item menu-user__item--login">
-                      <svg class="isvg-user menu-user__item-icon" role="img">
-                        <use xlink:href="#isvg-user"></use>
-                      </svg>User Login</a>
-                    <a class="menu-user__item" href="javascript:">Logout</a>
-                    <div class="menu-user__item-lang">
-                      <select class="select-sm">
-                        <option>EN</option>
-                        <option>RU</option>
-                      </select>
-                    </div>
+                  <nav class="menu-user mw-100">
+                    <ul class="menu-user__inner">
+                      <li class="menu-user__item menu-user__item--login">
+                        <a class="menu-user__link" href="javascript:" title="user_login@example.com">
+                          <svg class="isvg-user menu-user__icon" role="img">
+                            <use xlink:href="#isvg-user"></use>
+                          </svg>user_login@example.com</a>
+                      </li>
+                      <li class="menu-user__item">
+                        <a class="menu-user__link" href="javascript:">Logout</a>
+                      </li>
+                      <li class="menu-user__item">
+                        <select class="select-sm">
+                          <option>EN</option>
+                          <option>RU</option>
+                        </select>
+                      </li>
+                    </ul>
                   </nav>
                 </div>
               </div>

@@ -1,15 +1,31 @@
 .menu-user {
-  font-size: 14px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
+  $b: &;
+
+  &__inner {
+    @include list-unstyled;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 -20px;
+  }
 
   &__item {
+    flex-shrink: 0;
+    margin-left: 20px;
+
+    &--login {
+      flex-shrink: 1;
+      overflow: hidden;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 16px;
     color: $color-blue;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    flex: none;
+    display: block;
     transition: color $btn-transition-base;
     @include plain-hover-focus {
       text-decoration: none;
@@ -17,24 +33,23 @@
     &:hover {
       color: white;
     }
-    & + & {
-      margin-left: 20px;
-    }
+  }
 
-    &--login {
-      max-width: 150px;
-    }
+  &__icon {
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
 
-    &-lang {
-      flex: none;
-      margin-left: 20px;
-    }
-
-    &-icon {
-      vertical-align: top;
-      width: 16px;
-      height: 16px;
-      margin-right: 8px;
+  &--dark-blue {
+    #{$b} {
+      &__link {
+        color: $color-dark-blue;
+        &:hover {
+          color: darken($color-dark-blue, 5%);
+        }
+      }
     }
   }
 }

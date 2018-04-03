@@ -1,3 +1,10 @@
+@keyframes form-field-lbl-autofill {
+  to {
+    color: white;
+    background: rgba(5, 11, 31, 0.6);
+  }
+}
+
 .form-field-lbl {
   $b: &;
   display: block;
@@ -33,6 +40,10 @@
     background: rgba(#050B1F, 0.2);
     box-shadow: 0 0 10px rgba($color-blue, 0.2);
     transition: $input-transition;
+    &:-webkit-autofill {
+      animation-name: form-field-lbl-autofill;
+      animation-fill-mode: both;
+    }
   }
 
   &__icon {

@@ -53,4 +53,15 @@
       }
     }
   }
+
+  &--theme-light {
+    #{$b} {
+      &__body {
+        color: #636363;
+        &-inner {
+          background: #FAFAFA;
+        }
+      }
+    }
+  }
 }
