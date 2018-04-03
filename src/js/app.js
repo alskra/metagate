@@ -12,6 +12,7 @@ $(function () {
   FormFieldSm.init();
   FieldFile.init();
   AppsGrid.init();
+  AppsCarousel.init();
 
   $('[data-toggle="popover"]').popover();
 });

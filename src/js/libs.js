@@ -10,3 +10,4 @@
 //=require ../vendor/peity/jquery.peity.js
 //=require ../../node_modules/hammerjs/hammer.js
 //=require ../../node_modules/muuri/muuri.js
+//=require ../../node_modules/slick-carousel/slick/slick.js

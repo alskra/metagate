@@ -1,6 +1,4 @@
 .apps-grid {
-  opacity: 0;
-
   &__inner {
     position: relative;
     margin: -24px -10px;
@@ -32,7 +30,7 @@
     }
 
     &-inner {
-
+      opacity: 0;
     }
 
     &-top {

@@ -324,8 +324,50 @@
   color: #99ceff;
   display: block
 }
-.apps-grid {
-  opacity: 0
+.apps-carousel [tabindex],
+.apps-carousel button {
+  outline: 0
+}
+.apps-carousel .slick-list {
+  padding: 0.625rem 0;
+  margin: -0.625rem -0.625rem
+}
+.apps-carousel .slick-slide {
+  margin: 0 0.625rem
+}
+.apps-carousel .slick-dots {
+  padding-left: 0;
+  list-style: none;
+  margin: 4.375rem 0 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.apps-carousel .slick-dots li {
+  -ms-flex: none;
+  flex: none;
+  margin: 0.3125rem
+}
+.apps-carousel .slick-dots li button {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c4c4c4;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  cursor: pointer
+}
+.apps-carousel .slick-dots li.slick-active button {
+  background: #2f7bc2;
+  cursor: default
 }
 .apps-grid__inner {
   position: relative;
@@ -354,6 +396,9 @@
 }
 .apps-grid__item.muuri-item-hidden {
   z-index: 0
+}
+.apps-grid__item-inner {
+  opacity: 0
 }
 .apps-grid__item-top {
   padding-top: 100%;

@@ -14,6 +14,29 @@ var bemC = function bemC(b) {
 }; // return BEM class
 
 
+var AppsCarousel = function() {
+  var b = 'apps-carousel';
+  var s;
+  return {
+    settings: {
+      $b: $(bemS(b)),
+      slickOptions: {
+        arrows: false,
+        dots: true,
+        infinite: false,
+        touchMove: false,
+        draggable: false
+      }
+    },
+    init: function init() {
+      s = this.settings;
+      s.$b.slick(s.slickOptions);
+      this.bindUIActions();
+    },
+    bindUIActions: function bindUIActions() {}
+  };
+}();
+
 var AppsGrid = function() {
   var b = 'apps-grid';
   var s;
@@ -21,36 +44,39 @@ var AppsGrid = function() {
     settings: {
       $b: $(bemS(b)),
       muuriOptions: {
-        dragEnabled: true
+        dragEnabled: true,
+        fillGaps: true,
+        dragSortPredicate: {
+          action: 'move'
+        }
       }
     },
     init: function init() {
       s = this.settings;
 
       if (s.$b.length) {
-        s.grid = new Muuri(bemS(b, 'inner'), s.muuriOptions);
-        $(bemS(b)).css('opacity', 1);
+        $(bemS(b, 'inner')).each(function() {
+          new Muuri(this, s.muuriOptions).on('dragMove', function(item, event) {
+            //console.log('dragMove');
+            //console.log(event);
+            //console.log(item);
+            $(item._element).on('click.Link', function() {
+              return false;
+            });
+          }).on('dragEnd', function(item, event) {
+            //console.log('dragEnd');
+            //console.log(event);
+            //console.log(item);
+            setTimeout(function() {
+              $(item._element).off('click.Link');
+            }, 50);
+          });
+        });
       }
 
       this.bindUIActions();
     },
-    bindUIActions: function bindUIActions() {
-      s.grid.on('dragMove', function(item, event) {
-        console.log('dragMove');
-        console.log(event);
-        console.log(item);
-        $(item._element).on('click.Link', function() {
-          return false;
-        });
-      }).on('dragEnd', function(item, event) {
-        console.log('dragEnd');
-        console.log(event);
-        console.log(item);
-        setTimeout(function() {
-          $(item._element).off('click.Link');
-        }, 50);
-      });
-    }
+    bindUIActions: function bindUIActions() {}
   };
 }();
 
@@ -288,6 +314,7 @@ $(function() {
   FormFieldSm.init();
   FieldFile.init();
   AppsGrid.init();
+  AppsCarousel.init();
   $('[data-toggle="popover"]').popover();
 });
 //# sourceMappingURL=app.js.map
