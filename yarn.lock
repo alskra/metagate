@@ -7536,9 +7536,9 @@ ware@^1.2.0:
   dependencies:
     wrap-fn "^0.1.0"
 
-"web-animations-js@https://github.com/web-animations/web-animations-js.git":
+web-animations-js@^2.3.1:
   version "2.3.1"
-  resolved "https://github.com/web-animations/web-animations-js.git#c69e14177ac4682205f8c4b3470939eba5b0349a"
+  resolved "https://registry.yarnpkg.com/web-animations-js/-/web-animations-js-2.3.1.tgz#3a6d9bc15196377a90f8e2803fa5262165b04510"
 
 web-resource-inliner@1.2.1:
   version "1.2.1"

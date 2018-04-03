@@ -46,7 +46,7 @@
     "sass-inline-svg-utf8": "^1.0.5",
     "slick-carousel": "^1.8.1",
     "stream-combiner2": "^1.1.1",
-    "web-animations-js": "https://github.com/web-animations/web-animations-js.git"
+    "web-animations-js": "^2.3.1"
   },
   "description": "MetaGate"
 }

@@ -4,13 +4,25 @@ const AppsGrid = function () {
   return {
     settings: {
       $b: $(bemS(b)),
-      muuriOptions: {dragEnabled: true, fillGaps: true, dragSortPredicate: {action: 'move'}}
+      muuriOptions: {
+        layoutDuration: 400,
+        layoutEasing: 'ease',
+        dragEnabled: true,
+        dragSortInterval: 50,
+        //dragContainer: document.querySelector('.apps-carousel'),
+        dragReleaseDuration: 400,
+        dragReleseEasing: 'ease',
+        layout: {rounding: false}//,
+        //dragSortPredicate: {action: 'swap'}
+      }
     },
     init: function () {
       s = this.settings;
+
       if (s.$b.length) {
         $(bemS(b, 'inner')).each(function () {
-          new Muuri(this, s.muuriOptions).on('dragMove', function (item, event) {
+          let grid = new Muuri(this, s.muuriOptions).on('dragStart', function (item, event) {
+          }).on('dragMove', function (item, event) {
             //console.log('dragMove');
             //console.log(event);
             //console.log(item);

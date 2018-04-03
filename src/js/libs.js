@@ -8,6 +8,7 @@
 //=require ../../node_modules/bootstrap/js/dist/popover.js
 //=require ../../node_modules/bootstrap-select/dist/js/bootstrap-select.js
 //=require ../vendor/peity/jquery.peity.js
+//=require ../../node_modules/web-animations-js/web-animations.min.js
 //=require ../../node_modules/hammerjs/hammer.js
 //=require ../../node_modules/muuri/muuri.js
 //=require ../../node_modules/slick-carousel/slick/slick.js
