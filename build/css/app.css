@@ -371,13 +371,13 @@
 }
 .apps-grid__inner {
   position: relative;
-  margin: -1.5rem -0.625rem
+  margin: -0.9375rem -0.625rem
 }
 .apps-grid__item {
   color: #141414;
   position: absolute;
   width: calc(100%/6 - 1.25rem);
-  margin: 1.5rem 0.625rem;
+  margin: 0.9375rem 0.625rem;
   z-index: 1;
   outline: 0
 }
@@ -490,7 +490,7 @@
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 2.625rem;
+  height: 2.625rem;
   margin-top: 0.9375rem
 }
 .apps-grid__item--disabled {

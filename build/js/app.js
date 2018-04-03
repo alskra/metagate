@@ -52,8 +52,13 @@ var AppsGrid = function() {
         dragReleaseDuration: 400,
         dragReleseEasing: 'ease',
         layout: {
-          rounding: false //,
-          //dragSortPredicate: {action: 'swap'}
+          rounding: false
+        },
+        layoutOnInit: false,
+        sortData: {
+          id: function id(item, element) {
+            return parseFloat($(element).index());
+          } //dragSortPredicate: {action: 'swap'}
 
         }
       }
@@ -67,7 +72,7 @@ var AppsGrid = function() {
             //console.log('dragMove');
             //console.log(event);
             //console.log(item);
-            $(item._element).on('click.Link', function() {
+            $(event.target).on('click.Link', function() {
               return false;
             });
           }).on('dragEnd', function(item, event) {
@@ -75,8 +80,11 @@ var AppsGrid = function() {
             //console.log(event);
             //console.log(item);
             setTimeout(function() {
-              $(item._element).off('click.Link');
+              $(event.target).off('click.Link');
             }, 50);
+          });
+          grid.sort('id', {
+            layout: 'instant'
           });
         });
       }

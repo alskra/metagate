@@ -12,7 +12,13 @@ const AppsGrid = function () {
         //dragContainer: document.querySelector('.apps-carousel'),
         dragReleaseDuration: 400,
         dragReleseEasing: 'ease',
-        layout: {rounding: false}//,
+        layout: {rounding: false},
+        layoutOnInit: false,
+        sortData: {
+          id: function (item, element) {
+            return parseFloat($(element).index());
+          }
+        }
         //dragSortPredicate: {action: 'swap'}
       }
     },
@@ -26,7 +32,7 @@ const AppsGrid = function () {
             //console.log('dragMove');
             //console.log(event);
             //console.log(item);
-            $(item._element).on('click.Link', function () {
+            $(event.target).on('click.Link', function () {
               return false;
             });
           }).on('dragEnd', function (item, event) {
@@ -34,9 +40,11 @@ const AppsGrid = function () {
             //console.log(event);
             //console.log(item);
             setTimeout(function () {
-              $(item._element).off('click.Link');
+              $(event.target).off('click.Link');
             }, 50);
           });
+
+          grid.sort('id', {layout: 'instant'});
         });
       }
 
