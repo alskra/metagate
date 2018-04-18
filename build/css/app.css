@@ -2028,7 +2028,7 @@ a.btn:disabled {
 }
 .page__body {
   height: 100%;
-  overflow: hidden
+  overflow-y: hidden
 }
 .page__body-inner {
   display: -ms-flexbox;
@@ -2039,7 +2039,6 @@ a.btn:disabled {
   height: calc(100% - 4.375rem);
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c;
   margin-top: 4.375rem;
-  overflow-x: hidden;
   overflow-y: auto
 }
 .page__header {
