@@ -14,7 +14,7 @@
 }
 
 @mixin not-disabled {
-  &:not(:disabled):not(.disabled) {
+  &:not(:disabled) {
     @content;
   }
 }

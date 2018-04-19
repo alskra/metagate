@@ -1,5 +1,5 @@
 .header {
-  padding: 19px 10px;
+  padding: 10px 10px;
   background: linear-gradient(180deg, #F2F2F2 57.46%, #EBEBEB 100%);
 
   &__inner {
@@ -7,29 +7,32 @@
   }
 
   &__btn {
-    color: #636363;
     font-size: 15px;
     line-height: 1;
-    border: 0;
-    padding: 0;
-    background: none;
-    width: 32px;
-    height: 32px;
+    color: #636363;
     display: flex;
     flex: none;
     justify-content: center;
     align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
     border-radius: 4px;
+    background: none;
     cursor: pointer;
     transition: $btn-transition;
-    @include hover {
-      &:not(:disabled) {
+    @include not-disabled {
+      &:hover {
         background: darken(#EBEBEB, 2%);
       }
     }
     &:disabled {
       color: #D9D9D9;
       cursor: default;
+    }
+    & + & {
+      margin-left: 5px;
     }
 
     &--back {
@@ -48,17 +51,18 @@
 
   &__loc {
     flex: 1 1 auto;
-    margin-left: 8px;
+    margin-left: 10px;
     margin-right: 50px;
 
     &-field {
-      color: #636363;
       font-size: 16px;
-      border-radius: 4px;
-      border: 0;
-      padding: 0 40px 0 15px;
+      line-height: 1.25;
+      color: #636363;
+      display: block;
       width: 100%;
-      height: 32px;
+      padding: (30px - 16px*1.25)/2 30px (30px - 16px*1.25)/2 15px;
+      border: 0;
+      border-radius: 15px;
       background: embed-svg('svg-icons/angle-1-down.svg') no-repeat right 15px center #FFFFFF;
       &:focus {
         outline: 0;
@@ -67,7 +71,8 @@
   }
 
   &__menu {
+    min-width: 0.2px;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 30px;
   }
 }

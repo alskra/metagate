@@ -79,6 +79,10 @@
   width: 0.88241em;
   height: 1em
 }
+.isvg-bahasa_melayu {
+  width: 1em;
+  height: 1em
+}
 .isvg-basket-1 {
   width: 0.8em;
   height: 1em
@@ -127,12 +131,20 @@
   width: 1em;
   height: 1em
 }
+.isvg-english {
+  width: 1em;
+  height: 1em
+}
 .isvg-envelope {
   width: 1.63517em;
   height: 1em
 }
 .isvg-erc20 {
   width: 3.91733em;
+  height: 1em
+}
+.isvg-espanol {
+  width: 1em;
   height: 1em
 }
 .isvg-ethereum {
@@ -199,6 +211,10 @@
   width: 1em;
   height: 1em
 }
+.isvg-portugues {
+  width: 1em;
+  height: 1em
+}
 .isvg-qr-code {
   width: 1em;
   height: 1em
@@ -209,6 +225,10 @@
 }
 .isvg-refresh {
   width: 1.29351em;
+  height: 1em
+}
+.isvg-russian {
+  width: 1em;
   height: 1em
 }
 .isvg-safe {
@@ -235,6 +255,14 @@
   width: 1em;
   height: 1em
 }
+.isvg-settings-3 {
+  width: 1.23518em;
+  height: 1em
+}
+.isvg-settings-4 {
+  width: 1em;
+  height: 1em
+}
 .isvg-settings {
   width: 1em;
   height: 1em
@@ -255,6 +283,10 @@
   width: 1em;
   height: 1em
 }
+.isvg-tuerkce {
+  width: 1em;
+  height: 1em
+}
 .isvg-user {
   width: 1.0661em;
   height: 1em
@@ -265,6 +297,22 @@
 }
 .isvg-warning {
   width: 1.072em;
+  height: 1em
+}
+.isvg- {
+  width: 1em;
+  height: 1em
+}
+.isvg- {
+  width: 1em;
+  height: 1em
+}
+.isvg- {
+  width: 1em;
+  height: 1em
+}
+.isvg-a {
+  width: 1em;
   height: 1em
 }
 .color-white {
@@ -562,11 +610,11 @@
   border-radius: 0.25rem;
   background: #2f7bc2
 }
-.btn--primary:not(:disabled):not(.disabled):hover {
+.btn--primary:not(:disabled):hover {
   color: #fff;
   background: #2a6ead
 }
-.btn--primary:not(:disabled):not(.disabled):active {
+.btn--primary:not(:disabled):active {
   background: #256199
 }
 .btn--primary .btn__icon {
@@ -588,11 +636,11 @@
   border-radius: 0.25rem;
   background: #2f7bc2
 }
-.btn--primary-xl:not(:disabled):not(.disabled):hover {
+.btn--primary-xl:not(:disabled):hover {
   color: #fff;
   background: #2a6ead
 }
-.btn--primary-xl:not(:disabled):not(.disabled):active {
+.btn--primary-xl:not(:disabled):active {
   background: #256199
 }
 .btn--primary-xl .btn__icon {
@@ -612,11 +660,11 @@
   border-radius: 0.25rem;
   background: #2f7bc2
 }
-.btn--primary-lg:not(:disabled):not(.disabled):hover {
+.btn--primary-lg:not(:disabled):hover {
   color: #fff;
   background: #2a6ead
 }
-.btn--primary-lg:not(:disabled):not(.disabled):active {
+.btn--primary-lg:not(:disabled):active {
   background: #256199
 }
 .btn--primary-sm {
@@ -630,11 +678,11 @@
   border-radius: 0.25rem;
   background: #2f7bc2
 }
-.btn--primary-sm:not(:disabled):not(.disabled):hover {
+.btn--primary-sm:not(:disabled):hover {
   color: #fff;
   background: #2a6ead
 }
-.btn--primary-sm:not(:disabled):not(.disabled):active {
+.btn--primary-sm:not(:disabled):active {
   background: #256199
 }
 .btn--primary-xs {
@@ -647,11 +695,11 @@
   border-radius: 0.25rem;
   background: #2f7bc2
 }
-.btn--primary-xs:not(:disabled):not(.disabled):hover {
+.btn--primary-xs:not(:disabled):hover {
   color: #fff;
   background: #2a6ead
 }
-.btn--primary-xs:not(:disabled):not(.disabled):active {
+.btn--primary-xs:not(:disabled):active {
   background: #256199
 }
 .btn--light {
@@ -660,7 +708,7 @@
   line-height: 1.25rem;
   color: #99ceff
 }
-.btn--light:not(:disabled):not(.disabled):hover {
+.btn--light:not(:disabled):hover {
   color: #fff
 }
 .btn--light .btn__icon {
@@ -685,7 +733,7 @@
   color: rgba(153, 206, 255, 0.3);
   text-transform: uppercase
 }
-.btn--light-1:not(:disabled):not(.disabled):hover {
+.btn--light-1:not(:disabled):hover {
   color: rgba(255, 255, 255, 0.3)
 }
 .btn--light-1 .btn__icon {
@@ -707,12 +755,12 @@
   border-radius: 0.3125rem;
   background: #012e53
 }
-.btn--big:not(:disabled):not(.disabled):hover {
+.btn--big:not(:disabled):hover {
   color: #99ceff;
   border-color: rgba(84, 245, 255, 0.7);
   box-shadow: 0 0 0.9375rem rgba(46, 217, 255, 0.7)
 }
-.btn--big:not(:disabled):not(.disabled):hover:focus {
+.btn--big:not(:disabled):hover:focus {
   outline: 0;
   box-shadow: 0 0 0 0.125rem #66b6ff,0 0 0.9375rem rgba(46, 217, 255, 0.7)
 }
@@ -741,7 +789,7 @@
   display: -ms-inline-flexbox;
   display: inline-flex
 }
-.btn--cancel:not(:disabled):not(.disabled):hover {
+.btn--cancel:not(:disabled):hover {
   color: #fff
 }
 .btn--cancel .btn__icon {
@@ -767,7 +815,7 @@
   display: -ms-inline-flexbox;
   display: inline-flex
 }
-.btn--collapse:not(:disabled):not(.disabled):hover {
+.btn--collapse:not(:disabled):hover {
   color: #fff
 }
 .btn--collapse.collapsed .btn__icon.isvg-angle-d {
@@ -796,7 +844,7 @@
 .btn--remove {
   color: #99ceff
 }
-.btn--remove:not(:disabled):not(.disabled):hover {
+.btn--remove:not(:disabled):hover {
   color: #fff
 }
 .btn--remove .btn__icon {
@@ -1058,7 +1106,7 @@ a.btn:disabled {
   text-decoration: underline;
   margin-top: 0.4375rem
 }
-.form-create__action:not(:disabled):not(.disabled):hover {
+.form-create__action:not(:disabled):hover {
   color: #fff;
   text-decoration: none
 }
@@ -1549,7 +1597,7 @@ a.btn:disabled {
   margin-top: 0.25rem
 }
 .header {
-  padding: 1.1875rem 0.625rem;
+  padding: 0.625rem 0.625rem;
   background: linear-gradient(180deg, #f2f2f2 57.46%, #ebebeb 100%)
 }
 .header__inner {
@@ -1557,14 +1605,9 @@ a.btn:disabled {
   display: flex
 }
 .header__btn {
-  color: #636363;
   font-size: 0.9375rem;
   line-height: 1;
-  border: 0;
-  padding: 0;
-  background: none;
-  width: 2rem;
-  height: 2rem;
+  color: #636363;
   display: -ms-flexbox;
   display: flex;
   -ms-flex: none;
@@ -1573,16 +1616,24 @@ a.btn:disabled {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: 0;
+  border: 0;
   border-radius: 0.25rem;
+  background: none;
   cursor: pointer;
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
 }
-.header__btn:hover:not(:disabled) {
+.header__btn:not(:disabled):hover {
   background: #e6e6e6
 }
 .header__btn:disabled {
   color: #d9d9d9;
   cursor: default
+}
+.header__btn + .header__btn {
+  margin-left: 0.3125rem
 }
 .header__btn--forward {
   transform-origin: 50% 50% 0;
@@ -1594,25 +1645,27 @@ a.btn:disabled {
 .header__loc {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  margin-left: 0.5rem;
+  margin-left: 0.625rem;
   margin-right: 3.125rem
 }
 .header__loc-field {
-  color: #636363;
   font-size: 1rem;
-  border-radius: 0.25rem;
-  border: 0;
-  padding: 0 2.5rem 0 0.9375rem;
+  line-height: 1.25;
+  color: #636363;
+  display: block;
   width: 100%;
-  height: 2rem;
+  padding: 0.3125rem 1.875rem 0.3125rem 0.9375rem;
+  border: 0;
+  border-radius: 0.9375rem;
   background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cuse%20xlink%3Ahref%3D%22%23path0_stroke%22%20transform%3D%22translate(1.04%201.199)%22%20fill%3D%22%238A8A8A%22%2F%3E%3Cdefs%3E%3Cpath%20id%3D%22path0_stroke%22%20d%3D%22M8.31.707A1%201%200%201%200%206.894-.707L8.309.707zM3.8%203.801l-.707.707a1%201%200%200%200%201.414%200L3.8%203.801zM.707-.707A1%201%200%200%200-.707.707L.707-.707zm6.188%200l-3.801%203.8%201.414%201.415L8.31.708%206.895-.708zm-2.387%203.8l-3.8-3.8L-.708.707l3.8%203.801%201.415-1.414z%22%2F%3E%3C%2Fdefs%3E%3C%2Fsvg%3E') no-repeat right 0.9375rem center #fff
 }
 .header__loc-field:focus {
   outline: 0
 }
 .header__menu {
+  min-width: 0.0125rem;
   margin-left: auto;
-  margin-right: 1.25rem
+  margin-right: 1.875rem
 }
 .help {
   display: inline-block;
@@ -1821,52 +1874,151 @@ a.btn:disabled {
 .menu-user--dark-blue .menu-user__link:hover {
   color: #2a6ead
 }
+@keyframes menu__form-field-autofill {
+  to {
+    color: #636363;
+    background: #fff
+  }
+}
 .menu {
   display: -ms-flexbox;
-  display: flex;
-  overflow: hidden
+  display: flex
 }
 .menu__item {
-  color: #636363;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1.25;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  transition: color 0.15s ease-in-out
-}
-.menu__item:focus,
-.menu__item:hover {
-  color: #141414;
-  text-decoration: none
+  min-width: 0.0125rem;
+  position: relative
 }
 .menu__item + .menu__item {
-  margin-left: 1.875rem
+  margin-left: 0.625rem
 }
-.menu__item-icon {
+.menu__link {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #636363;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+}
+.menu__link:hover,
+.show .menu__link {
+  color: #fff;
+  text-decoration: none;
+  background: #4f4f4f
+}
+.menu__link-ico {
   -ms-flex: none;
   flex: none;
-  margin-right: 0.3125rem
+  width: 1.375rem;
+  height: 1.375rem
 }
-.menu__item-icon.isvg-buy {
-  font-size: 1.0625rem
+.menu__link-ico + .menu__link-lbl {
+  margin-left: 0.3125rem
 }
-.menu__item-icon.isvg-metaapps {
-  font-size: 0.875rem
+.menu__link-ico.isvg-buy {
+  transform: scale(0.77273)
 }
-.menu__item-icon.isvg-metawallet {
-  font-size: 1.0625rem
+.menu__link-ico.isvg-metawallet {
+  transform: scale(0.90909)
 }
-.menu__item-icon.isvg-settings {
-  font-size: 1.0625rem
+.menu__link-ico.isvg-metaapps {
+  transform: scale(0.86364)
 }
-.menu__item-lbl {
+.menu__link-ico.isvg-user {
+  transform: scale(0.72727)
+}
+.menu__link-ico.isvg-settings-3 {
+  transform: scale(0.95455)
+}
+.menu__link-lbl {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis
+}
+.menu__dd {
+  color: #636363;
+  min-width: 11.25rem;
+  padding: 0;
+  border: 0;
+  margin: -0.9375rem 0 0;
+  border-radius: 0
+}
+.menu__dd-item {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: inherit;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.46875rem 0.9375rem;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out
+}
+.menu__dd-item:hover {
+  color: inherit;
+  text-decoration: none;
+  background: #f2f2f2
+}
+.menu__dd-ico {
+  -ms-flex: none;
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.625rem
+}
+.menu__dd-lbl {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+.menu__form {
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  width: 17.5rem;
+  padding: 1.25rem
+}
+.menu__form-row {
+  margin-bottom: 1.25rem
+}
+.menu__form-lbl {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  text-transform: uppercase;
+  display: inline;
+  margin: 0
+}
+.menu__form-lnk {
+  color: #2f80ed;
+  text-decoration: none
+}
+.menu__form-lnk:hover {
+  color: #2f80ed
+}
+.menu__form-lnk--lbl {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  text-transform: uppercase
+}
+.menu__form-field {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: #636363;
+  display: block;
+  width: 100%;
+  padding: 0.64063rem 0.9375rem;
+  border: 0.0625rem solid #bdbdbd;
+  background: #fff
+}
+.menu__form-field:-webkit-autofill {
+  animation-name: menu__form-field-autofill;
+  animation-fill-mode: both
 }
 .nav-filters__inner {
   display: -ms-flexbox;
@@ -2036,9 +2188,9 @@ a.btn:disabled {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 80rem;
-  height: calc(100% - 4.375rem);
+  height: calc(100% - 3.125rem);
   background: url(../img/promo-spiral.png) no-repeat 0 0 fixed,url(../img/team-cloud.png) no-repeat 100% 100% fixed #03081c;
-  margin-top: 4.375rem;
+  margin-top: 3.125rem;
   overflow-y: auto
 }
 .page__header {
@@ -2483,10 +2635,10 @@ a.btn:disabled {
   text-transform: uppercase;
   margin: 0 0.3125rem
 }
-.wallet__action:not(:disabled):not(.disabled):hover {
+.wallet__action:not(:disabled):hover {
   color: #fff
 }
-.wallet__action:not(:disabled):not(.disabled):focus {
+.wallet__action:not(:disabled):focus {
   box-shadow: none
 }
 .wallet__action-icon {

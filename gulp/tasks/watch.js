@@ -14,6 +14,6 @@ module.exports = function () {
       });
     $.gulp.watch('src/**/*.js', $.gulp.series('js'));
     $.gulp.watch('src/img/**/*.*', $.gulp.series('img'));
-    $.gulp.watch(['src/fonts/**/*.*', 'src/upload/**/*.*'], $.gulp.series('copy'));
+    $.gulp.watch(['src/fonts/**/*.*', 'src/upload/**/*.*', 'src/favicon/**/*.*'], $.gulp.series('copy'));
   });
 };

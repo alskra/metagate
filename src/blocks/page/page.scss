@@ -14,10 +14,10 @@
       display: flex;
       flex-direction: column;
       min-width: 1280px;
-      height: calc(100% - 70px);
+      height: calc(100% - 50px);
       background: url-img('promo-spiral.png') no-repeat 0 0 fixed,
       url-img('team-cloud.png') no-repeat 100% 100% fixed $body-bg;
-      margin-top: 70px;
+      margin-top: 50px;
       overflow-y: auto;
     }
   }

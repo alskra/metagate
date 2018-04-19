@@ -9,6 +9,17 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#2f7bc2" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="MetaHash" />
+    <meta name="application-name" content="MetaHash" />
+    <meta name="msapplication-TileColor" content="#2f7bc2" />
+    <meta name="msapplication-config" content="favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#fafafa" />
     <!-- CSS-->
     <link rel="stylesheet" href="css/libs.min.css" />
     <link rel="stylesheet" href="css/app.min.css" />
@@ -63,30 +74,141 @@
             <input class="header__loc-field" type="text" value="/MetaGate/Create" />
           </div>
           <nav class="menu header__menu">
-            <a class="menu__item" href="javascript:">
-              <svg class="isvg-buy menu__item-icon" role="img">
-                <use xlink:href="#isvg-buy"></use>
-              </svg>
-              <span class="menu__item-lbl">Buy#MHC</span>
-            </a>
-            <a class="menu__item" href="javascript:">
-              <svg class="isvg-metawallet menu__item-icon" role="img">
-                <use xlink:href="#isvg-metawallet"></use>
-              </svg>
-              <span class="menu__item-lbl">MetaWallet</span>
-            </a>
-            <a class="menu__item" href="javascript:">
-              <svg class="isvg-metaapps menu__item-icon" role="img">
-                <use xlink:href="#isvg-metaapps"></use>
-              </svg>
-              <span class="menu__item-lbl">MetaApps</span>
-            </a>
-            <a class="menu__item" href="javascript:">
-              <svg class="isvg-settings menu__item-icon" role="img">
-                <use xlink:href="#isvg-settings"></use>
-              </svg>
-              <span class="menu__item-lbl">Settings</span>
-            </a>
+            <div class="menu__item">
+              <a class="menu__link" href="javascript:">
+                <svg class="isvg-buy menu__link-ico" role="img">
+                  <use xlink:href="#isvg-buy"></use>
+                </svg>
+                <span class="menu__link-lbl">Buy#MHC</span>
+              </a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="javascript:">
+                <svg class="isvg-metawallet menu__link-ico" role="img">
+                  <use xlink:href="#isvg-metawallet"></use>
+                </svg>
+                <span class="menu__link-lbl">MetaWallet</span>
+              </a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="javascript:">
+                <svg class="isvg-metaapps menu__link-ico" role="img">
+                  <use xlink:href="#isvg-metaapps"></use>
+                </svg>
+                <span class="menu__link-lbl">MetaApps</span>
+              </a>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="javascript:" data-toggle="dropdown">
+                <svg class="isvg-user menu__link-ico" role="img">
+                  <use xlink:href="#isvg-user"></use>
+                </svg>
+                <span class="menu__link-lbl">Login</span>
+              </a>
+              <div class="menu__dd dropdown-menu dropdown-menu-right">
+                <form class="menu__form" action="">
+                  <div class="menu__form-row">
+                    <div class="row mb-5">
+                      <div class="col-12">
+                        <label class="menu__form-lbl" for="user-email">User e-mail</label>
+                      </div>
+                    </div>
+                    <input class="menu__form-field" id="user-email" type="email" />
+                  </div>
+                  <div class="menu__form-row">
+                    <div class="row mb-5">
+                      <div class="col-6">
+                        <label class="menu__form-lbl" for="user-password">Password</label>
+                      </div>
+                      <div class="col-6 text-right">
+                        <a class="menu__form-lnk menu__form-lnk--lbl" href="javascript:">Forgot password?</a>
+                      </div>
+                    </div>
+                    <input class="menu__form-field" id="user-password" type="password" />
+                  </div>
+                  <div class="menu__form-row">
+                    <button class="btn btn btn--primary-xs w-100">Login</button>
+                  </div>
+                  <div class="text-center">Not registered?
+                    <a class="menu__form-lnk" href="javascript:">Create Account</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="javascript:" data-toggle="dropdown">
+                <svg class="isvg-user menu__link-ico" role="img">
+                  <use xlink:href="#isvg-user"></use>
+                </svg>
+                <span class="menu__link-lbl">Gleb</span>
+              </a>
+              <div class="menu__dd dropdown-menu dropdown-menu-right">
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Profile & Settings</span>
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Messages</span>
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Logout</span>
+                </a>
+              </div>
+            </div>
+            <div class="menu__item">
+              <a class="menu__link" href="javascript:" data-toggle="dropdown">
+                <svg class="isvg-settings-3 menu__link-ico" role="img">
+                  <use xlink:href="#isvg-settings-3"></use>
+                </svg>
+              </a>
+              <div class="menu__dd dropdown-menu dropdown-menu-right">
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Settings</span>
+                  <svg class="isvg-settings-4 menu__dd-ico" role="img">
+                    <use xlink:href="#isvg-settings-4"></use>
+                  </svg>
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">English</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/english.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Español</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/español.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Русский</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/russian.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Português</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/português.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Türkçe</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/türkçe.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">Bahasa Melayu</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/bahasa_melayu.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">中文</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/中文.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">日本語</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/日本語.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">한국어</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/한국어.svg" alt="" role="presentation" />
+                </a>
+                <a class="menu__dd-item" href="javascript:">
+                  <span class="menu__dd-lbl">ﺔﻴﺑﺮﻌﻟا‏</span>
+                  <img class="menu__dd-ico" src="img/svg-icons/ﺔﻴﺑﺮﻌﻟا‏.svg" alt="" role="presentation" />
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
       </header>

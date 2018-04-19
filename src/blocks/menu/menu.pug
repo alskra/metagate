@@ -1,14 +1,86 @@
 mixin menu
   +b.NAV.menu&attributes(attributes)
-    +e.A.__item(href=js)
-      +isvg#buy.__item-icon
-      +e.__item-lbl Buy#MHC
-    +e.A.__item(href=js)
-      +isvg#metawallet.__item-icon
-      +e.__item-lbl MetaWallet
-    +e.A.__item(href=js)
-      +isvg#metaapps.__item-icon
-      +e.__item-lbl MetaApps
-    +e.A.__item(href=js)
-      +isvg#settings.__item-icon
-      +e.__item-lbl Settings
+    +e.__item
+      +e.A.__link(href=js)
+        +isvg#buy.__link-ico
+        +e.__link-lbl Buy#MHC
+    +e.__item
+      +e.A.__link(href=js)
+        +isvg#metawallet.__link-ico
+        +e.__link-lbl MetaWallet
+    +e.__item
+      +e.A.__link(href=js)
+        +isvg#metaapps.__link-ico
+        +e.__link-lbl MetaApps
+    +e.__item
+      +e.A.__link(href=js data-toggle='dropdown')
+        +isvg#user.__link-ico
+        +e.__link-lbl Login
+      +e.__dd.dropdown-menu.dropdown-menu-right
+        +e.FORM.__form(action='')
+          +e.__form-row
+            .row.mb-5
+              .col-12
+                +e.LABEL.__form-lbl(for='user-email') User e-mail
+            +e.INPUT.__form-field#user-email(type='email')
+          +e.__form-row
+            .row.mb-5
+              .col-6
+                +e.LABEL.__form-lbl(for='user-password') Password
+              .col-6.text-right
+                +e.A.__form-lnk--lbl(href=js) Forgot password?
+            +e.INPUT.__form-field#user-password(type='password')
+          +e.__form-row
+            +b.BUTTON.btn.btn--primary-xs.w-100 Login
+          .text-center
+            | Not registered?
+            +e.A.__form-lnk(href=js) Create Account
+
+    +e.__item
+      +e.A.__link(href=js data-toggle='dropdown')
+        +isvg#user.__link-ico
+        +e.__link-lbl Gleb
+      +e.__dd.dropdown-menu.dropdown-menu-right
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Profile & Settings
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Messages
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Logout
+    +e.__item
+      +e.A.__link(href=js data-toggle='dropdown')
+        +isvg#settings-3.__link-ico
+      +e.__dd.dropdown-menu.dropdown-menu-right
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Settings
+          +isvg#settings-4.__dd-ico
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl English
+          +e.IMG.__dd-ico(src='img/svg-icons/english.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Español
+          +e.IMG.__dd-ico(src='img/svg-icons/español.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Русский
+          +e.IMG.__dd-ico(src='img/svg-icons/russian.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Português
+          +e.IMG.__dd-ico(src='img/svg-icons/português.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Türkçe
+          +e.IMG.__dd-ico(src='img/svg-icons/türkçe.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl Bahasa Melayu
+          +e.IMG.__dd-ico(src='img/svg-icons/bahasa_melayu.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl 中文
+          +e.IMG.__dd-ico(src='img/svg-icons/中文.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl 日本語
+          +e.IMG.__dd-ico(src='img/svg-icons/日本語.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl 한국어
+          +e.IMG.__dd-ico(src='img/svg-icons/한국어.svg' alt='')
+        +e.A.__dd-item(href=js)
+          +e.__dd-lbl ﺔﻴﺑﺮﻌﻟا‏
+          +e.IMG.__dd-ico(src='img/svg-icons/ﺔﻴﺑﺮﻌﻟا‏.svg' alt='')

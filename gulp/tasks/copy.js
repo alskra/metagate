@@ -3,10 +3,10 @@
 module.exports = function () {
   $.gulp.task('copy', function () {
     return $.combiner.obj([
-      $.gulp.src(['src/fonts/**/*.*', 'src/upload/**/*.*']),
+      $.gulp.src(['src/fonts/**/*.*', 'src/upload/**/*.*', 'src/favicon/**/*.*']),
       $.gp.newer('build/upload'),
       $.gp.if(function (file) {
-        return file.base.indexOf('fonts') === -1
+        return file.base.indexOf('upload') !== -1
       }, $.gp.imagemin([
         $.gp.imagemin.gifsicle({interlaced: true}),
         require('imagemin-jpeg-recompress')({progressive: true}),
@@ -22,7 +22,7 @@ module.exports = function () {
       })),
       $.gp.debug({title: 'Debug task "copy"'}),
       $.gulp.dest(function (file) {
-        return file.base.indexOf('fonts') !== -1 ? 'build/fonts' : 'build/upload'
+        return file.base.indexOf('fonts') !== -1 ? 'build/fonts' : file.base.indexOf('upload') !== -1 ? 'build/upload' : 'build/favicon'
       }),
       $.browserSync.stream()
     ]).on('error', $.gp.notify.onError(function (err) {
