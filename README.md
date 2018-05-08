@@ -1,17 +1,49 @@
-# Сборка проекта
+## Сборка проекта
 
 Если не установлен `yarn`, устанавливаем: `npm install --global yarn`
 
 Установка зависимостей: `yarn`
-
-Сборка в режиме **development**: `gulp`, `gulp default`
-
-Сборка в режиме **production**: `gulp prod`
-
-При `gulp prod` происходит все то же самое + минимизация css и js.
 
 ## Файловая структура
 
 `./srs` -> `./build`
 
 gulp-задачи находятся в `./gulp`
+
+## Gulp-задачи
+
+`gulp clean` - удаление папки `./build`.
+
+`gulp html` - компиляция файлов `*.pug` в `*.html` с заданным форматированием.
+
+`gulp css` - компиляция файлов `*.scss` в `*.css` с генерацией sourcemap в папке назначения. При 
+
+`gulp js` - сборка `*.js` посредством [`gulp-include`](https://www.npmjs.com/package/gulp-include) с генерацией sourcemap в папке назначения.
+
+`gulp img` - минимизация `*.gif, *.jpg, *.png, *.svg` изображений, а также генерация svg-спрайта.
+
+`gulp copy` - копирование файлов из `./srs` в `./build`.
+
+`gulp watch` - запускает отслеживание изменений и запуск соответствующих тасков для всех редактируемых исходников.
+
+`gulp serve` - сервер на директории `./build`.
+
+`gulp`, `gulp default` - сборка в режиме **development**.
+```js
+$.gulp.task('default', $.gulp.series(
+  'clean',
+  'img',
+  $.gulp.parallel(
+    'html',
+    'css',
+    'js',
+    'copy'
+  ),
+  $.gulp.parallel(
+    'watch',
+    'serve'
+  )
+));
+```
+
+`gulp prod` - сборка в режиме **production** (то же, что `gulp` + минимизация `.css` и `.js`).
