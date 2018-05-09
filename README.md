@@ -104,4 +104,4 @@ $.gulp.task('default', $.gulp.series(
   )
 ));
 ```
-`gulp prod` - сборка в режиме **production** (то же, что `gulp` + минимизация `*.css` и `*.js`).
+`gulp prod` - сборка в режиме **production** (то же, что **development** + минимизация `*.css` и `*.js`).
