@@ -1,11 +1,11 @@
-## Сборка проекта
+## Зависимости проекта
 
 Если не установлен `yarn`, устанавливаем: [`https://yarnpkg.com/en/docs/install`](https://yarnpkg.com/en/docs/install)
 
 Установка зависимостей: `yarn`
 
 ## Файловая структура
-```txt
+```js
 source // исходники для сборки
 |--block // блоки
 |  |--[<block_name>]*
@@ -104,4 +104,4 @@ $.gulp.task('default', $.gulp.series(
   )
 ));
 ```
-`gulp prod` - сборка в режиме **production** (то же, что `gulp` + минимизация `.css` и `.js`).
+`gulp prod` - сборка в режиме **production** (то же, что `gulp` + минимизация `*.css` и `*.js`).
