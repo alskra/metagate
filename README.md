@@ -1,22 +1,81 @@
 ## Сборка проекта
 
-Если не установлен `yarn`, устанавливаем: `npm install --global yarn`
+Если не установлен `yarn`, устанавливаем: [`https://yarnpkg.com/en/docs/install`](https://yarnpkg.com/en/docs/install)
 
 Установка зависимостей: `yarn`
 
 ## Файловая структура
-
-`./srs` -> `./build`
-
-gulp-задачи находятся в `./gulp`
-
+```js
+source // исходники для сборки
+|--block // блоки
+|  |--[<block_name>]*
+|  |  |--*.pug // описание разметки блока
+|  |  |--*.scss // описание стилей блока
+|  |  |--*.js // описание функционала блока
+|--html
+|  |--helper
+|  |  |--var.pug
+|  |  |--mixin.pug
+|  |--part
+|  |  |--[*.pug]* // включаемые блоки HTML, например, favicon
+|  |--[*.pug]* // страницы
+|--css
+|  |--helper
+|  |  |--_var.scss
+|  |  |--_function.scss
+|  |  |--_mixin.scss
+|  |--part
+|  |  |--[*.scss]* // импортируемые стили
+|  |--lib.scss // библиотеки
+|  |--app.scss // основной файл scss
+|--js
+|  |--lib.js // библиотеки
+|  |--app.js // основной файл js
+|--img
+|  |--style // изображения оформления
+|  |  |--svg-icon // svg-иконки, доступные после сборки напрямую и через спрайт 
+|  |--content // контентные изображения
+|--font // шрифты
+|  |--[<font_name>]*
+|  |  |--[<font_file>]*
+|  |  |--*.css
+|--favicon // файлы favicon
+|--vendor // библиотеки
+build // собранные файлы проекта
+|--assets
+|  |--css
+|  |  |--lib.css
+|  |  |--lib.css.map
+|  |  |--lib.min.css // дополнительно генерируется при production-сборке
+|  |  |--app.css
+|  |  |--app.css.map
+|  |  |--app.min.css // дополнительно генерируется при production-сборке
+|  |--js
+|  |  |--lib.js
+|  |  |--lib.js.map
+|  |  |--lib.min.js // дополнительно генерируется при production-сборке
+|  |  |--app.js
+|  |  |--app.js.map
+|  |  |--app.min.js // дополнительно генерируется при production-сборке
+|  |--img
+|  |  |--style // изображения оформления
+|  |  |  |--svg-icon // svg-иконки, доступные через спрайт svg-icon-lib.svg
+|  |  |  |--svg-icon-lib.svg // svg-спрайт
+|  |  |--content // контентные изображения
+|  |--font // шрифты
+|  |  |--[<font_name>]*
+|  |  |  |--[<font_file>]*
+|  |  |  |--*.css
+|  |--favicon // файлы favicon
+|--[*.html]* // страницы
+```
 ## Gulp-задачи
 
 `gulp clean` - удаление папки `./build`.
 
 `gulp html` - компиляция файлов `*.pug` в `*.html` с заданным форматированием.
 
-`gulp css` - компиляция файлов `*.scss` в `*.css`. Автопрефиксы, преобразование единиц, минимизация. В папке назначения создается sourcemap-файл.
+`gulp css` - компиляция файлов `*.scss` в `*.css`. Автопрефиксы, преобразование единиц, минимизация (при production-сборке). В папке назначения создается sourcemap-файл.
 
 `gulp js` - сборка `*.js` посредством [`gulp-include`](https://www.npmjs.com/package/gulp-include). Минимизация. В папке назначения создается sourcemap-файл.
 
@@ -45,5 +104,4 @@ $.gulp.task('default', $.gulp.series(
   )
 ));
 ```
-
 `gulp prod` - сборка в режиме **production** (то же, что `gulp` + минимизация `.css` и `.js`).
